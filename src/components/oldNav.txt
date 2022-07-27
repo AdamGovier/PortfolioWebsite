@@ -1,0 +1,49 @@
+<template>
+    <nav>
+        <Fullsize />
+        <Minimised />
+    </nav>
+</template>
+
+<style>
+    * {
+        margin-block: 0;
+    }
+
+    #Logo {
+        text-align: center;
+        color: var(--brand-colour);
+        font-size: 36px;
+    }
+
+    a.active {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        cursor: default;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: lighter;
+        
+        transition: .25s;
+    }
+
+    a:hover:not(a.active) {
+        color: lightgreen;
+    }
+</style>
+
+<script>
+import Fullsize from "./nav/Fullsize.vue";
+import Minimised from "./nav/Minimised.vue";
+
+export default {
+    components: {
+        Fullsize,
+        Minimised
+    }
+}
+</script>

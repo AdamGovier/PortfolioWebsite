@@ -1,0 +1,99 @@
+<template>
+    <div id="minimisedNavPanel">
+        <img id="closeBtn" src="../../../assets/Cross.png" @click="this.$emit('close');" />
+        <img src="../../../assets/MobileProfilePhoto.jpg" class="portraitImg">
+        <div style="display: flex; flex-direction: column;">
+            <Links/>
+        </div>
+        <footer>
+            <Socials/>
+        </footer>
+    </div>
+</template>
+
+<style scoped>
+    #minimisedNavPanel {
+        width: 100%;
+        height: 100%;
+
+        background-color: black;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .portraitImg {
+        height: 150px; 
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    footer {
+        margin-bottom: 10%;
+    }
+
+    #closeBtn {
+        margin-top: 5%;
+    }
+
+/* 
+    #minimisedNavPanel {
+        width: 100%;
+        height: 100%;
+
+        background-color: black;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > img:nth-child(1) {
+        margin-bottom: 30px;
+    }
+
+    main, footer {
+        margin: 10% 0;
+    }
+
+    i {
+        color: white;
+    }
+
+    #minimisedNavPanel h1[data-id="Logo"] {
+        background-color: transparent;
+        font-size: 28px;
+    } */
+</style>
+
+<script>
+import Logo from "./Logo.vue";
+import Links from "../Links.vue";
+import Socials from "../Socials.vue";
+
+export default {
+    components: {
+        Logo,
+        Links,
+        Socials
+    }
+}
+</script>
