@@ -1,7 +1,11 @@
 <template>
+    <!-- <nav></nav> -->
     <Nav/>
     <Page :isLandingPage="true">
         <Introduction/>
+    </Page>
+    <Page>
+        <BolusCalcProj/>
     </Page>
 </template>
 
@@ -14,31 +18,43 @@
         --navBar-mobile-height: 12.5%;
     }
 
+    ::-webkit-scrollbar {
+        width: 0.5em;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(25,25,25);
+        opacity: 0.5;
+        height: 7px !important;
+    }
+
     @font-face {
         font-family: "ITC Avant Garde Gothic Std";
         src: url("./assets/fonts/itcavantgardestd-md.otf");
     }
 
-    body,html {
+    @font-face {
+        font-family: 'ITC Avant Garde Gothic LT';
+        src: url("./assets/fonts/ITC Avant Garde Gothic LT Bold.otf");
+    }
+
+    html, body {
+        margin: 0;
         height: 100%;
-        width: 100%;
     }
 
     body {
-        margin: 0;
-        padding: 0;
-
         font-family: "ITC Avant Garde Gothic Std";
         color: white;
         background-color: black;
     }
 
-    div#app {
+    #app {
         height: 100%;
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+
+    #app > * {
+        margin: 0 auto;
     }
 
     a {
@@ -52,12 +68,14 @@
 import Page from "./components/Page.vue";
 import Nav from "./components/Nav.vue";
 import Introduction from "./components/sections/Introduction.vue";
+import BolusCalcProj from "./components/sections/projects/BolusCalcProj.vue"
 
 export default {
     components: {
         Page,
         Nav,
-        Introduction
+        Introduction,
+        BolusCalcProj
     }
 }
 </script>

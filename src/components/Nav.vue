@@ -9,7 +9,6 @@
     nav {
         width: var(--content-width);
         height: var(--navBar-height);
-        /* background-color: blue; */
     }
 
     * {

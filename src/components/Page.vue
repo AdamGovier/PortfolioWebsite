@@ -8,11 +8,12 @@
     section {
         width: var(--content-width);
         height: 100%;
-        /* background-color: red; */
     }
 
     .landingPage {
-        height: calc(100% - var(--navBar-height));
+        /* height: calc(100% - var(--navBar-height));
+         */
+         height: 67.5%;
     }
 
     @media screen and (max-width: 850px) {
