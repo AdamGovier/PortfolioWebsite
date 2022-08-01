@@ -1,7 +1,7 @@
 <template>
     <div id="minimisedNavPanel">
-        <img id="closeBtn" src="../../../assets/Cross.png" @click="this.$emit('close');" />
-        <img src="../../../assets/MobileProfilePhoto.jpg" class="portraitImg">
+        <img id="closeBtn" src="../../../../assets/images/Cross.png" @click="this.$emit('close');" />
+        <img src="../../../../assets/images/MobileProfilePhoto.jpg" class="portraitImg">
         <div style="display: flex; flex-direction: column;">
             <Links/>
         </div>
@@ -85,13 +85,11 @@
 </style>
 
 <script>
-import Logo from "./Logo.vue";
-import Links from "../Links.vue";
-import Socials from "../Socials.vue";
+import Links from "../common/Links.vue";
+import Socials from "../common/Socials.vue";
 
 export default {
     components: {
-        Logo,
         Links,
         Socials
     }

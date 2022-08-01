@@ -6,8 +6,8 @@
                 My name is <span id="profileName">Adam</span>,<br/>
                 and I’m a 
                 <span id="profileRole">
-                    Web Dev<span id="profileLongWordForm">eloper</span><br/>
-                </span>
+                    Web Dev<span id="profileLongWordForm">eloper</span>
+                </span><br/>
                 based in <span id="profileLocation">Aberdeen</span>.
             </p>
             <p id="profilePortfolioAdvertisment">View my projects & skills <a href="">below</a>.</p>
@@ -40,7 +40,7 @@
         font-family: arial, sans-serif;
         font-weight: normal;
         white-space: nowrap;
-
+        width: 300px;
         padding-right: 1vw;
         margin-block-end: 0;
         margin-bottom: 35px;
@@ -102,7 +102,7 @@
     }
 
     #profileContainer .halfShield:nth-of-type(2) {
-        background-image: url('../../assets/ProfilePhoto.jpg');
+        background-image: url('../../assets/images/ProfilePhoto.jpg');
         background-size: cover;
         background-position-x: 47%;
         border-radius: 55px 0 175px 0;
@@ -199,28 +199,22 @@
             width: 20vw;
         }
     } 
-
-    /*
-    #profileContainer > p {
-        transform: rotate(90deg);
-        text-align: center;
-
-        opacity: 0;
-        transition: 1s;
-
-        position: absolute;
-        right: 40px;
-
-        text-transform: uppercase;
-        font-family: Arial;
-        font-weight: normal;
-        font-size: 40px;
-        
-        -webkit-text-stroke-width: 2px;
-        color: white;
-    }
-
-    #profileContainer:hover p {
-        opacity: 1;
-    } */
 </style>
+
+<script>
+    import Typed from "typed.js";
+
+    export default {
+        mounted() {
+            // const typed = new Typed('#profileRole', {
+            //     strings: ['Web Developer', 'App Developer'],
+            //     typeSpeed: 50,
+            //     backSpeed: 50,
+            //     backDelay: 1000,
+            //     startDelay: 1000,
+            //     loop: true,
+            //     showCursor: false
+            // });
+        }
+    }
+</script>

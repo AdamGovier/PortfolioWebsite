@@ -1,5 +1,4 @@
 <template>
-    <!-- <nav></nav> -->
     <Nav/>
     <Page :isLandingPage="true">
         <Introduction/>
@@ -65,10 +64,10 @@
 </style>
 
 <script>
-import Page from "./components/Page.vue";
-import Nav from "./components/Nav.vue";
-import Introduction from "./components/sections/Introduction.vue";
-import BolusCalcProj from "./components/sections/projects/BolusCalcProj.vue"
+import Page from "./components/common/Page.vue";
+import Nav from "./components/common/navigation/Nav.vue";
+import Introduction from "./components/pages/Introduction.vue";
+import BolusCalcProj from "./components/pages/projects/BolusCalcProj.vue";
 
 export default {
     components: {

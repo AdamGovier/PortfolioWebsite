@@ -15,13 +15,6 @@
         margin-block: 0;
     }
 
-    #Logo {
-        text-align: center;
-        font-family: "ITC Avant Garde Gothic Std";
-        color: var(--brand-colour);
-        font-size: 36px;
-    }
-
     nav a.active {
         text-decoration: underline;
         text-underline-offset: 10px;
@@ -50,8 +43,8 @@
 </style>
 
 <script>
-import NavFullsize from "./nav/Fullsize.vue";
-import NavMinimised from "./nav/Minimised.vue";
+import NavFullsize from "./Fullsize.vue";
+import NavMinimised from "./Minimised.vue";
 
 export default {
     components: {

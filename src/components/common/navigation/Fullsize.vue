@@ -1,7 +1,7 @@
 <template>
     <div class="fullsize">
         <div class="leftside">
-            <h1 id="Logo">GO<br/>VIER</h1>
+            <Logo/>
 
             <div id="mainNavigation">
                 <Links/>
@@ -20,7 +20,7 @@
     }
 
     #mainNavigation {
-        margin-left: 15%;
+        margin-left: 12.5%;
     }
 
     #mainNavigation a {
@@ -57,13 +57,15 @@
 </style>
 
 <script>
-import Links from "./Links.vue";
-import Socials from "./Socials.vue";
+import Links from "./common/Links.vue";
+import Socials from "./common/Socials.vue";
+import Logo from "./minimised/Logo.vue";
 
 export default {
     components: {
         Links,
-        Socials
+        Socials,
+        Logo
     }
 }
 </script>

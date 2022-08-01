@@ -1,7 +1,7 @@
 <template>
     <div class="microNav">
         <div class="menuIcon" @click="showNaviagtion = true">
-            <img src="../../assets/Cross.png" />
+            <img src="../../../assets/images/Cross.png" />
         </div>
         <Logo/>
     </div>
