@@ -26,8 +26,9 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        gap: 125px;
 
-        height: 65vh;
+        height: 67.5vh;
     }
 
     #introduction > h1 {
@@ -142,7 +143,7 @@
         #starterContent {
             align-items: flex-start;
             height: 40vh;
-            margin-top: 45%;
+            margin-top: 22.5vh;
         }
 
         #introduction > h1 {

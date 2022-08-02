@@ -11,14 +11,12 @@
     }
 
     .landingPage {
-        /* height: calc(100% - var(--navBar-height));
-         */
-         height: 67.5%;
+         height: 64%;
     }
 
     @media screen and (max-width: 850px) {
         .landingPage {
-            height: calc(100% - var(--navBar-mobile-height));
+            height: calc(100% - var(--navBar-mobile-height) - 35%);
         }
         
         section {
