@@ -1,12 +1,20 @@
 <template>
     <Nav/>
+
     <Page :isLandingPage="true">
         <Introduction/>
     </Page>
-    <!-- <div style="height: 1000vh;"></div> -->
+
     <Page>
         <BolusCalcProj/>
     </Page>
+    
+    <Page>
+        <Skills/>
+    </Page>
+
+    <Footer/>
+
 </template>
 
 <style>
@@ -62,6 +70,12 @@
         font-weight: lighter;
         transition: .25s;
     }
+
+    /* Animations */
+
+    .fade-in {
+        opacity: 1 !important;
+    }
 </style>
 
 <script>
@@ -69,13 +83,17 @@ import Page from "./components/common/Page.vue";
 import Nav from "./components/common/navigation/Nav.vue";
 import Introduction from "./components/pages/Introduction.vue";
 import BolusCalcProj from "./components/pages/projects/BolusCalcProj.vue";
+import Skills from "./components/pages/skills/Skills.vue";
+import Footer from "./components/pages/Footer.vue";
 
 export default {
     components: {
         Page,
         Nav,
         Introduction,
-        BolusCalcProj
+        BolusCalcProj,
+        Skills,
+        Footer
     }
 }
 </script>

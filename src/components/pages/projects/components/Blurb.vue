@@ -17,7 +17,7 @@
         padding: 60px 0;
 
         position: relative;
-        right: 5vw;
+        right: 4.5vw;
 
         display: flex;
         flex-direction: column;

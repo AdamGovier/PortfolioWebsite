@@ -1,0 +1,116 @@
+<template>
+    <div id="skillsContainer">
+        <div class="blurb">
+            <h1>Skills</h1>
+            <p>Technical Skills.</p>
+        </div>
+
+        <div id="skills">
+            <Skill title="JavaScript" type="Language" :image="require('@/assets/images/skills/JavaScript.png')" />
+            <Skill title="HTML" type="Markup" :image="require('@/assets/images/skills/HTML.png')" />
+            <Skill title="CSS" type="Styling" :image="require('@/assets/images/skills/CSS.png')" />
+            <Skill title="Node.js" type="Servers" :image="require('@/assets/images/skills/Node.png')" />
+            <Skill title="MongoDB" type="Database" :image="require('@/assets/images/skills/MongoDB.png')" />
+            <Skill title="Capacitor.js" type="Mobile Apps" :image="require('@/assets/images/skills/Capacitor.png')" />
+            <Skill title="Vue.js" type="Framework" :image="require('@/assets/images/skills/Vue.png')" />
+            <Skill title="Java" type="Language" :image="require('@/assets/images/skills/Java.png')" />
+            <Skill title="SQL (MYSQL)" type="Database" :image="require('@/assets/images/skills/SQL.png')" />
+            <Skill title="$ PHP" type="Language" :image="require('@/assets/images/skills/PHP.png')" />
+            <Skill title="Figma" type="UI Design" :image="require('@/assets/images/skills/Figma.png')" />
+            <Skill title="Postman" type="API Testing" :image="require('@/assets/images/skills/Postman.png')" />
+            <Skill title="Git" type="Source Control" :image="require('@/assets/images/skills/Git.png')" />
+            <Skill title="Puppeteer" type="E2E Testing" :image="require('@/assets/images/skills/Puppeteer.png')" />
+            <Skill title="Charles Proxy" type="Debugging" :image="require('@/assets/images/skills/CharlesProxy.svg')" />
+        </div>
+    </div>
+</template>
+
+<style>
+    #skills {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    #skillsContainer {
+        height: 100%;
+
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        grid-template-columns: 1.25fr 4fr;
+        opacity: 0.25;
+        transition: all 1s ease-out;
+    }
+
+    #skillsContainer .blurb p {
+        font-family: Arial;
+        font-style: normal;
+        font-size: 18px;
+        /* or 21px */
+
+
+        color: #7B7B7B;
+    }
+
+    #skillsContainer .blurb h1 {
+        font-family: 'ITC Avant Garde Gothic LT';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 84px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        #skills {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        #skillsContainer .blurb h1 {
+            font-size:60px;
+        }
+    }
+
+
+    @media screen and (max-width: 850px) {
+        #skillsContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #skillsContainer .blurb h1 {
+            font-size: 74px;
+        }
+
+        #skillsContainer .blurb {
+            text-align: center;
+            margin-top: 25%;
+        }
+
+        #skills {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 15%;
+        }
+    }
+</style>
+
+<script>
+import Skill from "./components/Skill.vue";
+import ScrollMagic from "scrollmagic";
+
+export default {
+    components: {
+        Skill
+    },
+    mounted() {
+        const scrollController = new ScrollMagic.Controller();
+
+        const scene = new ScrollMagic.Scene({
+            triggerElement: `#skillsContainer`
+        }).setClassToggle(`#skillsContainer`, 'fade-in')
+        .addTo(scrollController);
+    }
+}
+</script>

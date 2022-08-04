@@ -88,7 +88,7 @@
     #profileContainer .halfShield {
         height: 57.5%;
         width:  30.5%;
-        background-color: red;
+        background-color: gray;
         outline: solid 4px rgba(255,255,255,0.15);
     }
     

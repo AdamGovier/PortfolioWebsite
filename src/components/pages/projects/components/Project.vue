@@ -25,10 +25,6 @@
         transition: all 1s ease-out;
     }
 
-    .projectHolder.fade-in {
-        opacity: 1;
-    }
-
     @media (max-width: 850px) {
         .projectHolder {
             width: 100%;
@@ -49,11 +45,6 @@ export default {
         const scene = new ScrollMagic.Scene({
             triggerElement: `.projectHolder[data-id='${this.projectID}']`
         }).setClassToggle(`.projectHolder[data-id='${this.projectID}']`, 'fade-in')
-        .addTo(scrollController);
-
-        const scene2 = new ScrollMagic.Scene({
-            triggerElement: `.projectHolder[data-id='${this.projectID}']`
-        }).setClassToggle(`.projectHolder[data-id='${this.projectID}'] .blurb`, 'y-in')
         .addTo(scrollController);
     }
 }
