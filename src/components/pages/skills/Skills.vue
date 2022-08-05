@@ -33,6 +33,7 @@
     }
 
     #skillsContainer {
+        margin: 5% 0;
         height: 100%;
 
         display: grid;
@@ -77,10 +78,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            margin-bottom: 15%;
         }
 
         #skillsContainer .blurb h1 {
-            font-size: 74px;
+            font-size: 48px;
+        }
+
+        #skillsContainer .blurb p {
+            display: none;
         }
 
         #skillsContainer .blurb {
@@ -98,19 +105,14 @@
 
 <script>
 import Skill from "./components/Skill.vue";
-import ScrollMagic from "scrollmagic";
+import Animations from "@/scripts/Animations.js";
 
 export default {
     components: {
         Skill
     },
     mounted() {
-        const scrollController = new ScrollMagic.Controller();
-
-        const scene = new ScrollMagic.Scene({
-            triggerElement: `#skillsContainer`
-        }).setClassToggle(`#skillsContainer`, 'fade-in')
-        .addTo(scrollController);
+        Animations.registerScrollController('#skillsContainer', 'fade-in');
     }
 }
 </script>

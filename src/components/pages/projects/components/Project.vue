@@ -11,6 +11,7 @@
 <style>
     .pageContainer {
         height: 100%;
+        width: var(--content-width);
 
         display: flex;
         justify-content: center;
@@ -30,22 +31,20 @@
             width: 100%;
             flex-direction: column;
         }
+
+        .pageContainer {
+            width: 100%;
+        }
     }
 </style>
 
 <script>
-// NPM Packages
-import ScrollMagic from "scrollmagic";
+import Animations from "@/scripts/Animations.js";
 
 export default {
     props: ["projectID"],
     mounted() {
-        const scrollController = new ScrollMagic.Controller();
-
-        const scene = new ScrollMagic.Scene({
-            triggerElement: `.projectHolder[data-id='${this.projectID}']`
-        }).setClassToggle(`.projectHolder[data-id='${this.projectID}']`, 'fade-in')
-        .addTo(scrollController);
+        Animations.registerScrollController(`.projectHolder[data-id='${this.projectID}']`, 'fade-in');
     }
 }
 </script>

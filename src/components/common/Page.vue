@@ -21,15 +21,13 @@
         
         section {
             width: var(--content-mobile-width);
+            height: auto;
         }
     }
 </style>
 
 <script>
 export default {
-    props: ['isLandingPage'],
-    mounted() {
-        console.log(this.isLandingPage)
-    }
+    props: ['isLandingPage']
 }
 </script>

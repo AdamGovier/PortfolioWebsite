@@ -112,7 +112,6 @@
         height: 75%;
         width: 48.5%;
         
-        z-index: 3;
 
         transition: 2s;
     }
@@ -143,7 +142,7 @@
         #starterContent {
             align-items: flex-start;
             height: 40vh;
-            margin-top: 22.5vh;
+            margin-top: 18.5vh;
         }
 
         #introduction > h1 {

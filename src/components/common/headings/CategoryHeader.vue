@@ -2,16 +2,16 @@
     <h1 class="catHeader">// {{ value }} //</h1>
 </template>
 
-<style>
+<style scoped>
     .catHeader {
         width: 0; /* Depopulate Y axis */
         margin-left: auto;
 
-        z-index: 5;
-        transform: rotate(90deg);
+        writing-mode: vertical-lr;
 
-        position: relative;
-        top: 60px;
+        position: absolute;
+        right: 8%;
+        top: 85%;
 
         font-family: "Arial";
         text-transform: uppercase;
@@ -19,9 +19,23 @@
         white-space: nowrap;
         letter-spacing: 5px;
     }
+
+    @media screen and (max-width: 850px) {
+        .catHeader {
+            writing-mode:initial;
+            position: static;
+            margin: 0;
+            margin-bottom: 8%;
+            width: auto;
+            text-align: center;
+            opacity: 0.25;
+        }
+    }
 </style>
 
 <script>
+import Animations from "@/scripts/Animations.js";
+
 export default {
     props: ['value']
 }

@@ -13,6 +13,7 @@
         <Skills/>
     </Page>
 
+    <Contact/>
     <Footer/>
 
 </template>
@@ -28,6 +29,7 @@
 
     ::-webkit-scrollbar {
         width: 0.5em;
+        position: fixed;
     }
     
     ::-webkit-scrollbar-thumb {
@@ -85,6 +87,7 @@ import Introduction from "./components/pages/Introduction.vue";
 import BolusCalcProj from "./components/pages/projects/BolusCalcProj.vue";
 import Skills from "./components/pages/skills/Skills.vue";
 import Footer from "./components/pages/Footer.vue";
+import Contact from "./components/common/Contact.vue";
 
 export default {
     components: {
@@ -93,7 +96,8 @@ export default {
         Introduction,
         BolusCalcProj,
         Skills,
-        Footer
+        Footer,
+        Contact
     }
 }
 </script>

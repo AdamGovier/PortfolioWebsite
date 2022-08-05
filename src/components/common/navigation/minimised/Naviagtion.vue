@@ -5,9 +5,9 @@
         <div style="display: flex; flex-direction: column;">
             <Links/>
         </div>
-        <footer>
+        <div style="padding: 50px 0;">
             <Socials/>
-        </footer>
+        </div>
     </div>
 </template>
 
@@ -26,6 +26,8 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
+        z-index: 3;
     }
 
 
@@ -92,6 +94,9 @@ export default {
     components: {
         Links,
         Socials
+    },
+    mounted() {
+
     }
 }
 </script>
