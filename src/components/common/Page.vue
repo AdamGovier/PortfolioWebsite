@@ -1,5 +1,5 @@
 <template>
-    <section :class="{ landingPage: this.isLandingPage }">
+    <section :class="{ landingPage: this.isLandingPage }" :style="overrideWidth">
         <slot></slot>
     </section>
 </template>
@@ -28,6 +28,11 @@
 
 <script>
 export default {
-    props: ['isLandingPage']
+    props: ['isLandingPage', 'overrideWidth'],
+    computed: {
+        overrideWidth() {
+            return this.overrideWidth ? `width: ${this.overrideWidth};` : "";
+        }
+    }
 }
 </script>

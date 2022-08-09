@@ -8,7 +8,7 @@
                 <span id="profileRole">
                     Web Dev<span id="profileLongWordForm">eloper</span>
                 </span><br/>
-                based in <span id="profileLocation">Aberdeen</span>.
+                based in <span id="profileLocation"> Scotland</span>.
             </p>
             <p id="profilePortfolioAdvertisment">View my projects & skills <a href="">below</a>.</p>
         </div>
@@ -112,7 +112,7 @@
         height: 75%;
         width: 48.5%;
         
-
+        z-index: 2;
         transition: 2s;
     }
 

@@ -1,8 +1,8 @@
 <template>
-    <a href="" class="active">About</a>
-    <a href="">Portfolio</a>
-    <a href="">Skills</a>
-    <a href="">Contact</a>
+    <router-link to="/">About</router-link>
+    <router-link to="/#portfolio" class="active">Portfolio</router-link>
+    <router-link to="/#skills">Skills</router-link>
+    <router-link to="/#contact">Contact</router-link>
 </template>
 
 <style scoped>

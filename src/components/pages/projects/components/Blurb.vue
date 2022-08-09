@@ -5,9 +5,9 @@
         <p class="desc">
             <slot></slot>
         </p>
-        <a class="actionAnchor" :href="href">
+        <router-link class="actionAnchor" :to="href">
             Find Out More
-        </a>
+        </router-link>
     </div>
 </template>
 

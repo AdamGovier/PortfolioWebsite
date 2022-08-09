@@ -1,21 +1,7 @@
 <template>
     <Nav/>
-
-    <Page :isLandingPage="true">
-        <Introduction/>
-    </Page>
-
-    <Page>
-        <BolusCalcProj/>
-    </Page>
-    
-    <Page>
-        <Skills/>
-    </Page>
-
-    <Contact/>
-    <Footer/>
-
+    <router-view></router-view>
+    <!-- <Footer/> -->
 </template>
 
 <style>
@@ -46,6 +32,10 @@
     @font-face {
         font-family: 'ITC Avant Garde Gothic LT';
         src: url("./assets/fonts/ITC Avant Garde Gothic LT Bold.otf");
+    }
+
+    html {
+        scroll-behavior: smooth;
     }
 
     html, body {
@@ -81,23 +71,13 @@
 </style>
 
 <script>
-import Page from "./components/common/Page.vue";
-import Nav from "./components/common/navigation/Nav.vue";
-import Introduction from "./components/pages/Introduction.vue";
-import BolusCalcProj from "./components/pages/projects/BolusCalcProj.vue";
-import Skills from "./components/pages/skills/Skills.vue";
-import Footer from "./components/pages/Footer.vue";
-import Contact from "./components/common/Contact.vue";
+import Nav from "@/components/common/navigation/Nav.vue";
+import Footer from "@/components/pages/Footer.vue";
 
 export default {
     components: {
-        Page,
         Nav,
-        Introduction,
-        BolusCalcProj,
-        Skills,
-        Footer,
-        Contact
+        Footer
     }
 }
 </script>

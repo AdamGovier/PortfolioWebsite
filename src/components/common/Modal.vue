@@ -15,7 +15,7 @@
         top: 0;
         transition: all 1s ease-out;
         opacity: 0;
-        visibility: hidden;
+        visibility: hidden; /* remove from document view */
     }
 
     .showModal {

@@ -1,11 +1,11 @@
 <template>
-    <div id="skillsContainer">
+    <div id="skills">
         <div class="blurb">
             <h1>Skills</h1>
             <p>Technical Skills.</p>
         </div>
 
-        <div id="skills">
+        <div id="skillsHolder">
             <Skill title="JavaScript" type="Language" :image="require('@/assets/images/skills/JavaScript.png')" />
             <Skill title="HTML" type="Markup" :image="require('@/assets/images/skills/HTML.png')" />
             <Skill title="CSS" type="Styling" :image="require('@/assets/images/skills/CSS.png')" />
@@ -26,14 +26,14 @@
 </template>
 
 <style>
-    #skills {
+    #skillsHolder {
         display: grid;
         gap: 50px;
         grid-template-columns: repeat(5, 1fr);
     }
 
-    #skillsContainer {
-        margin: 5% 0;
+    #skills {
+        margin: 4% 0;
         height: 100%;
 
         display: grid;
@@ -44,7 +44,7 @@
         transition: all 1s ease-out;
     }
 
-    #skillsContainer .blurb p {
+    #skills .blurb p {
         font-family: Arial;
         font-style: normal;
         font-size: 18px;
@@ -54,7 +54,7 @@
         color: #7B7B7B;
     }
 
-    #skillsContainer .blurb h1 {
+    #skills .blurb h1 {
         font-family: 'ITC Avant Garde Gothic LT';
         font-style: normal;
         font-weight: 700;
@@ -62,19 +62,19 @@
     }
 
     @media screen and (max-width: 1300px) {
-        #skills {
+        #skillsHolder {
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
 
-        #skillsContainer .blurb h1 {
+        #skills .blurb h1 {
             font-size:60px;
         }
     }
 
 
     @media screen and (max-width: 850px) {
-        #skillsContainer {
+        #skills {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -82,20 +82,20 @@
             margin-bottom: 15%;
         }
 
-        #skillsContainer .blurb h1 {
+        #skills .blurb h1 {
             font-size: 48px;
         }
 
-        #skillsContainer .blurb p {
+        #skills .blurb p {
             display: none;
         }
 
-        #skillsContainer .blurb {
+        #skills .blurb {
             text-align: center;
             margin-top: 25%;
         }
 
-        #skills {
+        #skillsHolder {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 15%;
@@ -112,7 +112,7 @@ export default {
         Skill
     },
     mounted() {
-        Animations.registerScrollController('#skillsContainer', 'fade-in');
+        Animations.registerScrollController('#skills', 'fade-in');
     }
 }
 </script>

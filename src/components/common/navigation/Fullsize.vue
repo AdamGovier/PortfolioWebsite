@@ -27,7 +27,7 @@
         margin: 0 20px;
     }
 
-    i {
+    nav i {
         font-size: 35px;
         
         margin: 0 16.5px;

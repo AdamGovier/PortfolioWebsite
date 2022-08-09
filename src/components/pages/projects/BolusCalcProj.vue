@@ -2,7 +2,7 @@
     <CategoryHeader value="2022 Portfolio" />
     <Project projectID="BolusCalc">
         <Hero :image="require('../../../assets/images/Mockups.png')"/>
-        <Blurb type="mobile app" title="Bolus Calculator" href="/BolusCalc">
+        <Blurb type="mobile app" title="Bolus Calculator" href="/Projects/BolusCalculator">
             I've created a mobile application that helps better manage my diabetes control. In the future, it will be distributed to other diabetics worldwide. Now here comes the good part... It's completely free!
         </Blurb>
     </Project>
