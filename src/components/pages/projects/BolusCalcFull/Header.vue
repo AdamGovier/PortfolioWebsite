@@ -1,7 +1,8 @@
 <template>
     <header>
         <div class="container">
-            <img src="@/assets/images/Projects/BolusCalc/AppHomeScreen.png" alt="">
+            <img :src="require('../../../../assets/images/Projects/BolusCalc/AppHomeScreen.png')" />
+            <!-- <img src="@/assets/images/Projects/BolusCalc/AppHomeScreen.png" alt=""> -->
         </div>
     </header>
 </template>
@@ -10,7 +11,7 @@
     header img {
         position: absolute;
         left: 10%;
-        height: 75%;
+        width: 20%;
     }
 
     header {
@@ -19,20 +20,29 @@
         justify-content: center;
     }
 
-    header h1 {
-        margin-top: 2%;
-        margin-left: 30%;
-        text-align: center;
-        /* text-transform: uppercase; */
-
-        font-family: 'ITC Avant Garde Gothic LT';
-        font-size: 58px;
-        color: white;
-    }
-
     .container {
         width: 80%;
         display: flex;
         justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 850px) {
+        header {
+            display: block;
+            height: auto;
+        }
+
+        header img {
+            position: initial;
+            width: auto;
+            height: 55vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 5%;
+        }
     }
 </style>

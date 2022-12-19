@@ -57,5 +57,10 @@ export default {
             showNaviagtion: false
         }
     },
+    watch:{
+        $route (to, from){
+            this.showNaviagtion = false;
+        }
+    } 
 }
 </script>

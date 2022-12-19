@@ -17,7 +17,7 @@
             </div>
 
             <div style="width: 100%; display: flex; justify-content: flex-end;">
-                <button type="button" @click="submitForm();" :style="showSubmitBtn">Submit</button>
+                <button type="button" @click="submitForm();">Submit</button>
             </div>
         </form>
     </div>
@@ -44,12 +44,6 @@ export default {
     },
     mounted() {
         Animations.registerScrollController('#contact', "fade-in")
-    },
-    computed: {
-        showSubmitBtn() {
-            // Opacity so box model is not changed.
-            return this.inputs.message && this.inputs.email && this.inputs.name ? "opacity: 1" : "opacity: 0;";
-        }
     },
     methods: {
         submitForm() {
@@ -95,7 +89,6 @@ export default {
     #contact form button {
         margin-top: 8%;
         padding: 3% 10%;
-        opacity: 0;
 
         font-family: 'ITC Avant Garde Gothic Std';
         color: white;
@@ -107,6 +100,10 @@ export default {
         border-bottom: 2px solid var(--brand-colour);
     }
 
+    #contact form button:hover {
+        border-bottom: 2px solid lightgreen;
+    }
+
     #contact .inputContainer label {
         font-family: Arial;
         font-style: normal;
@@ -114,7 +111,7 @@ export default {
         font-size: 32px;
     }
 
-    #contact .inputContainer input,textarea {
+    #contact .inputContainer input, textarea {
         width: 30vw;
         padding: 10px;
 

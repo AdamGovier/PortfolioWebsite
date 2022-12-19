@@ -30,7 +30,7 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     scrollBehavior(to, from, savedPosition) {
-        if (!to.hash) return;
+        if (!to.hash) return document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
 
         return { el: to.hash };
     },

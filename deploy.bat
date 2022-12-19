@@ -1,0 +1,1 @@
+npm run build&&cd dist&&git init&&git add -A&&git commit -m 'Deployment'&&git push -f https://github.com/AdamGovier/PortfolioWebsite.git master:gh-pages&&cd ..

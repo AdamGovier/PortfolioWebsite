@@ -44,46 +44,6 @@
     #closeBtn {
         margin-top: 5%;
     }
-
-/* 
-    #minimisedNavPanel {
-        width: 100%;
-        height: 100%;
-
-        background-color: black;
-
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    main > img:nth-child(1) {
-        margin-bottom: 30px;
-    }
-
-    main, footer {
-        margin: 10% 0;
-    }
-
-    i {
-        color: white;
-    }
-
-    #minimisedNavPanel h1[data-id="Logo"] {
-        background-color: transparent;
-        font-size: 28px;
-    } */
 </style>
 
 <script>
@@ -94,9 +54,6 @@ export default {
     components: {
         Links,
         Socials
-    },
-    mounted() {
-
     }
 }
 </script>

@@ -10,7 +10,7 @@
                 </span><br/>
                 based in <span id="profileLocation"> Scotland</span>.
             </p>
-            <p id="profilePortfolioAdvertisment">View my projects & skills <a href="">below</a>.</p>
+            <p id="profilePortfolioAdvertisment">View my projects & skills <a href="#portfolio">below</a>.</p>
         </div>
         <div id="profileContainer">
             <div class="halfShield"></div>

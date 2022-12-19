@@ -1,5 +1,7 @@
 <template>
-    <h1 id="Logo">GO<br/>VIER</h1>
+    <a href="/">
+        <h1 id="Logo">GO<br/>VIER</h1>
+    </a>
 </template>
 
 <style scoped>

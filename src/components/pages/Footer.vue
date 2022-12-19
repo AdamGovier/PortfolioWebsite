@@ -1,7 +1,7 @@
 <template>
     <footer>
         <h1>ADAM GOVIER</h1>
-        <a href="mailto:adam@govier-web.co.uk">adam@govier-web.co.uk</a>
+        <a href="mailto:adam@adamgovier.co.uk">adam@adamgovier.co.uk</a>
         <div class="socials">
             <Socials />
         </div>
@@ -63,9 +63,7 @@
             font-size: 30px;
             margin: 5px;
         }
-    }
 
-    @media screen and (max-width: 400px) {
         footer h1 {
             display: none;
         }
@@ -73,6 +71,17 @@
         footer .socials {
             display: flex;
             flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width: 850px) {
+        footer i {
+            font-size: 30px;
+            margin: 10px;
+        }
+
+        footer a:hover {
+            color: var(--brand-colour);
         }
     }
 </style>

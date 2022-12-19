@@ -26,6 +26,7 @@
             position: static;
             margin: 0;
             margin-bottom: 8%;
+            padding-top: 8%;
             width: auto;
             text-align: center;
             opacity: 0.25;
