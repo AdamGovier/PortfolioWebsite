@@ -21,7 +21,7 @@ export default {
 
 <style>
     .panel {
-        margin-top: 15%;
+        margin-top: 12.5%;
         display: flex;
         justify-content: space-around;
         align-items: center;
