@@ -33,7 +33,8 @@
     }
 
     #skills {
-        margin: var(--margin-large) 0;
+        margin-top: 10%;
+        padding-top: 5%;
         height: 100%;
 
         display: grid;

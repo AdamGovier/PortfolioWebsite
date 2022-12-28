@@ -79,6 +79,10 @@ export default {
 </script>
 
 <style>
+    #contact {
+        margin-top: 10%;
+    }
+
     #contact .inputContainer {
         display: flex;
         flex-direction: column;

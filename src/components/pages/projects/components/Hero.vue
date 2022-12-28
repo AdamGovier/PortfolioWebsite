@@ -5,7 +5,7 @@
 <style>
     .projectHolder .hero {
         width: 50vw;
-        height: 80vh;
+        height: 90vh;
         margin-lefT: 5vw;
 
         background-color: slategray;

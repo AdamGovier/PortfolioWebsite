@@ -33,6 +33,7 @@
 
     #introduction > h5 {
         margin-bottom: var(--margin-medium);
+        font-size: var(--font-body-medium);
     }
 
     #profile {
@@ -123,10 +124,17 @@
         border-radius: 0;
     }
 
-    @media only screen and (max-width: 1250px) {
+    @media screen and (max-width: 1250px) and (min-width: 850px) {
         #profile {
+            width: auto;
         }
 
+        #profileContainer {
+            display: none !important;
+        }
+    }
+
+    @media only screen and (max-width: 1250px) {
         #profileContainer .halfShield:nth-of-type(2) {
             width: 90%;
         }

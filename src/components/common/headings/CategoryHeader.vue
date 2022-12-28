@@ -11,7 +11,7 @@
 
         position: absolute;
         right: 8%;
-        top: 85%;
+        top: 87.5%;
 
         font-family: "Arial";
         text-transform: uppercase;

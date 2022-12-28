@@ -23,8 +23,8 @@
     /* Element Sizes */
     --content-width: 80vw;
     --content-mobile-width: 90vw;
-    --navBar-height: 20%;
-    --navBar-mobile-height: 12.5%;
+    --navBar-height: 20vh;
+    --navBar-mobile-height: 12.5vh;
 }
 
 ::-webkit-scrollbar {
@@ -54,7 +54,6 @@ html {
 
 html, body {
     margin: 0;
-    height: 100%;
 }
 
 body {
@@ -64,11 +63,9 @@ body {
 }
 
 #app {
-    height: 100%;
-}
-
-#app > * {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -108,15 +105,26 @@ h4 {
 }
 
 h5 {
-    font-size: var(--font-body-medium);
+    font-size: var(--font-body-small);
 }
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--font-body-medium);
+}
+
+ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: var(--font-body-medium);
 }
 
 @media only screen and (max-width: 850px) {
     h1 {
         --font-heading-large: 35px;
     }
+}
+
+a.info-link {
+    color: #A89ACB;
 }

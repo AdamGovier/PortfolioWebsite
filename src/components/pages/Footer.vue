@@ -11,8 +11,9 @@
 <style>
     footer {
         width: 100%;
+        margin-top: 10vh;
 
-        height: 25%;
+        height: 25vh;
         background-color: rgba(255,255,255, 0.95); /* Slight tint makes it easier on eyes */
         color: black;
 
