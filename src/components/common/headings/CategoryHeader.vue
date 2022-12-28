@@ -1,5 +1,5 @@
 <template>
-    <h1 class="catHeader">// {{ value }} //</h1>
+    <h4 class="catHeader">// {{ value }} //</h4>
 </template>
 
 <style scoped>

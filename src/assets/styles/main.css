@@ -1,0 +1,122 @@
+:root {
+    /* Colours */
+    --brand-colour: #58AE15;
+    --link-hover-colour: #C0C0C0;
+    --link-hover-alt-colour: lightgreen;
+    --text-colour: white;
+    --sub-text-colour: #7B7B7B;
+
+    /* Font Sizes */
+    --font-body-small: 16px;
+    --font-body-medium: 18px;
+    --font-heading-xsmall: 24px;
+    --font-heading-small: 30px;
+    --font-heading-medium: 35px;
+    --font-heading-large: 55px;
+
+    /* Margin */
+    --margin-small: 10px;
+    --margin-medium: 20px;
+    --margin-large: 40px;
+    --margin-xlarge: 60px;
+
+    /* Element Sizes */
+    --content-width: 80vw;
+    --content-mobile-width: 90vw;
+    --navBar-height: 20%;
+    --navBar-mobile-height: 12.5%;
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    position: fixed;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(25,25,25);
+    opacity: 0.5;
+    height: 7px !important;
+}
+
+@font-face {
+    font-family: "ITC Avant Garde Gothic Std";
+    src: url('../fonts/itcavantgardestd-md.otf');
+}
+
+@font-face {
+    font-family: 'ITC Avant Garde Gothic LT';
+    src: url('../fonts/ITC Avant Garde Gothic LT Bold.otf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: "ITC Avant Garde Gothic Std";
+    color: white;
+    background-color: black;
+}
+
+#app {
+    height: 100%;
+}
+
+#app > * {
+    margin: 0 auto;
+}
+
+a {
+    color: white;
+    font-weight: lighter;
+}
+
+a:hover {
+    color: var(--link-hover-colour);
+}
+
+/* Animations */
+
+.fade-in {
+    opacity: 1 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    font-size: var(--font-heading-large);
+}
+
+h2 {
+    font-size: var(--font-heading-medium);
+}
+
+h3 {
+    font-size: var(--font-heading-small)
+}
+
+h4 {
+    font-size: var(--font-heading-xsmall);
+}
+
+h5 {
+    font-size: var(--font-body-medium);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 850px) {
+    h1 {
+        --font-heading-large: 35px;
+    }
+}

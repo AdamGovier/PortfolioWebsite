@@ -26,6 +26,18 @@
         justify-content: flex-end;
     }
 
+    @media screen and (min-width: 1950px) {
+        header img {
+            width: 16%;
+        }
+    }
+
+    @media screen and (min-width: 2600px) {
+        header img {
+            width: 10%;
+        }
+    }
+
     @media screen and (max-width: 850px) {
         header {
             display: block;

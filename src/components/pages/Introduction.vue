@@ -1,15 +1,15 @@
 <template>
     <section id="starterContent">
         <div id="introduction">
-            <h1>Hello!</h1>
-            <p id="profile">
+            <h5>Hello!</h5>
+            <h1 id="profile">
                 My name is <span id="profileName">Adam</span>,<br/>
                 and I’m a 
                 <span id="profileRole">
                     Web Dev<span id="profileLongWordForm">eloper</span>
                 </span><br/>
                 based in <span id="profileLocation"> Scotland</span>.
-            </p>
+            </h1>
             <p id="profilePortfolioAdvertisment">View my projects & skills <a href="#portfolio">below</a>.</p>
         </div>
         <div id="profileContainer">
@@ -31,20 +31,17 @@
         height: 67.5vh;
     }
 
-    #introduction > h1 {
-        font-family: Arial;
-        margin-bottom: 18px;
+    #introduction > h5 {
+        margin-bottom: var(--margin-medium);
     }
 
     #profile {
-        font-size: 55px;
-        font-family: arial, sans-serif;
         font-weight: normal;
         white-space: nowrap;
         width: 300px;
         padding-right: 1vw;
         margin-block-end: 0;
-        margin-bottom: 35px;
+        margin-bottom: var(--margin-large);
     }
 
     #profileName {
@@ -62,10 +59,8 @@
 
     #profilePortfolioAdvertisment {
         margin-block-start: 0;
-        font-size: 15px;
-        margin-bottom: 60px;
+        margin-bottom: var(--margin-xlarge);
 
-        font-family: Arial;
         font-weight: bold;
     }
 
@@ -130,7 +125,6 @@
 
     @media only screen and (max-width: 1250px) {
         #profile {
-            font-size: 35px;
         }
 
         #profileContainer .halfShield:nth-of-type(2) {
@@ -148,7 +142,6 @@
         #introduction > h1 {
             font-family: Arial;
             font-weight: lighter;
-            font-size: 20px;
             margin-bottom: 18px;
             text-align: center;
         }
@@ -158,7 +151,6 @@
         }
 
         #profile {
-            font-size: 36px;
             text-align: center;
             line-height: 129.52%;
         }

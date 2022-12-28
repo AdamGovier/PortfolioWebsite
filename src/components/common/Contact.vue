@@ -87,10 +87,9 @@ export default {
     }
 
     #contact form button {
-        margin-top: 8%;
+        margin-top: 10%;
         padding: 3% 10%;
 
-        font-family: 'ITC Avant Garde Gothic Std';
         color: white;
         font-size: 22px;
         cursor: pointer;
@@ -101,7 +100,7 @@ export default {
     }
 
     #contact form button:hover {
-        border-bottom: 2px solid lightgreen;
+        border-bottom: 2px solid var(--link-hover-alt-colour);
     }
 
     #contact .inputContainer label {
@@ -152,25 +151,21 @@ export default {
     }
 
     #contact > h1 {
-        font-family: 'ITC Avant Garde Gothic Std';
         font-style: normal;
         font-weight: normal;
-        font-size: 84px;
     }
 
     @media screen and (max-width: 850px) {
         #contact {
             flex-direction: column;
             justify-content: space-around;
-            padding-bottom: 15%;
+            padding-bottom: 20%;
             padding-top: 10%;
         }
 
         #contact h1 {
-            font-family: 'ITC Avant Garde Gothic LT';
             font-style: normal;
             font-weight: 700;
-            font-size: 48px;
             margin: 10%;
         }
 
@@ -190,7 +185,7 @@ export default {
 
     @media screen and (max-height: 650px){
         #contact {
-            padding-bottom: 30vh; /* Stop footer and contact colliding on very small screens */
+            padding-bottom: 35vh; /* Stop footer and contact colliding on very small screens */
         }
     }
 </style>

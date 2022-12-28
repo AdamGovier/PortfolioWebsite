@@ -51,6 +51,7 @@
         font-weight: 500;
         font-size: 19.5px;
         text-align: center;
+        color: white;
     }
 
     @media screen and (max-width: 1300px) {

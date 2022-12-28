@@ -60,6 +60,8 @@ export default {
     watch:{
         $route (to, from){
             this.showNaviagtion = false;
+            // Hide URL incase of refresh until project is moved to a spa friendly host.
+            history.pushState({}, null, "/");
         }
     } 
 }

@@ -28,12 +28,12 @@
 <style>
     #skillsHolder {
         display: grid;
-        gap: 50px;
+        gap: var(--margin-xlarge);
         grid-template-columns: repeat(5, 1fr);
     }
 
     #skills {
-        margin: 4% 0;
+        margin: var(--margin-large) 0;
         height: 100%;
 
         display: grid;
@@ -45,30 +45,21 @@
     }
 
     #skills .blurb p {
-        font-family: Arial;
         font-style: normal;
         font-size: 18px;
-        /* or 21px */
 
-
-        color: #7B7B7B;
+        color: var(--sub-text-colour);
     }
 
     #skills .blurb h1 {
-        font-family: 'ITC Avant Garde Gothic LT';
         font-style: normal;
         font-weight: 700;
-        font-size: 84px;
     }
 
     @media screen and (max-width: 1300px) {
         #skillsHolder {
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        #skills .blurb h1 {
-            font-size:60px;
+            gap: var(--margin-medium);
         }
     }
 
@@ -82,10 +73,6 @@
             margin-bottom: 15%;
         }
 
-        #skills .blurb h1 {
-            font-size: 48px;
-        }
-
         #skills .blurb p {
             display: none;
         }
@@ -97,7 +84,7 @@
 
         #skillsHolder {
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: var(--margin-medium);
             margin-top: 15%;
         }
     }

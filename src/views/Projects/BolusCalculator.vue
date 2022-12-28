@@ -3,6 +3,8 @@
 
     <main id="projectContents">
         <Introduction />
+        <Outcome />
+        <Technical />
     </main>
 </template>
 
@@ -33,7 +35,7 @@
         margin-top: 2%;
         color: rgb(15,15,15);
 
-        font-size: 28px;
+        font-size: 25px;
         line-height: 180%;
     }
 </style>
@@ -41,11 +43,15 @@
 <script>
 import Header from "@/components/pages/projects/BolusCalcFull/Header.vue";
 import Introduction from "@/components/pages/projects/BolusCalcFull/Introduction.vue";
+import Outcome from "@/components/pages/projects/BolusCalcFull/Outcome.vue"
+import Technical from "@/components/pages/projects/BolusCalcFull/Technical.vue";
 
 export default {
     components: {
         Header,
-        Introduction
+        Introduction,
+        Outcome,
+        Technical
     }
 }
 </script>
