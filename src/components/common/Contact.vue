@@ -26,6 +26,7 @@
 <script>
 import Modal from "./Modal.vue";
 import Animations from "@/scripts/Animations.js";
+import * as EmailValidator from 'email-validator';
 
 export default {
     components: {
@@ -54,6 +55,14 @@ export default {
             formData.append("Message", this.inputs.message);
 
             this.emailSentStatus = true;
+
+            // If invalid email.
+            if(!EmailValidator.validate(this.inputs.email)) {
+                this.emailSentStatusMsg = "Error sending. Invalid email address.";
+                // Hide pop up, and cancel send.
+                return setTimeout(() => this.emailSentStatus = false, 4000);
+            }
+
             this.emailSentStatusMsg = "Sending.. Please wait."
 
             fetch('https://formbold.com/s/9k2P6', {
@@ -63,8 +72,6 @@ export default {
             .then((response) => {
                 if(response.status == 200) {
                     this.emailSentStatusMsg = "Your message has successfully been sent, please expect to receive a reply within a few days.";
-                    // Hide message after 4s.
-                    setTimeout(() => this.emailSentStatus = false, 4000);
                 } else {
                     this.emailSentStatusMsg = "An unknown error has occurred. Please email me directly at adam@govier-web.co.uk";
                     // Don't hide message if error as user will need time to copy the above email into their client.
@@ -72,6 +79,9 @@ export default {
             }).catch(error => {
                 console.log(error);
                 this.emailSentStatusMsg = "An unknown error has occurred. Please email me directly at adam@govier-web.co.uk";
+            }).finally(() => {
+                    // Hide message after 4s.
+                    setTimeout(() => this.emailSentStatus = false, 4000);
             });
         }
     }
