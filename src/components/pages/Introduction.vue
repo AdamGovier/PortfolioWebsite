@@ -160,6 +160,7 @@
 
         #profile {
             text-align: center;
+            width: auto;
             line-height: 129.52%;
         }
 
@@ -200,21 +201,3 @@
         }
     } 
 </style>
-
-<script>
-    import Typed from "typed.js";
-
-    export default {
-        mounted() {
-            // const typed = new Typed('#profileRole', {
-            //     strings: ['Web Developer', 'App Developer'],
-            //     typeSpeed: 50,
-            //     backSpeed: 50,
-            //     backDelay: 1000,
-            //     startDelay: 1000,
-            //     loop: true,
-            //     showCursor: false
-            // });
-        }
-    }
-</script>
