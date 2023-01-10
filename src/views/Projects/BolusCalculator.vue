@@ -100,7 +100,7 @@
                 <br/>
 
                 <p>
-                    Bolus Calculators is open and transparent; all of the source code for its products and services is available on <a href="https://github.com/stars/AdamGovier/lists/bolus-calculator">GitHub</a>.
+                    Bolus Calculator is open and transparent; all of the source code for its products and services is available on <a href="https://github.com/stars/AdamGovier/lists/bolus-calculator">GitHub</a>.
                 </p>
             </template>
         </Panel>

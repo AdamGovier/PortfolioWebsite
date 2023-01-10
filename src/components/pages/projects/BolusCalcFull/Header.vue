@@ -95,7 +95,7 @@
 
         #hero {
             width: 100%;
-            height: 35vh;
+            height: 35%;
             background-position: center;
         }
     }

@@ -53,6 +53,7 @@ html {
 }
 
 html, body {
+    height: --webkit-fill-available;
     margin: 0;
 }
 

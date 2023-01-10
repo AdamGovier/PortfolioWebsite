@@ -28,7 +28,7 @@ export default {
     }
 
     .panel img {
-        height: 80vh;
+        height: 800px;
     }
 
     .panel .allContentContainer {

@@ -4,9 +4,9 @@
             <h5>Hello!</h5>
             <h1 id="profile">
                 My name is <span id="profileName">Adam</span>,<br/>
-                and I’m a 
+                I’m a 
                 <span id="profileRole">
-                    Web Dev<span id="profileLongWordForm">eloper</span>
+                    Software Dev<span id="profileLongWordForm">eloper</span>
                 </span><br/>
                 based in <span id="profileLocation"> Scotland</span>.
             </h1>
@@ -28,7 +28,7 @@
         align-items: center;
         gap: 125px;
 
-        height: 67.5vh;
+        height: 67.5%;
     }
 
     #introduction > h5 {

@@ -18,7 +18,7 @@
     @media (max-width: 850px) {
         .projectHolder .hero {
             width: 100%;
-            height: 40vh;
+            height: 300px;
             margin: 0;
             border: none;
         }
