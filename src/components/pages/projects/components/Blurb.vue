@@ -3,11 +3,12 @@
         <h4 class="type">{{ type }}</h4>
         <h1 class="title">{{ title }}</h1>
         <p class="desc">
-            <slot></slot>
+            <slot name="content"></slot>
         </p>
-        <router-link class="actionAnchor" :to="href">
-            Find Out More
-        </router-link>
+        
+        <slot name="footer">
+
+        </slot>
     </div>
 </template>
 
@@ -49,20 +50,6 @@
         line-height: 157.52%;
     }
 
-    .projectHolder .blurb .actionAnchor {
-        font-family: 'ITC Avant Garde Gothic Std';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-
-        text-align: center;
-        text-decoration: none;
-
-        padding: 10px 0;
-        background: black;
-        color:white;
-    }
-
     .projectHolder .blurb > * {
         width: 80%;
         margin: 0 auto;
@@ -87,6 +74,6 @@
 
 <script>
 export default {
-    props: ['type', 'title', 'href']   
+    props: ['type', 'title']   
 }
 </script>

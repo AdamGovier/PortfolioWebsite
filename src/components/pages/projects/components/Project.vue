@@ -19,6 +19,7 @@
         align-items: center;
     }
 
+
     .projectHolder {
         display: flex;
         align-items: center;
@@ -35,6 +36,7 @@
 
         .pageContainer {
             width: 100%;
+            margin-top: 20% !important;
         }
     }
 </style>

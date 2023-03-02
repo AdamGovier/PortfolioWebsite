@@ -9,6 +9,7 @@
 
     <Page id="portfolio">
         <BolusCalcProj/>
+        <EasyGPT/>
     </Page>
     
     <Page id="Skills">
@@ -22,6 +23,7 @@
 import Page from "@/components/common/Page.vue";
 import Introduction from "@/components/pages/Introduction.vue";
 import BolusCalcProj from "@/components/pages/projects/BolusCalcProj.vue";
+import EasyGPT from "@/components/pages/projects/EasyGPT.vue";
 import Skills from "@/components/pages/skills/Skills.vue";
 import Contact from "@/components/common/Contact.vue";
 
@@ -30,6 +32,7 @@ export default {
         Page,
         Introduction,
         BolusCalcProj,
+        EasyGPT,
         Skills,
         Contact
     }

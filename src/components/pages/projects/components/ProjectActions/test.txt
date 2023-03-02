@@ -1,0 +1,11 @@
+<template>
+    <router-link class="actionAnchor" :to="href">
+        Find Out More
+    </router-link>
+</template>
+
+<script>
+export default {
+    props: ['href']
+}
+</script>
