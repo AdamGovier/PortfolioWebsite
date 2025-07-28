@@ -1,0 +1,14 @@
+---
+import ErrorPage from "../components/layout/ErrorPage.vue";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SleepyDogImage from "../assets/images/errors/sleepy_dog.webp";
+---
+
+<BaseLayout title="Error 404">
+  <ErrorPage 
+    code={404} 
+    message="It looks like you may be lost! This page does not exist." 
+    image={SleepyDogImage} 
+    imageCaption="Surf Hostel Taghazout's dog Sam having a sleep!"
+    />
+</BaseLayout>

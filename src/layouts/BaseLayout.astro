@@ -1,0 +1,35 @@
+---
+import "../assets/global.css";
+import Navigation from "../components/layout/nav/Navigation.vue";
+import { type SearchEngineMetaData } from "../models/Head";
+import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
+
+type Props = SearchEngineMetaData; 
+
+const props = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://kit.fontawesome.com/1bf5d037b0.js" crossorigin="anonymous"></script>
+    <script>
+      import '../scripts/AstroHelpers.ts';
+    </script>
+    <title>{props.title}</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <Navigation />
+      <!-- <div class="flex justify-end pt-4">
+        <ToggleThemeButton client:idle />
+      </div> -->
+
+      <div id="page-container">
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>

@@ -3,16 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "deploy": "deploy.bat"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/vue": "^5.1.0",
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.11.0",
     "core-js": "^3.6.5",
     "email-validator": "^2.0.4",
     "scrollmagic": "^2.0.8",
+    "tailwindcss": "^4.1.11",
     "typed.js": "^2.0.12",
-    "vue": "^3.0.0",
+    "vue": "^3.5.17",
     "vue-router": "^4.0.0-0",
     "vue-typer": "^1.2.0"
   },
