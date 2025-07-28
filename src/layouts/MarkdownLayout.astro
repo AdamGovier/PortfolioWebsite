@@ -1,0 +1,15 @@
+---
+import { type SearchEngineMetaData } from "../models/Head";
+import BaseLayout from "./BaseLayout.astro";
+import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
+
+type Props = SearchEngineMetaData; 
+
+const props = Astro.props;
+---
+
+<BaseLayout title={props.title}>
+  <div class="mark-down-page">
+    <slot />
+  </div>
+</BaseLayout>

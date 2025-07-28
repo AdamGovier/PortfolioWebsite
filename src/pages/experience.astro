@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Skills from "../components/experience/Skills.vue";
+import Button from "../components/inputs/Button.vue";
+
+import ExperienceItem from "../components/experience/ExperienceItem.vue";
+import Dev4Logo from "../assets/images/organisations/dev4_logo.webp";
+import RguLogo from "../assets/images/organisations/rgu_logo.webp";
+import UhiLogo from "../assets/images/organisations/uhi_logo.webp";
+
+import { Content as ModuleList } from "../markdown/info-modals/ModuleListRGU.md";
+import Modal from "../components/modals/Modal.vue";
+import Projects from "../components/experience/Projects.vue";
+---
+<script>
+
+</script>
+
+<BaseLayout title="Welcome to Astro">
+  <fieldset>
+    <legend>
+      <label>Professional Experience</label>
+    </legend>
+
+    <ExperienceItem 
+      organisationName="DEV4 ONLINE" 
+      organisationImage={Dev4Logo} 
+      roleName="Software Developer" 
+      period="Since 2023" 
+      article="/blog/a-day-at-dev4">
+
+      <p>
+        Since joining DEV4 Online in 2023, I build and maintain web applications that keep our oil‑and‑gas and equipment‑rental clients running smoothly.
+      </p>
+
+      <p>
+        On the front end I work with Blazor and Vue.js, and on the back end I rely on ASP.NET Core. Staying within the Microsoft ecosystem has let me deepen my expertise in Azure hosting, secret management, and automated CI/CD with Azure Pipelines, resulting in fast, secure releases.
+      </p>
+
+      <p>
+        My main focus right now is Equi‑Track, DEV4’s proprietary equipment‑tracking platform. I collaborate closely with clients through regular calls and dedicated Microsoft Teams channels, iterating quickly on their feedback. Seeing each release turn into real‑world gains for users is the most rewarding part of the job.
+      </p>
+    </ExperienceItem>
+  </fieldset>
+
+  <Skills />
+
+  <fieldset class="spacer">
+    <legend>
+      <label>Education</label>
+    </legend>
+
+    <ExperienceItem 
+      organisationName="Robert Gordon University"
+      organisationImage={RguLogo}
+      roleName="Master of Science | Computing Science | MERIT" 
+      period="2020 - 2025" 
+      article="/blog/graduation">
+
+      <p>
+        I graduated in July 2025 with a Master of Science (Merit) in Computing Science, completing a five‑year integrated programme that spanned 29 modules and a year‑long industrial placement at Dev4 Online.
+      </p>
+
+      <p>
+        During the 5 years, I covered almost 30 modules, and as the degree was an intergrated masters; I took part in a year long placement with Dev4 Online.
+      </p>
+
+      <p>
+        Modules that particularly captured my interest
+        <ul>
+          <li>Advanced Artificial Intelligence</li>
+          <li>Languages and Compilers</li>
+          <li>Concurrent Programming</li>
+          <li>Advanced Software Design and Development</li>
+          <li>Dynamic Web Development</li>
+          <li class="no-bullet">
+            <Button client:only theme="fake-anchor" @click={() => ToggleSelectorVisibility('#Modal-RGU-Modules')}>
+              All Modules
+            </Button>
+          </li>
+        </ul>
+      </p>
+
+    </ExperienceItem>
+
+    <ExperienceItem 
+      organisationName="UHI Moray" 
+      organisationImage={UhiLogo}
+      roleName="Higher National Certificate (HNC) | Computer Science | A" 
+      period="2019 - 2020">
+
+    </ExperienceItem>
+  </fieldset>
+
+  <!-- <Projects /> -->
+
+  <Modal title="RGU Module List" id="Modal-RGU-Modules">
+    <ModuleList />
+  </Modal>
+
+</BaseLayout>
