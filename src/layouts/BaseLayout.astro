@@ -2,7 +2,7 @@
 import "../assets/global.css";
 import Navigation from "../components/layout/nav/Navigation.vue";
 import { type SearchEngineMetaData } from "../models/Head";
-import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
+import Footer from "../components/layout/Footer.vue";
 
 type Props = SearchEngineMetaData; 
 
@@ -31,5 +31,7 @@ const props = Astro.props;
         <slot />
       </div>
     </div>
+
+    <Footer />
   </body>
 </html>

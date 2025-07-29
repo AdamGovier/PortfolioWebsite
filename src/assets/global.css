@@ -15,14 +15,17 @@
   --secondary: #1f1f1f;
   --accent: #58ae15;
   --accent-dark: #4b9512;
+  --glow: rgba(88, 174, 21, 0.2);
+  --glow-dark: rgba(75 149 18, 0.2);
   --text-colour: white;
-  --sub-text-colour: #7B7B7B;
+  --sub-text-colour: #8b8b8b;
+  --sub-text-colour-2: #202020;
 
   /* Margin */
-  --margin-small: 10px;
-  --margin-medium: 20px;
-  --margin-large: 40px;
-  --margin-xlarge: 60px;
+  --margin-small: 20px;
+  --margin-medium: 30px;
+  --margin-large: 60px;
+  --margin-xlarge: 80px;
 
   --box-shadow:
     0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
@@ -40,10 +43,11 @@ html[data-theme='light'] {
   --background: #fff;
 }
 
+
 body {
   color: var(--text-colour);
   background: var(--background);
-  font-family: 'Atkinson', sans-serif;
+  font-family: "ITC Avant Garde Gothic Std";
 }
 
 body {
@@ -88,7 +92,9 @@ h4 {
 }
 
 h5 {
-	font-size: 1.25em;
+	font-size: 20px;
+  font-weight: 400;
+  color: var(--text-colour);
 }
 
 strong, b 
@@ -106,6 +112,7 @@ a:hover {
 
 p {
 	margin-bottom: 1em;
+  font-family: Arial;
 }
 
 .prose p {
@@ -172,7 +179,7 @@ legend {
 }
 
 #app {
-  padding: 3% 5%;
+  padding: 3% 6.5%;
 
   height: 100%;
 }
@@ -194,22 +201,39 @@ html[data-theme="dark"] .mark-down-page {
 }
 
 .text-small {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.3;
 }
 
 .text-regular {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 
 .text-large {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1.6;
+}
+
+.text-extra-large {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.sub-text {
+  color: var(--sub-text-colour);
+}
+
+.sub-text-2 {
+  color: var(--sub-text-colour-2);
 }
 
 .spacer {
   margin-top: var(--margin-large);
+}
+
+.text-black {
+  color: black;
 }
 
 ul {
@@ -237,7 +261,6 @@ ul>li.no-bullet {
 
 .blurb p {
     font-style: normal;
-    font-size: 18px;
 
     color: var(--sub-text-colour);
 }
@@ -245,4 +268,10 @@ ul>li.no-bullet {
 .blurb h1 {
     font-style: normal;
     font-weight: 700;
+}
+
+.title {
+  font-family: ITC Avant Garde Gothic LT;
+  font-weight: 400;
+  font-size: 40px;
 }
