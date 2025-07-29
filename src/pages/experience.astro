@@ -13,14 +13,10 @@ import { Content as ModuleList } from "../markdown/info-modals/ModuleListRGU.md"
 import Modal from "../components/modals/Modal.vue";
 import Projects from "../components/experience/Projects.vue";
 ---
-<script>
-
-</script>
 
 <BaseLayout title="Welcome to Astro">
   <fieldset>
     <legend>
-      <label>Professional Experience</label>
     </legend>
 
     <ExperienceItem 
@@ -46,10 +42,8 @@ import Projects from "../components/experience/Projects.vue";
 
   <Skills />
 
-  <fieldset class="spacer">
-    <legend>
-      <label>Education</label>
-    </legend>
+  <div class="spacer">
+    <h5 class="title" style="margin-bottom: var(--margin-medium);">Education</h5>
 
     <ExperienceItem 
       organisationName="Robert Gordon University"
@@ -57,15 +51,15 @@ import Projects from "../components/experience/Projects.vue";
       roleName="Master of Science | Computing Science | MERIT" 
       period="2020 - 2025" 
       article="/blog/graduation">
-
+  
       <p>
         I graduated in July 2025 with a Master of Science (Merit) in Computing Science, completing a five‑year integrated programme that spanned 29 modules and a year‑long industrial placement at Dev4 Online.
       </p>
-
+  
       <p>
         During the 5 years, I covered almost 30 modules, and as the degree was an intergrated masters; I took part in a year long placement with Dev4 Online.
       </p>
-
+  
       <p>
         Modules that particularly captured my interest
         <ul>
@@ -81,19 +75,19 @@ import Projects from "../components/experience/Projects.vue";
           </li>
         </ul>
       </p>
-
+  
     </ExperienceItem>
-
+  
     <ExperienceItem 
       organisationName="UHI Moray" 
       organisationImage={UhiLogo}
       roleName="Higher National Certificate (HNC) | Computer Science | A" 
       period="2019 - 2020">
-
+  
     </ExperienceItem>
-  </fieldset>
+  </div>
 
-  <!-- <Projects /> -->
+  <Projects />
 
   <Modal title="RGU Module List" id="Modal-RGU-Modules">
     <ModuleList />

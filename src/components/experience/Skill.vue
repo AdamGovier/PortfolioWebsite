@@ -73,6 +73,4 @@ const props = defineProps<{
   image?: ImageMetaData,
   title: string
 }>();
-
-
 </script>

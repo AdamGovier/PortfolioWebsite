@@ -4,15 +4,15 @@
       <div class="header-row">
         <div class="header-left">
           <div class="thumbnail" :style="`background-image: url('${organisationImage.src.toString()}')`"></div>
-          <div class="role-info">
+          <div class="role-info text-large">
             <strong>{{ organisationName }}</strong>
             <span class="sub-text">{{ roleName }}</span>
           </div>
         </div>
-        <span class="period"><strong>{{ period }}</strong></span>
+        <span class="period text-regular"><strong>{{ period }}</strong></span>
       </div>
 
-      <div class="intro">
+      <div class="intro text-regular">
         <slot></slot>
       </div>
 
@@ -92,10 +92,6 @@ const props = defineProps<{
 .button-wrapper {
   display: flex;
   justify-self: flex-end;
-}
-
-.sub-text {
-  color: var(--sub-text-colour);
 }
 </style>
 

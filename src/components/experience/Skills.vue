@@ -2,7 +2,7 @@
     <div id="skills" class="spacer">
         <div class="blurb">
             <h1>Skills</h1>
-            <p>Technical Capabilities</p>
+            <p>Core Technical Capabilities</p>
         </div>
 
         <div id="skillsHolder">
