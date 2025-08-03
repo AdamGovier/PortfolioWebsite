@@ -48,9 +48,6 @@ body {
   color: var(--text-colour);
   background: var(--background);
   font-family: "ITC Avant Garde Gothic Std";
-}
-
-body {
   margin: 0;
   padding: 0;
   text-align: left;
@@ -61,13 +58,6 @@ body {
   line-height: 1.7;
 
   height: 100%;
-}
-
-main {
-  width: 720px;
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -113,6 +103,7 @@ a:hover {
 p {
 	margin-bottom: 1em;
   font-family: Arial;
+  font-size: 20px;
 }
 
 .prose p {
@@ -169,6 +160,18 @@ legend {
   margin-bottom: var(--margin-small);
 }
 
+.big {
+  display: block;
+}
+
+.small {
+  display: none;
+}
+
+.font-heading {
+  font-family: "ITC Avant Garde Gothic Std";
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
@@ -176,6 +179,18 @@ legend {
 	main {
 		padding: 1em;
 	}
+
+  p {
+    font-size: 18px;
+  }
+
+  .big {
+    display: none;
+  }
+
+  .small {
+    display: block;
+  }
 }
 
 #app {
@@ -228,9 +243,22 @@ html[data-theme="dark"] .mark-down-page {
   color: var(--sub-text-colour-2);
 }
 
+.spacer-xl {
+  margin-top: calc(var(--margin-large) * 2);
+}
+
 .spacer {
   margin-top: var(--margin-large);
 }
+
+.spacer-medium {
+  margin-top: var(--margin-medium);
+}
+
+.spacer-small {
+  margin-top: var(--margin-small);
+}
+
 
 .text-black {
   color: black;
@@ -244,6 +272,8 @@ ul {
 ul > li {
   display: list-item;
   list-style-position: inside;
+
+  font-family: Arial;
 }
 
 ul>li.no-bullet {
@@ -257,6 +287,7 @@ ul>li.no-bullet {
 
 #page-container {
   margin-top: var(--margin-large);
+  padding: 0 3%;
 }
 
 .blurb p {

@@ -14,36 +14,31 @@ import Modal from "../components/modals/Modal.vue";
 import Projects from "../components/experience/Projects.vue";
 ---
 
-<BaseLayout title="Welcome to Astro">
-  <fieldset>
-    <legend>
-    </legend>
+<BaseLayout title="Experience">
 
-    <ExperienceItem 
-      organisationName="DEV4 ONLINE" 
-      organisationImage={Dev4Logo} 
-      roleName="Software Developer" 
-      period="Since 2023" 
-      article="/blog/a-day-at-dev4">
+  <h2 class="title" style="margin-bottom: var(--margin-medium);">Career</h2>
+  <ExperienceItem
+    organisationName="DEV4 ONLINE" 
+    organisationImage={Dev4Logo} 
+    roleName="Software Developer" 
+    period="2023 - Present" 
+    article="/blog/a-day-at-dev4">
 
-      <p>
-        Since joining DEV4 Online in 2023, I build and maintain web applications that keep our oil‑and‑gas and equipment‑rental clients running smoothly.
-      </p>
+    <p>
+      Since 2023 I’ve built and maintained Azure‑hosted web apps for DEV4 Online’s oil‑and‑gas and equipment‑rental clients.
+    </p>
 
-      <p>
-        On the front end I work with Blazor and Vue.js, and on the back end I rely on ASP.NET Core. Staying within the Microsoft ecosystem has let me deepen my expertise in Azure hosting, secret management, and automated CI/CD with Azure Pipelines, resulting in fast, secure releases.
-      </p>
+    <p>
+      Using Blazor, Vue, and ASP.NET Core—and automating secure CI/CD with Azure Pipelines—I deliver fast, reliable releases. 
+    </p>
 
-      <p>
-        My main focus right now is Equi‑Track, DEV4’s proprietary equipment‑tracking platform. I collaborate closely with clients through regular calls and dedicated Microsoft Teams channels, iterating quickly on their feedback. Seeing each release turn into real‑world gains for users is the most rewarding part of the job.
-      </p>
-    </ExperienceItem>
-  </fieldset>
+    <p>My current focus is Equi‑Track, our equipment‑tracking platform, where close client collaboration turns feedback into real‑world gains each sprint.</p>
+  </ExperienceItem>
 
   <Skills />
 
-  <div class="spacer">
-    <h5 class="title" style="margin-bottom: var(--margin-medium);">Education</h5>
+  <div class="spacer-xl">
+    <h2 class="title" style="margin-bottom: var(--margin-medium);">Education</h2>
 
     <ExperienceItem 
       organisationName="Robert Gordon University"
@@ -60,21 +55,6 @@ import Projects from "../components/experience/Projects.vue";
         During the 5 years, I covered almost 30 modules, and as the degree was an intergrated masters; I took part in a year long placement with Dev4 Online.
       </p>
   
-      <p>
-        Modules that particularly captured my interest
-        <ul>
-          <li>Advanced Artificial Intelligence</li>
-          <li>Languages and Compilers</li>
-          <li>Concurrent Programming</li>
-          <li>Advanced Software Design and Development</li>
-          <li>Dynamic Web Development</li>
-          <li class="no-bullet">
-            <Button client:only theme="fake-anchor" @click={() => ToggleSelectorVisibility('#Modal-RGU-Modules')}>
-              All Modules
-            </Button>
-          </li>
-        </ul>
-      </p>
   
     </ExperienceItem>
   

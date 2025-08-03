@@ -1,7 +1,7 @@
 <template>
-    <div id="skills" class="spacer">
+    <div id="skills">
         <div class="blurb">
-            <h1>Skills</h1>
+            <h2>Skills</h2>
             <p>Core Technical Capabilities</p>
         </div>
 

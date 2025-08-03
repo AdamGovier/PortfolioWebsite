@@ -1,7 +1,7 @@
 <template>
   <nav>
       <NavFullsize/>
-      <!-- <NavMinimised/> -->
+      <NavMinimised/>
   </nav>
 </template>
 
@@ -37,5 +37,5 @@
 
 <script lang="ts" setup>
 import NavFullsize from "./Fullsize.vue";
-// import NavMinimised from "./Minimised.vue";
+import NavMinimised from "./Minimised.vue";
 </script>
