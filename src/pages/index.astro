@@ -1,5 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Introduction from "../components/home/Introduction.vue";
+import Story from "../components/home/Story.vue";
+import Contact from "../components/shared/Contact.vue";
 ---
-<BaseLayout title="Welcome to Astro">
+<BaseLayout title="Home">
+  <Introduction />
+  <Story />
+  <div class="spacer-xl">
+    <Contact client:only />
+  </div>
 </BaseLayout>

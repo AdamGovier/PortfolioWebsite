@@ -9,9 +9,9 @@
       </div>
 
       <div class="card-body">
-        <h4 class="title" style="color: black;">
+        <h3 class="title" style="color: black;">
           {{ title }}
-        </h4>
+        </h3>
         <slot name="body"></slot>
       </div>
   </div>

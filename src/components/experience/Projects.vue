@@ -1,6 +1,6 @@
 <template>
   <div class="spacer">
-    <h4 class="title">Notable Projects</h4>
+    <h2 class="title">Notable Projects</h2>
     <h5 class="text-small sub-text" style="margin-top: var(--margin-small);">A showcase of projects undertaken in academic and personal contexts.</h5>
 
     <div class="projects-grid">
@@ -34,9 +34,28 @@
 
   margin-top: var(--margin-large);
 
-  min-height: 70dvh;
+  min-height: 60dvh;
 }
 
+@media (min-width: 1401px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 801px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 40dvh;
+  }
+}
+
+@media (max-width: 800px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
+}
 </style>
 
 <script lang="ts" setup>

@@ -3,13 +3,19 @@
     <div class="content">
       <div class="header-row">
         <div class="header-left">
-          <div class="thumbnail" :style="`background-image: url('${organisationImage.src.toString()}')`"></div>
-          <div class="role-info text-large">
-            <strong>{{ organisationName }}</strong>
-            <span class="sub-text">{{ roleName }}</span>
+          <div class="thumbnail big" :style="`background-image: url('${organisationImage.src.toString()}')`"></div>
+          <div class="header-left-sub-container">
+            <div class="thumbnail small" :style="`background-image: url('${organisationImage.src.toString()}')`"></div>
+            <div>
+              <div class="role-info text-large">
+                <h3 class="text-extra-large org-name">{{ organisationName }}</h3>
+                <span class="text-regular sub-text role-name">{{ roleName }}</span>
+              </div>
+              <span class="period small text-regular">{{ period }}</span>
+            </div>
           </div>
         </div>
-        <span class="period text-regular"><strong>{{ period }}</strong></span>
+        <span class="period big text-regular">{{ period }}</span>
       </div>
 
       <div class="intro text-regular">
@@ -68,17 +74,18 @@ const props = defineProps<{
 .header-row {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 .header-left {
   display: flex;
-  width: 100%;
+  flex: 1;
 }
+
 
 .role-info {
   display: flex;
   flex-direction: column;
+  margin-left: calc(var(--margin-small) / 2);
 }
 
 .period {
@@ -86,12 +93,61 @@ const props = defineProps<{
 }
 
 .intro {
-  margin-top: var(--margin-medium);
+  margin-top: calc(var(--margin-small) * 2);
 }
 
 .button-wrapper {
   display: flex;
   justify-self: flex-end;
+}
+
+@media (max-width: 720px) {
+  .header-row {
+    flex-direction: column;
+  }
+
+  .header-left {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    height: 55px;
+  }
+
+  .role-info {
+    margin-left: 0;
+  }
+
+  .period {
+    margin-top: calc(var(--margin-small) / 4);
+    color: var(--sub-text-colour);
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 25px 0;
+    width: 100%;
+  }
+
+  .intro {
+    margin-top: var(--margin-small);
+    font-size: 16px;
+  }
+
+  .org-name {
+    font-size: 18px;
+    margin-block-end: calc(var(--margin-small) / 4);
+  }
+
+  .role-name {
+    font-size: 16px;
+  }
+
+  .header-left-sub-container {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>
 
