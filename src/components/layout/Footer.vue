@@ -80,10 +80,6 @@
             font-size: 30px;
             margin: 10px;
         }
-
-        footer a:hover {
-            color: var(--brand-colour);
-        }
     }
 </style>
 

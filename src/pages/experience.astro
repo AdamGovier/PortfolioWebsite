@@ -2,15 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import Skills from "../components/experience/Skills.vue";
-import Button from "../components/inputs/Button.vue";
 
 import ExperienceItem from "../components/experience/ExperienceItem.vue";
 import Dev4Logo from "../assets/images/organisations/dev4_logo.webp";
 import RguLogo from "../assets/images/organisations/rgu_logo.webp";
 import UhiLogo from "../assets/images/organisations/uhi_logo.webp";
 
-import { Content as ModuleList } from "../markdown/info-modals/ModuleListRGU.md";
-import Modal from "../components/modals/Modal.vue";
 import Projects from "../components/experience/Projects.vue";
 ---
 
@@ -68,9 +65,4 @@ import Projects from "../components/experience/Projects.vue";
   </div>
 
   <Projects />
-
-  <Modal title="RGU Module List" id="Modal-RGU-Modules">
-    <ModuleList />
-  </Modal>
-
 </BaseLayout>

@@ -1,0 +1,26 @@
+---
+import { getCollection, render  } from 'astro:content';
+import { loadAndFormatCollection } from "../../content/collection";
+import MarkdownLayout from '../../layouts/MarkdownLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await loadAndFormatCollection('blog');
+
+  return posts
+    .map(post => {
+        return {
+            params: { slug: post.data.relativePath },
+            props: post
+        }
+    });
+}
+
+const { slug } = Astro.params;
+
+const post = (await loadAndFormatCollection('blog', (item) => item.data.relativePath == slug))[0];
+const { Content } = await render(post);
+---
+
+<MarkdownLayout title={post.data.title} image={post.data.image} date={post.data.pubDate} author={post.data.author} slug={post.data.slug} tags={post.data.tags}>
+  <Content />
+</MarkdownLayout>

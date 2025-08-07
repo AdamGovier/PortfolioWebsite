@@ -2,14 +2,87 @@
 import { type SearchEngineMetaData } from "../models/Head";
 import BaseLayout from "./BaseLayout.astro";
 import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
+import "../assets/blog.css";
+import BlogCard from "../components/blog/BlogCard.vue";
+import { getCollection } from "astro:content";
 
-type Props = SearchEngineMetaData; 
+const { title, author, date, image, slug, tags } = Astro.props;
 
-const props = Astro.props;
+const dateParsed = new Date(date).toLocaleDateString('en-GB', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+});
+
+const relatedPosts = (await getCollection('blog', item =>
+  !item.data.draft &&
+  item.data.slug != slug &&
+  item.data.tags.some(tag => tags.includes(tag))
+))
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .slice(0, 3);
+
+const url = `https://adamgovier.co.uk/${new Date(date).getFullYear()}/${slug}`;
+
+const linkedInLink = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURI(url)}`
+const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(url)}`
+const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
 ---
 
-<BaseLayout title={props.title}>
-  <div class="mark-down-page">
-    <slot />
+<BaseLayout title={title}>
+  <div class="markdown-page">
+    <div class="markdown-page-content">
+      <img class="markdown-page-hero-image" src={image.url} style="" alt={image.alt} />
+      <div class="blog-card-tags">
+        {tags && tags.map((tag: string) => (
+          <div class="blog-card-tag">
+            <span class="text-small">#{tag}</span>
+          </div>
+        ))}
+      </div>
+      <h1 class="title" style="margin-top: var(--margin-small);">{title}</h1>
+      <p class="sub-text">{author ?? "Adam Govier"} | {dateParsed}</p>
+      <div class="spacer-medium"></div>
+      <div class="spacer"></div>
+      <slot />
+    </div>
+
+    <div class="markdown-page-sidebar">
+      <div>
+        <a href="/blog" class="text-small">
+          <i class="fa-solid fa-arrow-left"></i> Back to blog
+        </a>
+      </div>
+
+      <div class="spacer-small d-flex align-center gap-small text-large divider">
+        <strong>Share on: </strong>
+
+        <a href={linkedInLink}><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+
+      {relatedPosts.length != 0 && (
+        <div class="spacer-small">
+          <span class="text-regular font-heading">Related Posts</span>
+        </div>
+      )}
+
+      {
+        relatedPosts.map((card) => (
+          <div class="spacer-small" style="height: 60dvh;">
+            <BlogCard
+              title={card?.data.title} 
+              tags={card?.data.tags} 
+              date={card?.data.pubDate} 
+              author={card?.data.author} 
+              imageURL={card?.data.image.url} 
+              slug={card?.data.slug}
+            />
+          </div>
+        ))
+      }
+
+    </div>
   </div>
 </BaseLayout>

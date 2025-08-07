@@ -15,8 +15,7 @@
   --secondary: #1f1f1f;
   --accent: #58ae15;
   --accent-dark: #4b9512;
-  --glow: rgba(88, 174, 21, 0.2);
-  --glow-dark: rgba(75 149 18, 0.2);
+  --accent-transparent: rgba(88, 174, 21, 0.9);
   --text-colour: white;
   --sub-text-colour: #8b8b8b;
   --sub-text-colour-2: #202020;
@@ -54,8 +53,7 @@ body {
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 20px;
-  line-height: 1.7;
+  line-height: 1.5;
 
   height: 100%;
 }
@@ -82,7 +80,6 @@ h4 {
 }
 
 h5 {
-	font-size: 20px;
   font-weight: 400;
   color: var(--text-colour);
 }
@@ -103,7 +100,7 @@ a:hover {
 p {
 	margin-bottom: 1em;
   font-family: Arial;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .prose p {
@@ -199,14 +196,6 @@ legend {
   height: 100%;
 }
 
-/* html[data-theme="light"] .mark-down-page {
-  padding: 3% 0%;
-}
-
-html[data-theme="dark"] .mark-down-page {
-  padding: 5% 0%;
-} */
-
 .text-colour {
   color: var(--text-colour) !important;
 }
@@ -221,8 +210,8 @@ html[data-theme="dark"] .mark-down-page {
 }
 
 .text-regular {
-  font-size: 1.3rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.3;
 }
 
 .text-large {
@@ -305,4 +294,95 @@ ul>li.no-bullet {
   font-family: ITC Avant Garde Gothic LT;
   font-weight: 400;
   font-size: 40px;
+}
+
+.card-anchor-wrapper {
+  all: unset;        
+  display: inline;  
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-anchor-wrapper:hover {
+  color: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-small {
+  gap: var(--margin-small)
+}
+
+.blog-card-tags {
+  padding: 2% 0;
+
+  display: flex;
+  gap: calc(var(--margin-small) / 2);
+}
+
+.blog-card-tag {
+  background-color: var(--accent-transparent);
+  border-radius: 30px;
+  padding: 5px 20px;
+  width: auto;
+}
+
+.divider {
+  padding-bottom: 5%;
+  border-bottom: 2px rgb(20, 20, 20) solid;
+  margin-bottom: var(--margin-medium);
+}
+
+::selection {
+  background: var(--accent-dark);
+  color: white;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5%;
+}
+
+.inputContainer label {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 32px;
+}
+
+.inputContainer input, textarea {
+    padding: 10px;
+
+    border: none;
+    border-bottom: 2px solid gray;
+    background: transparent;
+
+    color: white;
+    font-family: Arial;
+    font-size: 18px;
 }

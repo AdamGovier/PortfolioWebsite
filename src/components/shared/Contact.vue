@@ -87,13 +87,6 @@ export default {
 </script>
 
 <style>
-    #contact .inputContainer {
-        display: flex;
-        flex-direction: column;
-
-        margin-top: 5%;
-    }
-
     #contact form button {
         margin-top: 10%;
         padding: 3% 10%;
@@ -111,24 +104,8 @@ export default {
         border-bottom: 2px solid var(--link-hover-alt-colour);
     }
 
-    #contact .inputContainer label {
-        font-family: Arial;
-        font-style: normal;
-        font-weight: 200;
-        font-size: 32px;
-    }
-
     #contact .inputContainer input, textarea {
         width: 30vw;
-        padding: 10px;
-
-        border: none;
-        border-bottom: 2px solid gray;
-        background: transparent;
-
-        color: white;
-        font-family: Arial;
-        font-size: 18px;
     }
 
     input:-webkit-autofill,
