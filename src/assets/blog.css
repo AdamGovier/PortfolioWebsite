@@ -1,0 +1,43 @@
+
+.markdown-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: var(--margin-large);
+  
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+.markdown-page-sidebar {
+  
+}
+
+.markdown-page-content .title {
+  font-size: clamp(2.5rem, 6vw + 1rem, 3.5rem);
+}
+
+.markdown-page-content h1 { font-size: 2.5em; }
+.markdown-page-content h2 { font-size: 2em; }
+.markdown-page-content h3 { font-size: 1.75em; }
+.markdown-page-content h4 { font-size: 1.5em; }
+.markdown-page-content h5 { font-size: 1.25em; }
+
+.markdown-page-content p {
+  font-size: 1em;
+}
+
+.markdown-page-content h1,h2,h3,h4,h5 {
+  margin-block-start: 50px;
+}
+
+.markdown-page-content blockquote,
+.markdown-page-content blockquote p, em {
+  font-size: 1em;
+}
+
+.markdown-page-content-hero-image {
+  width: 100%; 
+  max-height: 45dvh; 
+  object-fit: cover;
+  object-position: 0 center;
+}

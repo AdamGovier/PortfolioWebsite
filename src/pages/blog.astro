@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogCard from "../components/blog/BlogCard.vue";
+
+import { getCollection, getEntry } from 'astro:content';
+import BlogPostList from "../components/blog/BlogPostList.vue";
+
+const allBlogPosts = await getCollection('blog', item => !item.data.draft);
+
+const topFeaturePost = allBlogPosts.find(post => post.data.pinned == 1);
+const secondaryFeaturePost = allBlogPosts.find(post => post.data.pinned == 2);
+const thirdFeaturePost = allBlogPosts.find(post => post.data.pinned == 3);
+---
+<BaseLayout title="Blog">
+  <h1 class="title">Articles</h1>
+  <div class="blog-featured-container spacer">
+    <div class="blog-featured-1">
+      <BlogCard title={topFeaturePost?.data.title} tags={topFeaturePost?.data.tags} date={topFeaturePost?.data.pubDate} author={topFeaturePost?.data.author} imageURL={topFeaturePost?.data.image.url} slug={topFeaturePost?.data.slug} />
+    </div>
+
+    <div class="blog-featured-subset">
+      <div>
+        <BlogCard title={secondaryFeaturePost?.data.title} tags={secondaryFeaturePost?.data.tags} date={secondaryFeaturePost?.data.pubDate} author={secondaryFeaturePost?.data.author} imageURL={secondaryFeaturePost?.data.image.url} slug={secondaryFeaturePost?.data.slug} />
+      </div>
+
+      <div>
+        <BlogCard title={thirdFeaturePost?.data.title} tags={thirdFeaturePost?.data.tags} date={thirdFeaturePost?.data.pubDate} author={thirdFeaturePost?.data.author} imageURL={thirdFeaturePost?.data.image.url} slug={thirdFeaturePost?.data.slug} />
+      </div>
+    </div>
+  </div>
+
+  <div class="spacer">
+    <BlogPostList posts={allBlogPosts.map(x => x.data)} client:idle />
+  </div>
+</BaseLayout>
+
+<style>
+.blog-featured-container {
+  height: 65dvh;
+  display: flex;
+  gap: var(--margin-medium);
+}
+
+.blog-featured-1 {
+  flex-grow: 3;
+}
+
+.blog-featured-subset {
+  flex-grow: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--margin-medium);
+}
+
+.blog-featured-subset > div {
+  flex-grow: 1;
+}
+</style>

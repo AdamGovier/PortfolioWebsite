@@ -81,7 +81,6 @@ const props = defineProps<{
   flex: 1;
 }
 
-
 .role-info {
   display: flex;
   flex-direction: column;

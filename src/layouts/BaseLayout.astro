@@ -17,12 +17,12 @@ const props = Astro.props;
     <script>
       import '../scripts/AstroHelpers.ts';
     </script>
-    <title>{props.title}</title>
+    <title>Govier | {props.title}</title>
   </head>
 
   <body>
     <div id="app">
-      <Navigation />
+      <Navigation client:idle />
       <!-- <div class="flex justify-end pt-4">
         <ToggleThemeButton client:idle />
       </div> -->
