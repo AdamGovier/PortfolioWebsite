@@ -1,7 +1,7 @@
 <template>
     <div id="minimisedNavPanel">
         <img id="closeBtn" :src="Cross.src" @click="$emit('close');" />
-        <img :src="MobileProfilePicture.src" class="portraitImg">
+        <h1 class="Logo">GO<br/>VIER</h1>
         <div style="display: flex; flex-direction: column;">
             <Links/>
         </div>
@@ -12,6 +12,10 @@
 </template>
 
 <style scoped>
+    .Logo {
+      font-size: 45px;
+    }
+
     #minimisedNavPanel {
         width: 100%;
         height: 100%;
@@ -49,7 +53,7 @@
 <script lang="ts" setup>
 import Links from "../common/Links.vue";
 import Socials from "../common/Socials.vue";
+import Logo from "../common/Logo.vue";
 
 import Cross from "../../../../assets/images/icons/Cross.png";
-import MobileProfilePicture from "../../../../assets/images/other/MobileProfilePhoto.jpg";
 </script>

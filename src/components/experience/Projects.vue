@@ -3,7 +3,7 @@
     <h2 class="title">Notable Projects</h2>
     <h5 class="text-small sub-text" style="margin-top: var(--margin-small);">A showcase of projects undertaken in academic and personal contexts.</h5>
 
-    <div class="projects-grid">
+    <div class="projects-grid spacer">
       <Project :thumbnail="GovierLogo" title="Portfolio." status="V1 2023 | V2 2025">
           <p class="text-black">
             Personal site, developed originally as a Vue standalone application. Recently in 2025 migrated to Astro + Vue for extended capabilities.
@@ -31,8 +31,6 @@
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: var(--margin-medium);
   justify-content: space-between;
-
-  margin-top: var(--margin-large);
 
   min-height: 60dvh;
 }

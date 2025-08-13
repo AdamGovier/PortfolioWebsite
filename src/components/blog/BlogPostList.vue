@@ -86,8 +86,14 @@ function toggleTagFilter(tag: string) {
   grid-row-gap: var(--margin-medium);
 }
 
+@media (max-width: 1400px) {
+  .blog-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .blog-list-item {
-  height: 50dvh;
+  height: 500px;
 }
 
 .tag-filter {

@@ -169,7 +169,7 @@ legend {
   font-family: "ITC Avant Garde Gothic Std";
 }
 
-@media (max-width: 720px) {
+@media (max-width: 850px) {
 	body {
 		font-size: 18px;
 	}
@@ -182,11 +182,27 @@ legend {
   }
 
   .big {
-    display: none;
+    display: none !important;
   }
 
   .small {
     display: block;
+  }
+
+  .spacer-xl {
+    margin-top: var(--margin-large);
+  }
+
+  .spacer {
+    margin-top: calc(var(--margin-large) / 2);
+  }
+
+  .spacer-medium {
+    margin-top: calc(var(--margin-medium) / 2);
+  }
+
+  .spacer-small {
+    margin-top: calc(var(--margin-small) / 2);
   }
 }
 
@@ -330,6 +346,10 @@ ul>li.no-bullet {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .gap-small {

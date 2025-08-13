@@ -1,13 +1,13 @@
 <template>
     <div class="microNav">
-        <div class="menuIcon" @click="showNaviagtion = true">
-            <img src="../../../assets/images/icons/Cross.png" />
+        <div class="menuIcon" @click="showNavigation = true">
+            <img :src="Icon.src.toString()" />
         </div>
         <Logo/>
     </div>
 
     <Transition name="fade">
-        <Naviagtion v-if="showNaviagtion" @close="showNaviagtion = false;" />
+        <Naviagtion v-if="showNavigation" @close="showNavigation = false;" />
     </Transition>
 </template>
 
@@ -44,26 +44,21 @@
     } 
 </style>
 
-<script>
+<script lang="ts" setup>
 import Naviagtion from "./minimised/Naviagtion.vue";
 import Logo from "./common/Logo.vue";
+import { watch } from 'vue';
+import { useRoute } from 'vue-router';
+import { ref } from 'vue';
+import Icon from "../../../assets/images/icons/Cross.png";
 
-export default {
-    components: {
-        Naviagtion,
-        Logo
-    },
-    data() {
-        return {
-            showNaviagtion: false
-        }
-    },
-    watch:{
-        $route (to, from){
-            this.showNaviagtion = false;
-            // Hide URL incase of refresh until project is moved to a spa friendly host.
-            history.pushState({}, null, "/");
-        }
-    } 
-}
+const showNavigation = ref(false);
+
+const route = useRoute();
+watch(
+  () => route?.fullPath ?? "",
+  () => {
+    showNavigation.value = false;
+  }
+);
 </script>

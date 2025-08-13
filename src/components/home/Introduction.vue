@@ -1,9 +1,10 @@
 <template>
+    <div :style="`background-image: url('${ProfilePhoto.src.toString()}')`" class="pfp small" />
     <section id="starterContent">
         <div id="introduction"> 
             <span class="text-regular font-heading">Hello!</span>
             <h1 id="profile" class="spacer-small">
-                My name is <span id="profileName">Adam</span>,<br/>
+                My name is <span id="profileName">Adam</span>,<br />
                 I’m a 
                 <span id="profileRole">
                     Software Dev<span id="profileLongWordForm">eloper</span>
@@ -21,7 +22,18 @@
     </section>
 </template>
 
+<script lang="ts" setup>
+import ProfilePhoto from "../../assets/images/other/ProfilePhoto.jpg";
+</script>
+
 <style>
+    .pfp {
+      height: 30dvh;
+      background-size: cover;
+      background-position: top center;
+      border-radius: 0 25px;
+    }
+
     #starterContent {
         display: flex;
         justify-content: space-between;
@@ -50,7 +62,7 @@
 
     #profileRole {
         font-weight: bold;
-        color: var(--accent);
+        color: var(--accent) !important;
     }
 
     #profileLocation {
@@ -141,16 +153,17 @@
 
     @media only screen and (max-width: 850px) {
         #starterContent {
-            align-items: flex-start;
-            height: 40vh;
-            margin-top: 18.5vh;
+          height: 40vh;
+          margin-top: 5vh;
+          justify-content: center;
+          gap: 0;
         }
 
         #introduction > h1 {
             font-family: Arial;
             font-weight: lighter;
             margin-bottom: 18px;
-            text-align: center;
+            font-size: 38px;
         }
 
         #profilePortfolioAdvertisment {
@@ -158,7 +171,6 @@
         }
 
         #profile {
-            text-align: center;
             width: auto;
             line-height: 129.52%;
         }
