@@ -1,11 +1,11 @@
 <template>
     <a href="/">
-        <h1 id="Logo">GO<br/>VIER</h1>
+        <h1 class="Logo">GO<br/>VIER</h1>
     </a>
 </template>
 
-<style scoped>
-    #Logo {
+<style>
+    .Logo {
         text-align: center;
         font-family: "ITC Avant Garde Gothic Std";
         color: var(--accent);
@@ -13,7 +13,7 @@
     }
 
     @media (max-width: 850px) {
-        #Logo {
+        .Logo {
             background-color: black;
             height: 80px;
             width: 80px;

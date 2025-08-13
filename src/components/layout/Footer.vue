@@ -1,7 +1,7 @@
 <template>
     <footer>
         <h1>ADAM GOVIER</h1>
-        <a href="mailto:adam@adamgovier.co.uk">adam@adamgovier.co.uk</a>
+        <a style="text-wrap: nowrap;" href="mailto:adam@adamgovier.co.uk">adam@adamgovier.co.uk</a>
         <div class="socials">
             <Socials />
         </div>
@@ -10,16 +10,16 @@
 
 <style>
     footer {
-        width: 100%;
-        margin-top: 10vh;
+      width: 100%;
+      margin-top: 10vh;
 
-        height: 25vh;
-        background-color: rgba(255,255,255, 0.95); /* Slight tint makes it easier on eyes */
-        color: black;
+      height: 25vh;
+      background-color: rgba(255,255,255, 0.95); /* Slight tint makes it easier on eyes */
+      color: black;
 
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
 
     footer > a {

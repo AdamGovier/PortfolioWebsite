@@ -7,6 +7,20 @@
       <img :src="image?.src?.toString()" />
       <h1>{{ title }}</h1>
     </div>
+    <div class="d-flex justify-center align-center gap-small">
+      <Star
+        v-for="n in nGoldStars"
+        type="Gold"
+      />
+      
+      <Star
+        v-for="n in nOtherStars"
+        type="Other"
+      />
+      <span v-if="needsRefresher">
+        <i class="fa-solid fa-hourglass-end" style="color: var(--accent);"></i>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -67,10 +81,14 @@
 
 <script lang="ts" setup>
 import { type ImageMetaData } from '../../models/Helpers';
+import Star from "../shared/Star.vue";
 
 const props = defineProps<{
-  type: "Language" | "Markup" | "Styling" | "Servers" | "Database" | "Mobile Apps" | "Framework" | "UI Design" | "Cloud" | "Debugging" | "Source Control",
+  type: "Language" | "Markup" | "Backend Runtime" | "Styling" | "Servers" | "Database" | "Mobile Apps" | "Framework" | "UI Design" | "Cloud" | "Debugging" | "Source Control",
   image?: ImageMetaData,
-  title: string
+  title: string,
+  nGoldStars?: number,
+  nOtherStars?: number,
+  needsRefresher?: boolean
 }>();
 </script>

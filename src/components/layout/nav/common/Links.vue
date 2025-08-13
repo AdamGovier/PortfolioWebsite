@@ -53,9 +53,5 @@ a.active {
     margin-top: 0;
     text-underline-offset: 18px;
   }
-
-  a:nth-of-type(2) {
-    margin-top: 30px;
-  }
 }
 </style>
