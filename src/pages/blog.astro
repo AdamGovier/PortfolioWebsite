@@ -13,13 +13,20 @@ const thirdFeaturePost = allBlogPosts.find(post => post.data.pinned == 3);
 ---
 <BaseLayout title="Blog">
   <h1 class="title">Articles</h1>
-  <div class="blog-featured-container spacer">
+
+  <p class="sub-text spacer">Featured Articles</p>
+  <div class="blog-featured-container">
+    <div class="leading-article article-item">
+      <BlogCard title={topFeaturePost?.data.title} tags={topFeaturePost?.data.tags} date={topFeaturePost?.data.pubDate} author={topFeaturePost?.data.author} imageURL={topFeaturePost?.data.image.url} slug={topFeaturePost?.data.slug} />
+    </div>
+  </div>
+  <!-- <div class="blog-featured-container spacer">
     <div class="blog-featured-1">
       <BlogCard title={topFeaturePost?.data.title} tags={topFeaturePost?.data.tags} date={topFeaturePost?.data.pubDate} author={topFeaturePost?.data.author} imageURL={topFeaturePost?.data.image.url} slug={topFeaturePost?.data.slug} />
     </div>
 
     <div class="blog-featured-subset">
-      <div>
+      <div style="height: 1009px;">
         <BlogCard title={secondaryFeaturePost?.data.title} tags={secondaryFeaturePost?.data.tags} date={secondaryFeaturePost?.data.pubDate} author={secondaryFeaturePost?.data.author} imageURL={secondaryFeaturePost?.data.image.url} slug={secondaryFeaturePost?.data.slug} />
       </div>
 
@@ -31,23 +38,31 @@ const thirdFeaturePost = allBlogPosts.find(post => post.data.pinned == 3);
 
   <div class="spacer">
     <BlogPostList posts={allBlogPosts.map(x => x.data)} client:idle />
-  </div>
+  </div> -->
 </BaseLayout>
 
 <style>
-.blog-featured-container {
-  height: 55dvh;
-  display: flex;
-  gap: var(--margin-medium);
+.article-item {
+  height: 40vh;
 }
 
-.blog-featured-1 {
-  flex-grow: 3;
+/* .blog-featured-container {
+  height: 75dvh;
+  max-height: 750px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 5fr 4fr;
+  column-gap: var(--margin-medium);
+}
+
+@media (max-width: 850px) {
+  .blog-featured-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .blog-featured-subset {
-  flex-grow: 2;
-
   display: flex;
   flex-direction: column;
 
@@ -56,5 +71,5 @@ const thirdFeaturePost = allBlogPosts.find(post => post.data.pinned == 3);
 
 .blog-featured-subset > div {
   flex-grow: 1;
-}
+} */
 </style>

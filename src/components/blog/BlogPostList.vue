@@ -1,5 +1,5 @@
 <template>
-  <div class="spacer d-flex justify-between align-center">
+  <div class="spacer d-flex justify-between align-center big">
     <div class="blog-card-tags">
       <div :class="['blog-card-tag', 'tag-filter', selectedTags.includes(tag) ? 'tag-filter-active' : '']" v-for="tag in tags" @click.native="toggleTagFilter(tag)">
         <span class="text-small">#{{tag}}</span>
@@ -93,7 +93,7 @@ function toggleTagFilter(tag: string) {
 }
 
 .blog-list-item {
-  height: 500px;
+  min-height: 600px;
 }
 
 .tag-filter {

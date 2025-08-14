@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
 @font-face {
     font-family: "ITC Avant Garde Gothic Std";
     src: url('./fonts/itcavantgardestd-md.otf');
@@ -169,6 +171,12 @@ legend {
   font-family: "ITC Avant Garde Gothic Std";
 }
 
+#app {
+  padding: 3% 6.5%;
+
+  height: 100%;
+}
+
 @media (max-width: 850px) {
 	body {
 		font-size: 18px;
@@ -179,6 +187,12 @@ legend {
 
   p {
     font-size: 18px;
+  }
+
+  #app {
+    padding: 3% 1%;
+
+    height: 100%;
   }
 
   .big {
@@ -206,11 +220,7 @@ legend {
   }
 }
 
-#app {
-  padding: 3% 6.5%;
 
-  height: 100%;
-}
 
 .text-colour {
   color: var(--text-colour) !important;

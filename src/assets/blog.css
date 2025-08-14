@@ -8,8 +8,13 @@
   line-height: 1.6;
 }
 
-.markdown-page-sidebar {
-  
+.markdown-page-hero-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .markdown-page-content .title {
@@ -40,4 +45,10 @@
   max-height: 45dvh; 
   object-fit: cover;
   object-position: 0 center;
+}
+
+@media (max-width: 850px) {
+  .markdown-page {
+    display: flex;
+  }
 }
