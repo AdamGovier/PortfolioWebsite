@@ -1,41 +1,57 @@
 <template>
     <div id="skills">
         <div class="blurb">
-            <h2>Skills</h2>
-            <p class="big" style="margin-top: 5px;">Technical Abilities</p>
-
-            <h5 class="text-small spacer-medium">
-              Ratings
-            </h5>
-
-            <p class="spacer-small text-small">
-              <strong>Gold stars</strong> – represent professional experience level:
-
-              <SkillStarExplanationItem :nStars="1" explanation="Light Usage" />
-              <SkillStarExplanationItem :nStars="2" explanation="Junior Level" />
-              <SkillStarExplanationItem :nStars="3" explanation="Mid Level" />
-            </p>
-
-            <p class="text-small spacer-medium">
-              <strong>Purple stars</strong> - represent the level of knowledge obtained within personal or university contexts:
-
-              <SkillStarExplanationItem :nStars="1" type="Other" explanation="Light Knowledge" />
-              <SkillStarExplanationItem :nStars="2" type="Other" explanation="Medium Knowledge" />
-              <SkillStarExplanationItem :nStars="3" type="Other" explanation="Strong Knowledge" />
-            </p>
-
-            <p class="text-small">
-              No purple stars are included if I have professional experience with that technology.
-            </p>
-
-            <p class="text-small spacer-medium">
-              <strong>Other</strong>
+            <h2>Skills Console</h2>
+            
+            <div class="console-terminal spacer-small">
+              <header>
+                <span><i class="fa-solid fa-terminal"></i> Terminal</span> 
+                <span>
+                  <i class="fa-solid fa-minus" style="margin-right: 15px;"></i>
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+              </header>
 
               <p class="text-small spacer-small">
-                <i class="fa-solid fa-hourglass-end" style="color: var(--accent);"></i> - Knowledge Requires Refresher
+                OS [Version 0.0.0.1]<br/>
+                (c) OS Company. All rights reserved.
               </p>
-            </p>
-
+              <p class="text-small" style="margin-top: 5px;">C:\Users\agovier&gt;help skills</p>
+  
+              <h5 class="text-small spacer-medium">
+                Ratings
+              </h5>
+  
+              <p class="spacer-small text-small">
+                <strong>Gold stars</strong> – represent professional experience level:
+  
+                <SkillStarExplanationItem :nStars="1" explanation="Light Usage" />
+                <SkillStarExplanationItem :nStars="2" explanation="Junior Level" />
+                <SkillStarExplanationItem :nStars="3" explanation="Mid Level" />
+              </p>
+  
+              <p class="text-small spacer-medium">
+                <strong>Purple stars</strong> - represent the level of knowledge obtained within personal or university contexts:
+  
+                <SkillStarExplanationItem :nStars="1" type="Other" explanation="Light Knowledge" />
+                <SkillStarExplanationItem :nStars="2" type="Other" explanation="Medium Knowledge" />
+                <SkillStarExplanationItem :nStars="3" type="Other" explanation="Strong Knowledge" />
+              </p>
+  
+              <p class="text-small">
+                No purple stars are included if I have professional experience with that technology.
+              </p>
+  
+              <p class="text-small spacer-medium">
+                <strong>Other</strong>
+  
+                <p class="text-small spacer-small">
+                  <i class="fa-solid fa-hourglass-end" style="color: var(--accent);"></i> - Knowledge Requires Refresher
+                </p>
+              </p>
+  
+              <p class="text-small spacer-medium">C:\Users\agovier&gt;skills list</p>
+            </div>
         </div>
 
         <div id="skillsHolder">
@@ -95,6 +111,8 @@ import ReactIcon from "../../assets/images/skills/React.webp";
 
     #skills .blurb {
       padding-right: 5%;
+
+      font-family: "Inconsolata", monospace;
     }
 
     #skills {
@@ -109,6 +127,21 @@ import ReactIcon from "../../assets/images/skills/React.webp";
         transition: all 1s ease-out;
     }
 
+    .console-terminal {
+      background-color: black;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1%;
+      width: 75%;
+    }
+
+    .console-terminal > header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 1%;
+      padding-right: 2%;
+    }
+
     @media screen and (max-width: 1300px) {
         #skillsHolder {
             grid-template-columns: repeat(4, 1fr);
@@ -118,6 +151,10 @@ import ReactIcon from "../../assets/images/skills/React.webp";
 
 
     @media screen and (max-width: 850px) {
+        .console-terminal {
+          width: 100%;
+        }
+
         #skills {
             display: flex;
             flex-direction: column;
@@ -129,6 +166,7 @@ import ReactIcon from "../../assets/images/skills/React.webp";
         #skills .blurb {
             text-align: left;
             margin-top: 25%;
+            padding-right: 0;
         }
 
         #skillsHolder {

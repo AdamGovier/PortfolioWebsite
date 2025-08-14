@@ -1,18 +1,19 @@
 <template>
   <a class="card-anchor-wrapper" :href="uri">
     <div class="blog-card" :style="`background-image: url('${imageURL}');`">
-      <div class="blog-card-tags-container">
+      <div class="blog-card-tags-container big">
         <div class="blog-card-tags">
           <div class="blog-card-tag" v-for="tag in tags">
             <span class="text-small">#{{tag}}</span>
           </div>
         </div>
       </div>
-    
-      <div class="blog-card-content">
-        <h1 class="text-large">{{title}}</h1>
-        <span class="sub-text">{{dateParsed}} | {{author}}</span>
-      </div>
+
+    </div>
+
+    <div class="blog-card-content">
+      <h1 class="text-large">{{title}}</h1>
+      <span class="sub-text">{{dateParsed}} | {{author}}</span>
     </div>
   </a>
 </template>
@@ -32,7 +33,6 @@
 
     transition: all 0.1s linear;
 
-    border-bottom: 5px rgba(0, 0, 0, 0.95) solid;
   }
 
   .blog-card-content {
@@ -40,10 +40,13 @@
     padding: var(--margin-small) 20px;
   }
 
-  .blog-card:hover {
+  .card-anchor-wrapper {
+    border-bottom: 5px rgba(0, 0, 0, 0.95) solid;
+  }
+  .card-anchor-wrapper:hover {
     border-bottom: 5px var(--accent) solid;
   }
-
+  
   .blog-card-tags-container {
     margin-left: var(--margin-small);
   }
