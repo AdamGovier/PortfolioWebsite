@@ -8,7 +8,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="blog-card-content">
@@ -20,7 +19,8 @@
 
 <style>
   .blog-card {
-    height: 100%;
+    min-height: 18.5vh;
+    flex-grow: 1;
     width: 100%;
 
     background-size: cover;
@@ -41,6 +41,9 @@
   }
 
   .card-anchor-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     border-bottom: 5px rgba(0, 0, 0, 0.95) solid;
   }
   .card-anchor-wrapper:hover {

@@ -104,9 +104,9 @@ import ReactIcon from "../../assets/images/skills/React.webp";
 
 <style>
     #skillsHolder {
-        display: grid;
-        gap: var(--margin-large);
-        grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      gap: var(--margin-large);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     #skills .blurb {
