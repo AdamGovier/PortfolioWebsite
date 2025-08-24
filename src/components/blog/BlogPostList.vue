@@ -1,6 +1,6 @@
 <template>
-  <div class="spacer d-flex justify-between align-center big">
-    <div class="blog-card-tags">
+  <div class="d-flex justify-between align-center">
+    <div class="blog-card-tags big">
       <div :class="['blog-card-tag', 'tag-filter', selectedTags.includes(tag) ? 'tag-filter-active' : '']" v-for="tag in tags" @click.native="toggleTagFilter(tag)">
         <span class="text-small">#{{tag}}</span>
       </div>
@@ -89,6 +89,12 @@ function toggleTagFilter(tag: string) {
 @media (max-width: 1400px) {
   .blog-list-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .blog-list-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

@@ -12,40 +12,51 @@ const secondaryFeaturePost = allBlogPosts.find(post => post.data.pinned == 2);
 const thirdFeaturePost = allBlogPosts.find(post => post.data.pinned == 3);
 ---
 <BaseLayout title="Blog">
-  <h1 class="title">Articles</h1>
-
   <p class="sub-text spacer">Featured Articles</p>
   <div class="blog-featured-container">
     <div class="leading-article article-item">
       <BlogCard title={topFeaturePost?.data.title} tags={topFeaturePost?.data.tags} date={topFeaturePost?.data.pubDate} author={topFeaturePost?.data.author} imageURL={topFeaturePost?.data.image.url} slug={topFeaturePost?.data.slug} />
     </div>
-  </div>
-  <!-- <div class="blog-featured-container spacer">
-    <div class="blog-featured-1">
-      <BlogCard title={topFeaturePost?.data.title} tags={topFeaturePost?.data.tags} date={topFeaturePost?.data.pubDate} author={topFeaturePost?.data.author} imageURL={topFeaturePost?.data.image.url} slug={topFeaturePost?.data.slug} />
-    </div>
 
     <div class="blog-featured-subset">
-      <div style="height: 1009px;">
+      <div class="article-item">
         <BlogCard title={secondaryFeaturePost?.data.title} tags={secondaryFeaturePost?.data.tags} date={secondaryFeaturePost?.data.pubDate} author={secondaryFeaturePost?.data.author} imageURL={secondaryFeaturePost?.data.image.url} slug={secondaryFeaturePost?.data.slug} />
       </div>
 
-      <div>
+      <div class="article-item">
         <BlogCard title={thirdFeaturePost?.data.title} tags={thirdFeaturePost?.data.tags} date={thirdFeaturePost?.data.pubDate} author={thirdFeaturePost?.data.author} imageURL={thirdFeaturePost?.data.image.url} slug={thirdFeaturePost?.data.slug} />
       </div>
     </div>
   </div>
 
-  <div class="spacer">
+  <p class="sub-text spacer">All Articles</p>
+  <div>
     <BlogPostList posts={allBlogPosts.map(x => x.data)} client:idle />
-  </div> -->
+  </div>
 </BaseLayout>
 
 <style>
 .article-item {
-  height: 40vh;
+  height: auto;
 }
 
+.blog-featured-container {
+  display: flex;
+  gap: var(--margin-medium);
+}
+
+.blog-featured-subset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--margin-medium);
+}
+
+@media (max-width: 850px) {
+  .blog-featured-container {
+    flex-direction: column;
+  }
+}
 /* .blog-featured-container {
   height: 75dvh;
   max-height: 750px;
