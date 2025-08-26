@@ -11,4 +11,11 @@ export interface BlogPostMetadata {
   relativePath: string | undefined;
   draft: boolean | undefined;
   pinned: number | undefined;
+  attachments?: Attachment[];
+}
+
+export interface Attachment {
+  href: string;
+  contentType: "application/pdf" | "audio/mpeg";
+  displayName: string;
 }

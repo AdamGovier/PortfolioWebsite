@@ -21,6 +21,6 @@ const post = (await loadAndFormatCollection('blog', (item) => item.data.relative
 const { Content } = await render(post);
 ---
 
-<MarkdownLayout title={post.data.title} image={post.data.image} date={post.data.pubDate} author={post.data.author} slug={post.data.slug} tags={post.data.tags}>
+<MarkdownLayout title={post.data.title} image={post.data.image} date={post.data.pubDate} author={post.data.author} slug={post.data.slug} tags={post.data.tags} attachments={post.data.attachments}>
   <Content />
 </MarkdownLayout>

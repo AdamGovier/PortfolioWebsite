@@ -19,7 +19,16 @@ const blog = defineCollection({
     tags: z.array(z.string()).optional(),
     relativePath: z.string().optional(),
     draft: z.boolean().optional().default(false),
-    pinned: z.number().min(1).max(3).optional()
+    pinned: z.number().min(1).max(3).optional(),
+    attachments: 
+      z.array(
+        z.object({
+          href: z.string(),
+          contentType: z.string(),
+          displayName: z.string(),
+        })
+      )
+      .optional(),
   }) as z.ZodType<BlogPostMetadata>,
 });
 
