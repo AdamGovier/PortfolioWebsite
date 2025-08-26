@@ -7,6 +7,13 @@ image:
     url: '/images/blog/2025/Crimson-Overview/cover.webp'
     alt: 'Crimson logo cover photo'
 tags: ["Education", "Technical"]
+attachments: [
+  {
+    href: "https://cdn.adamgovier.co.uk/blog/2025/crimson/2006291%20Adam%20Govier%20Crimson%20Final.pdf",
+    contentType: "application/pdf",
+    displayName: "Crimson: Bridging Rapid Application Development and Traditional Development Environments (paper)"
+  }
+]
 ---
 
 # The Question

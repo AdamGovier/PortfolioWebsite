@@ -5,8 +5,10 @@ import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
 import "../assets/blog.css";
 import BlogCard from "../components/blog/BlogCard.vue";
 import { getCollection } from "astro:content";
+import type { Attachment } from "../types/collection";
+import Attachments from "../components/shared/Attachments.vue";
 
-const { title, author, date, image, slug, tags } = Astro.props;
+const { title, author, date, image, slug, tags, attachments } = Astro.props;
 
 const dateParsed = new Date(date).toLocaleDateString('en-GB', {
   month: 'short',
@@ -49,17 +51,23 @@ const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
         <div class="spacer-medium"></div>
         <div class="spacer"></div>
         <slot />
+
         <div class="spacer-xl d-flex align-center gap-small text-large divider small">
-          <strong>Share on: </strong>
+          <strong>Share Post: </strong>
 
           <a href={linkedInLink}><i class="fa-brands fa-linkedin-in"></i></a>
           <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
           <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
         </div>
+
+        {
+          attachments &&
+          <div class="small spacer">
+            <Attachments attachments={attachments} />
+          </div>
+        }
       </div>
     </div>
-
-
 
     <div class="markdown-page-sidebar big">
       <div>
@@ -75,6 +83,8 @@ const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
         <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
         <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
       </div>
+
+      <Attachments attachments={attachments} />
 
       {relatedPosts.length != 0 && (
         <div class="spacer-small">
