@@ -23,6 +23,7 @@
   --sub-text-colour-2: #202020;
 
   /* Margin */
+  --margin-extra-small: 20px;
   --margin-small: 20px;
   --margin-medium: 30px;
   --margin-large: 60px;

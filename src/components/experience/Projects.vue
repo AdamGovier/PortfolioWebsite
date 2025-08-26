@@ -4,19 +4,19 @@
     <h5 class="text-small sub-text" style="margin-top: var(--margin-small);">A showcase of projects undertaken in academic and personal contexts.</h5>
 
     <div class="projects-grid spacer">
-      <Project :thumbnail="GovierLogo" title="Portfolio." status="V1 2023 | V2 2025">
+      <Project href="/blog/2025/portfolio-v2-launch" :thumbnail="GovierLogo" title="Portfolio." status="V1 2023 | V2 2025">
           <p class="text-black">
             Personal site, developed originally as a Vue standalone application. Recently in 2025 migrated to Astro + Vue for extended capabilities.
           </p>
       </Project>
 
-      <Project :thumbnail="CrimsonLogo" title="Crimson." status="2025 | Awarded A Grade">
+      <Project href="/blog/2025/Crimson-Overview" :thumbnail="CrimsonLogo" title="Crimson." status="2025 | Awarded A Grade">
           <p class="text-black">
             Crimson is a research project exploring a bespoke prototype full-stack framework that automates backend code generation from front-end components, aiming to simplify and streamline web application development.
           </p>
       </Project>
 
-      <Project :thumbnail="BolusCalcLogo" title="Bolus Calc." status="2018 - 2023 | Retired / Legacy">
+      <Project href="/blog/2025/Bolus-Calc-Overview" :thumbnail="BolusCalcLogo" title="Bolus Calc." status="2018 - 2023 | Retired / Legacy">
           <p class="text-black">
             A mobile application that aimed to help better manage my diabetes control. Bolus Calculator is featureful but requires serious and stringent testing to be realeased to the general public as a medical application. 
           </p>

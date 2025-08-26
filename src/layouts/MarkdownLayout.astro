@@ -31,31 +31,35 @@ const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
 
 <BaseLayout title={title}>
   <div class="markdown-page">
-    <div class="markdown-page-content">
+    <div class="markdown-full-content">
       <div class="markdown-page-hero-image" style={`background-image: url('${image.url}')`} />
-      <div class="blog-card-tags">
-        {tags && tags.map((tag: string) => (
-          <div class="blog-card-tag">
-            <span class="text-small">#{tag}</span>
-          </div>
-        ))}
-      </div>
-      <h1 class="title" style="margin-top: var(--margin-small);">{title}</h1>
-      <p class="sub-text">{author ?? "Adam Govier"} | {dateParsed}</p>
-      <a href="/blog" class="text-small small">
-        <i class="fa-solid fa-arrow-left"></i> Back to blog
-      </a>
-      <div class="spacer-medium"></div>
-      <div class="spacer"></div>
-      <slot />
-      <div class="spacer-xl d-flex align-center gap-small text-large divider small">
-        <strong>Share on: </strong>
+      <div class="markdown-page-content">
+        <div class="blog-card-tags">
+          {tags && tags.map((tag: string) => (
+            <div class="blog-card-tag">
+              <span class="text-small">#{tag}</span>
+            </div>
+          ))}
+        </div>
+        <h1 class="title" style="margin-top: var(--margin-small);">{title}</h1>
+        <p class="sub-text">{author ?? "Adam Govier"} | {dateParsed}</p>
+        <a href="/blog" class="text-small small">
+          <i class="fa-solid fa-arrow-left"></i> Back to blog
+        </a>
+        <div class="spacer-medium"></div>
+        <div class="spacer"></div>
+        <slot />
+        <div class="spacer-xl d-flex align-center gap-small text-large divider small">
+          <strong>Share on: </strong>
 
-        <a href={linkedInLink}><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
+          <a href={linkedInLink}><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
       </div>
     </div>
+
+
 
     <div class="markdown-page-sidebar big">
       <div>
