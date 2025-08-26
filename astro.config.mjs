@@ -2,10 +2,12 @@ import { defineConfig } from "astro/config";
 import vue from "@astrojs/vue";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), tailwindcss(), mdx()],
+  site: "https://adamgovier.co.uk",
+  integrations: [vue(), tailwindcss(), mdx(), sitemap()],
   markdown: {
     shikiConfig: {
       theme: "monokai"

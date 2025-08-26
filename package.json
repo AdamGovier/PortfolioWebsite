@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.4",
+    "@astrojs/sitemap": "^3.5.1",
     "@astrojs/vue": "^5.1.0",
     "@tailwindcss/vite": "^4.1.11",
     "@types/fuzzy-search": "^2.1.5",
