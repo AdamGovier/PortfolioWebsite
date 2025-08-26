@@ -1,20 +1,22 @@
 <template>
-  <div class="card">
-      <div class="card-hover-view" v-if="$slots.hover">
-        <slot name="hover"></slot>
-      </div>
-
-      <div class="card-thumbnail" :style="`background-image: url('${thumbnail.src.toString()}');`">
-
-      </div>
-
-      <div class="card-body">
-        <h3 class="title" style="color: black;">
-          {{ title }}
-        </h3>
-        <slot name="body"></slot>
-      </div>
-  </div>
+  <a :href="href">
+    <div class="card">
+        <div class="card-hover-view" v-if="$slots.hover">
+          <slot name="hover"></slot>
+        </div>
+  
+        <div class="card-thumbnail" :style="`background-image: url('${thumbnail.src.toString()}');`">
+  
+        </div>
+  
+        <div class="card-body">
+          <h3 class="title" style="color: black;">
+            {{ title }}
+          </h3>
+          <slot name="body"></slot>
+        </div>
+    </div>
+  </a>
 </template>
 
 
@@ -23,7 +25,8 @@ import { type ImageMetaData } from '../../models/Helpers';
 
 const props = defineProps<{
   thumbnail: ImageMetaData,
-  title: string
+  title: string,
+  href?: string
 }>();
 
 </script>

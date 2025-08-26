@@ -1,5 +1,5 @@
 <template>
-  <Card :thumbnail="thumbnail" :title="title">
+  <Card :thumbnail="thumbnail" :title="title" :href="href">
     <template #body>
       <div class="card-project-body">
         <slot></slot>
@@ -23,7 +23,8 @@ import Card from "../shared/Card.vue";
 const props = defineProps<{
   thumbnail: ImageMetaData,
   title: string,
-  status: string
+  status: string,
+  href?: string
 }>();
 </script>
 

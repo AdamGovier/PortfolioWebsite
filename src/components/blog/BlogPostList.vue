@@ -83,7 +83,7 @@ function toggleTagFilter(tag: string) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: var(--margin-medium);
-  grid-row-gap: var(--margin-medium);
+  grid-row-gap: var(--margin-large);
 }
 
 @media (max-width: 1400px) {
