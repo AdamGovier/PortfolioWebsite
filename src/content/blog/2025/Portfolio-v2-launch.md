@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
-title: "Portfolio Rebrand, What's new?"
+title: "Portfolio rebrand, what's new?"
 pubDate: 2025-08-24
 slug: portfolio-v2-launch
 image:
