@@ -23,7 +23,7 @@
     I’ve also pursued self-directed research. One educational project, 
     <a href="/blog/2025/crimson">Crimson</a>, explored whether generating backends from frontend components 
     could improve developer efficiency.  On the personal side, 
-    as a type 1 diabetic I built a feature-rich application called <a href="/blog/2025/boluscalc">Bolus Calculator</a> to help manage insulin dosage with 
+    as a type 1 diabetic I built a feature-rich application called <a href="/blog/2026/Bolus-Calc-Overview">Bolus Calculator</a> to help manage insulin dosage with
     carbohydrate tracking via Open Food Facts and a bespoke secondary API. 
     While the app was ultimately retired due to concerns around lack of testing and ageing infrastructure, 
     it remains one of my most meaningful exercises in balancing technical execution with personal impact.

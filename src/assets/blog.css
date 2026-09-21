@@ -152,6 +152,29 @@
   margin: 0 auto;
 }
 
+.bolus-feature-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--margin-small);
+  margin: var(--margin-large) 0;
+}
+
+.bolus-feature-gallery figure {
+  margin: 0;
+}
+
+.bolus-feature-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bolus-feature-gallery figcaption {
+  margin-top: var(--margin-extra-small);
+  text-align: center;
+  color: #aaa;
+}
+
 .markdown-page-content em {
   margin-top: var(--margin-extra-small);
   display: block;
@@ -180,4 +203,3 @@
     padding-left: 0;
   }
 }
-
