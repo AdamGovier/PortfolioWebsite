@@ -4,9 +4,9 @@
     <h5 class="text-small sub-text" style="margin-top: var(--margin-small);">A showcase of projects undertaken in academic and personal contexts.</h5>
 
     <div class="projects-grid spacer">
-      <Project href="/blog/2025/portfolio-v2-launch" :thumbnail="GovierLogo" title="Portfolio." status="V1 2023 | V2 2025">
+      <Project href="/blog/2025/portfolio-v2-launch" :thumbnail="GovierLogo" title="Portfolio." status="2023 – Present">
           <p class="text-black">
-            Personal site, developed originally as a Vue standalone application. Recently in 2025 migrated to Astro + Vue for extended capabilities.
+            Personal website, originally developed as a standalone Vue application in 2023. Gradually migrated to Astro + Vue throughout 2025 and 2026 to extend functionality.
           </p>
       </Project>
 
