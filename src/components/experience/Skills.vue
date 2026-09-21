@@ -4,19 +4,12 @@
             <h2>Skills Console</h2>
             
             <div class="console-terminal spacer-small">
-              <header>
-                <span><i class="fa-solid fa-terminal"></i> Terminal</span> 
-                <span>
-                  <i class="fa-solid fa-minus" style="margin-right: 15px;"></i>
-                  <i class="fa-solid fa-xmark"></i>
-                </span>
+              <header class="terminal-titlebar">
+                <span><i class="fa-solid fa-terminal" aria-hidden="true"></i> agovier@os: ~</span>
               </header>
 
-              <p class="text-small spacer-small">
-                OS [Version 0.0.0.1]<br/>
-                (c) OS Company. All rights reserved.
-              </p>
-              <p class="text-small" style="margin-top: 5px;">C:\Users\agovier&gt;help skills</p>
+              <div class="px-4 pt-4 pb-2">
+              <p class="text-small terminal-command"><span class="terminal-prompt">[agovier@os ~]</span>$ skills --help</p>
   
               <h5 class="text-small spacer-medium">
                 Ratings
@@ -26,8 +19,8 @@
                 <strong>Gold stars</strong> – represent professional experience level:
   
                 <SkillStarExplanationItem :nStars="1" explanation="Light Usage" />
-                <SkillStarExplanationItem :nStars="2" explanation="Junior Level" />
-                <SkillStarExplanationItem :nStars="3" explanation="Mid Level" />
+                <SkillStarExplanationItem :nStars="2" explanation="Intermediate Usage" />
+                <SkillStarExplanationItem :nStars="3" explanation="In-depth Usage" />
               </p>
   
               <p class="text-small spacer-medium">
@@ -50,7 +43,8 @@
                 </p>
               </p>
   
-              <p class="text-small spacer-medium">C:\Users\agovier&gt;skills list</p>
+              <p class="text-small spacer-medium terminal-command"><span class="terminal-prompt">[agovier@os ~]</span>$ skills list<span class="terminal-cursor" aria-hidden="true"></span></p>
+              </div>
             </div>
         </div>
 
@@ -71,8 +65,8 @@
           <Skill title="HTML" type="Markup" :image="HtmlIcon" />
           <Skill title="CSS" type="Styling" :image="CssIcon"   />
           <Skill title="Git" type="Source Control" :image="GitIcon" />
-          <Skill title="Java" type="Language" :image="JavaIcon" :nOtherStars="3" :needsRefresher="true" />
-          <Skill title="MongoDB" type="Database" :image="MongoIcon" :nOtherStars="2" :needsRefresher="true" />
+          <Skill title="Java" type="Language" :image="JavaIcon" :nOtherStars="2" :needsRefresher="true" />
+          <Skill title="MongoDB" type="Database" :image="MongoIcon" :nOtherStars="1" :needsRefresher="true" />
         </div>
     </div>
 </template>
@@ -134,12 +128,29 @@ import ReactIcon from "../../assets/images/skills/React.webp";
       width: 75%;
     }
 
-    .console-terminal > header {
+    .terminal-titlebar {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding-left: 1%;
       padding-right: 2%;
+    }
+
+    .blurb p.terminal-command {
+      overflow-wrap: anywhere;
+      color: var(--text-colour);
+    }
+
+    .terminal-prompt {
+      color: var(--accent);
+    }
+
+    .terminal-cursor {
+      display: inline-block;
+      width: 0.5em;
+      height: 1em;
+      margin-left: 0.35em;
+      background-color: currentColor;
+      vertical-align: -0.15em;
     }
 
     @media screen and (max-width: 1300px) {
@@ -176,4 +187,3 @@ import ReactIcon from "../../assets/images/skills/React.webp";
         }
     }
 </style>
-

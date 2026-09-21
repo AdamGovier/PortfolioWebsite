@@ -4,22 +4,19 @@
   <p class="spacer-small">
     I’m a software developer focused on full-stack web development, 
     with a strong technical skills in ASP.NET, Blazor, and Vue, 
-    and over two years of hands-on experience building and maintaining commercial systems. 
+    and over three years of hands-on experience building and maintaining commercial systems.
     My work at DEV4 Online spans bespoke client projects and an equipment management platform; I’ve also supported onboarding and training for new team members, 
     helping share the tools and practices that keep our collaborative workflow effective.
   </p>
 
   <p>
-    My background combines formal education consisting of a MSci in Computer Science (with Merit) 
-    and an A in HNC Computing, with a development journey that started in high school 
-    experimenting with game servers, batch scripting, and Visual Basic. 
-    In college I picked up full-stack web fundamentals (including PHP, introductory Java, and SQL databases)
-    while learning Node.js in my own time. During university I also taught myself 
-    Vue.js outside of coursework, and the curriculum deepened my foundation 
-    with modules such as OOP with Java, both SQL and NoSQL databases, AI, networking, and cybersecurity. 
-    In my placement year at DEV4 Online I translated my existing knowledge from Java to C#, 
-    shifted to using ASP.NET instead of Node.js, introduced Vue to the team, and adopted Blazor as a primary frontend tool 
-    - inline with the existing team.
+    My formal education includes an MSci in Computer Science (with Merit) and an HNC in Computing (grade A).
+    My development journey began in high school, where I experimented with game servers, batch scripts and Visual Basic.
+    At college, I learned the fundamentals of full-stack web development, including PHP, introductory Java and SQL databases,
+    while studying Node.js in my own time. Alongside my university coursework, I taught myself Vue.js.
+    My university modules in object-oriented programming with Java, SQL and NoSQL databases, AI, networking and cybersecurity strengthened my foundation.
+    During my placement year at DEV4 Online, I applied my Java knowledge to C#, moved from Node.js to ASP.NET,
+    introduced Vue to the team and adopted Blazor as a primary front-end tool in line with the team’s existing practices.
   </p>
 
   <p>
@@ -29,7 +26,7 @@
     as a type 1 diabetic I built a feature-rich application called <a href="/blog/2025/boluscalc">Bolus Calculator</a> to help manage insulin dosage with 
     carbohydrate tracking via Open Food Facts and a bespoke secondary API. 
     While the app was ultimately retired due to concerns around lack of testing and ageing infrastructure, 
-    it remains one of the most meaningful exercises in balancing technical execution with personal impact.
+    it remains one of my most meaningful exercises in balancing technical execution with personal impact.
   </p>
 
   <p>
