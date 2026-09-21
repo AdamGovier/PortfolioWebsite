@@ -52,12 +52,6 @@ Looking ahead, I have a few ideas for improvements, such as adding interactivity
 comments, and a way to ask questions. From a maintainability perspective, 
 I’m also considering migrating the old vanilla CSS taken from the original site to a modern utility framework like Tailwind CSS.
 
-![Astro](https://cdn.adamgovier.co.uk/Screenshot%202024-05-23%20172856.png)
-*Test 2*
-
-![Astro](https://cdn.adamgovier.co.uk/blog/2025/Screenshot%202024-03-27%20194610.png)
-*Test 3*
-
 # A Takeaway Quote
 
 > "Real artists ship."
