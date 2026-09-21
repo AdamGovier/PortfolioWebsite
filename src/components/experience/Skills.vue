@@ -26,8 +26,8 @@
                 <strong>Gold stars</strong> – represent professional experience level:
   
                 <SkillStarExplanationItem :nStars="1" explanation="Light Usage" />
-                <SkillStarExplanationItem :nStars="2" explanation="Junior Level" />
-                <SkillStarExplanationItem :nStars="3" explanation="Mid Level" />
+                <SkillStarExplanationItem :nStars="2" explanation="Intermediate Usage" />
+                <SkillStarExplanationItem :nStars="3" explanation="In-depth Usage" />
               </p>
   
               <p class="text-small spacer-medium">
@@ -71,8 +71,8 @@
           <Skill title="HTML" type="Markup" :image="HtmlIcon" />
           <Skill title="CSS" type="Styling" :image="CssIcon"   />
           <Skill title="Git" type="Source Control" :image="GitIcon" />
-          <Skill title="Java" type="Language" :image="JavaIcon" :nOtherStars="3" :needsRefresher="true" />
-          <Skill title="MongoDB" type="Database" :image="MongoIcon" :nOtherStars="2" :needsRefresher="true" />
+          <Skill title="Java" type="Language" :image="JavaIcon" :nOtherStars="2" :needsRefresher="true" />
+          <Skill title="MongoDB" type="Database" :image="MongoIcon" :nOtherStars="1" :needsRefresher="true" />
         </div>
     </div>
 </template>
