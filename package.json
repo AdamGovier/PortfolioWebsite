@@ -8,28 +8,25 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.4",
-    "@astrojs/sitemap": "^3.5.1",
-    "@astrojs/vue": "^5.1.0",
-    "@tailwindcss/vite": "^4.1.11",
+    "@astrojs/mdx": "^8.0.1",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/vue": "^7.0.3",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/fuzzy-search": "^2.1.5",
     "@types/scrollmagic": "^2.0.8",
-    "astro": "^5.11.0",
-    "core-js": "^3.6.5",
+    "astro": "^7.3.3",
+    "core-js": "^3.50.0",
     "email-validator": "^2.0.4",
-    "fuzzy-search": "^3.2.1",
-    "scrollmagic": "^2.0.8",
-    "tailwindcss": "^4.1.11",
-    "to-words": "^4.7.0",
-    "typed.js": "^2.0.12",
-    "vue": "^3.5.17",
-    "vue-router": "^4.0.0-0",
+    "fuzzy-search": "^3.3.0",
+    "scrollmagic": "^2.0.9",
+    "tailwindcss": "^4.3.3",
+    "to-words": "^7.1.0",
+    "typed.js": "^3.0.0",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1",
     "vue-typer": "^1.2.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.13",
-    "@vue/cli-plugin-router": "~4.5.13",
-    "@vue/cli-service": "~4.5.13",
-    "@vue/compiler-sfc": "^3.0.0"
+    "@vue/compiler-sfc": "^3.5.43"
   }
 }
