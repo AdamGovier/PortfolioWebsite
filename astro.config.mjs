@@ -7,7 +7,10 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://adamgovier.co.uk",
-  integrations: [vue(), tailwindcss(), mdx(), sitemap()],
+  integrations: [vue(), mdx(), sitemap()],
+  vite: {
+    plugins: [tailwindcss()]
+  },
   markdown: {
     shikiConfig: {
       theme: "monokai"
