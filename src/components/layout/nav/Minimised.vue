@@ -47,18 +47,8 @@
 <script lang="ts" setup>
 import Naviagtion from "./minimised/Naviagtion.vue";
 import Logo from "./common/Logo.vue";
-import { watch } from 'vue';
-import { useRoute } from 'vue-router';
 import { ref } from 'vue';
 import Icon from "../../../assets/images/icons/Cross.png";
 
 const showNavigation = ref(false);
-
-const route = useRoute();
-watch(
-  () => route?.fullPath ?? "",
-  () => {
-    showNavigation.value = false;
-  }
-);
 </script>
