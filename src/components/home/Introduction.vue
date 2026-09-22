@@ -28,10 +28,13 @@ import ProfilePhoto from "../../assets/images/other/ProfilePhoto.jpg";
 
 <style>
     .pfp {
-      height: 30dvh;
-      background-size: cover;
-      background-position: top center;
+      margin: 0 auto;
+      height: 25dvh;
+      width: 40dvw;
+      background-repeat: repeat-x;
+      background-size: 100%;
       border-radius: 0 25px;
+      background-position-y: 35%;
     }
 
     #starterContent {
@@ -112,7 +115,7 @@ import ProfilePhoto from "../../assets/images/other/ProfilePhoto.jpg";
     #profileContainer .halfShield:nth-of-type(2) {
         background-image: url('../../assets/images/other/ProfilePhoto.jpg');
         background-size: cover;
-        background-position-x: 47%;
+        background-position-x: 35%;
         border-radius: 55px 0 175px 0;
         margin-top: 20px;
 
