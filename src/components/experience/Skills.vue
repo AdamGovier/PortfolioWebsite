@@ -39,7 +39,7 @@
                 <strong>Other</strong>
   
                 <p class="text-small spacer-small">
-                  <i class="fa-solid fa-hourglass-end" style="color: var(--accent);"></i> - Knowledge Requires Refresher
+                  <i class="fa-solid fa-hourglass-end" style="color: var(--accent);"></i> - Knowledge Requires a Refresher
                 </p>
               </p>
   

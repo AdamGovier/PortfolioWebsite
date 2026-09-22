@@ -71,12 +71,12 @@ export default {
                 if(response.status == 200) {
                     this.emailSentStatusMsg = "Your message has successfully been sent, please expect to receive a reply within a few days.";
                 } else {
-                    this.emailSentStatusMsg = "An unknown error has occurred. Please email me directly at adam@govier-web.co.uk";
+                    this.emailSentStatusMsg = "An unknown error has occurred. Please email me directly at adam@adamgovier.co.uk";
                     // Don't hide message if error as user will need time to copy the above email into their client.
                 }
             }).catch(error => {
                 console.log(error);
-                this.emailSentStatusMsg = "An unknown error has occurred. Please email me directly at adam@govier-web.co.uk";
+                this.emailSentStatusMsg = "An unknown error has occurred. Please email me directly at adam@adamgovier.co.uk";
             }).finally(() => {
                     // Hide message after 4s.
                     setTimeout(() => this.emailSentStatus = false, 4000);

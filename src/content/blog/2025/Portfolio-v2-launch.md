@@ -12,7 +12,7 @@ pinned: 3
 
 # Why I Rebuilt My Portfolio
 
-My original portfolio, which I launched in 2022, had became outdated. The content was sparse and stale, 
+My original portfolio, which I launched in 2022, had become outdated. The content was sparse and stale, 
 much of it no longer reflected my current experience. The site wasn't properly optimised for search engines 
 or newer AI generated search results. In short, it no longer represented who I am today, or allowed me to easily append content.
 
@@ -38,10 +38,10 @@ without relying on a JavaScript runtime.
 ## New content
 
 * **Expanded Experience Page** - Now includes a detailed look at my career history and education, offering more context about my journey into software development.
-* **Enhanced Skills Section** – Introduced confidence level ratings for each technology with a quirky Windows inspired "skills console" that explains the different ratings.
+* **Enhanced Skills Section** – Introduced confidence level ratings for each technology with a quirky "skills console" that explains the different ratings.
 * **New Blog** - A dedicated space where I’ll occasionally share technical insights, career reflections, and the occasional travel story.
 * **Personal Biography** - Added a biography to the home page, giving visitors a better idea of who I am, how I started, and what drives me as a developer.
-* **Refined Personal Projects** - Projects are now displayed in a clean grid layout, making it easier to browse. Some of which link to deeper blog write-ups for those interested - including Crimson, my master’s research project.
+* **Refined Personal Projects** - Projects are now displayed in a clean grid layout, making it easier to browse. Some of them link to deeper blog write-ups for those interested - including Crimson, my master’s research project.
 
 # The Road Ahead
 
