@@ -24,7 +24,7 @@ const props = defineProps<{
 .attachments-wrapper {
   margin-top: 1.5rem;
   padding: 1em;
-  border: 1px solid #222;
+  border: 1px solid var(--surface-colour);
   border-radius: 8px;
 }
 
@@ -37,7 +37,7 @@ const props = defineProps<{
   gap: 10px;
   margin-bottom: 0.5rem;
 
-  background-color: #222;
+  background-color: var(--surface-colour);
   padding: 2%;
 }
 
@@ -48,6 +48,6 @@ const props = defineProps<{
 .attachments-wrapper i {
   font-size: 32px;
 
-  color: whitesmoke;
+  color: var(--surface-text-colour);
 }
 </style>
