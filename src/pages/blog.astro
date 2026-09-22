@@ -11,7 +11,11 @@ const topFeaturePost = allBlogPosts.find(post => post.data.pinned == 1);
 const secondaryFeaturePost = allBlogPosts.find(post => post.data.pinned == 2);
 const thirdFeaturePost = allBlogPosts.find(post => post.data.pinned == 3);
 ---
-<BaseLayout title="Blog">
+<BaseLayout
+  title="Software Development Blog"
+  description="Technical articles, project retrospectives, and personal insights from software developer Adam Govier."
+  keywords={["software development blog", "web development", "technical articles", "Adam Govier"]}
+>
   <p class="sub-text spacer">Featured Articles</p>
   <div class="blog-featured-container">
     <div class="leading-article article-item">

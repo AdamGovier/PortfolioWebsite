@@ -8,7 +8,7 @@ import { getCollection } from "astro:content";
 import Attachments from "../components/shared/Attachments.vue";
 import Sources from "../components/shared/Sources.vue";
 
-const { title, author, date, image, slug, tags, attachments, sources } = Astro.props;
+const { title, description, author, date, image, slug, tags, attachments, sources } = Astro.props;
 
 const dateParsed = new Date(date).toLocaleDateString('en-GB', {
   month: 'short',
@@ -31,7 +31,16 @@ const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(u
 const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
 ---
 
-<BaseLayout title={title}>
+<BaseLayout
+  title={title}
+  description={description}
+  author={author}
+  image={image.url}
+  imageAlt={image.alt}
+  type="article"
+  publishedTime={date}
+  keywords={tags}
+>
   <div class="markdown-page">
     <div class="markdown-full-content">
       <div class="markdown-page-hero-image" style={`background-image: url('${image.url}')`} />

@@ -1,6 +1,7 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
 title: "Portfolio rebrand, what's new?"
+description: "A look at the Astro and Vue rebuild of Adam Govier's portfolio, including its new structure, expanded content, blog, and project showcase."
 pubDate: 2025-08-24
 slug: portfolio-v2-launch
 image:
