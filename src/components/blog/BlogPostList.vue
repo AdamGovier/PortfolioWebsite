@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, defineProps, ref } from 'vue';
+import { computed, ref } from 'vue';
 import BlogCard from './BlogCard.vue';
 import { type BlogPostMetadata } from '../../types/collection.ts';
 import FuzzySearch from 'fuzzy-search';
@@ -49,10 +49,7 @@ const searchString = ref<string>("");
 const filteredPosts = computed(() => {
   const preFiltered = props.posts.filter(post => {    
     if (selectedTags.value.length === 0)  {
-      // If no filter is on remove pinned posts.
-      if(!searchString.value && post.pinned) return false;
-
-      // If no tags are selected, show all non-pinned posts.
+      // If no tags are selected, show all posts.
       return true;
     } else {
       return post.tags.some(tag => selectedTags.value.includes(tag));
