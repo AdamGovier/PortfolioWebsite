@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import { unified } from "@astrojs/markdown-remark";
 import vue from "@astrojs/vue";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
@@ -28,7 +29,9 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   markdown: {
-    rehypePlugins: [openMarkdownLinksInNewTab],
+    processor: unified({
+      rehypePlugins: [openMarkdownLinksInNewTab],
+    }),
     shikiConfig: {
       theme: "monokai"
     }
