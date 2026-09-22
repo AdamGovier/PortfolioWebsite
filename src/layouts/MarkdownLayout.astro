@@ -5,10 +5,10 @@ import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
 import "../assets/blog.css";
 import BlogCard from "../components/blog/BlogCard.vue";
 import { getCollection } from "astro:content";
-import type { Attachment } from "../types/collection";
 import Attachments from "../components/shared/Attachments.vue";
+import Sources from "../components/shared/Sources.vue";
 
-const { title, author, date, image, slug, tags, attachments } = Astro.props;
+const { title, author, date, image, slug, tags, attachments, sources } = Astro.props;
 
 const dateParsed = new Date(date).toLocaleDateString('en-GB', {
   month: 'short',
@@ -66,6 +66,13 @@ const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
             <Attachments attachments={attachments} />
           </div>
         }
+
+        {
+          sources &&
+          <div class="small spacer">
+            <Sources sources={sources} />
+          </div>
+        }
       </div>
     </div>
 
@@ -85,6 +92,7 @@ const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
       </div>
 
       <Attachments attachments={attachments} />
+      <Sources sources={sources} />
 
       {relatedPosts.length != 0 && (
         <div class="spacer-small">

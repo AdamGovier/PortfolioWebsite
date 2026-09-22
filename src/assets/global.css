@@ -20,6 +20,9 @@
   --text-colour: white;
   --sub-text-colour: #8b8b8b;
   --sub-text-colour-2: #202020;
+  --surface-colour: #222;
+  --surface-text-colour: whitesmoke;
+  --divider: 1px solid rgba(255, 255, 255, 0.18);
 
   /* Margin */
   --margin-extra-small: 20px;

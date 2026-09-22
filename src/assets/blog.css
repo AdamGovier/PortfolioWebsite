@@ -61,7 +61,7 @@
   line-height: 1.2;
   margin-block: 1.1em 0.9em;
   letter-spacing: 0.6px;
-  counter-reset: h2;
+  counter-reset: h3;
 }
 
 .markdown-page-content h2:before {
@@ -78,7 +78,6 @@
   line-height: 1.25;
   margin-block: 1em 0.7em;
 
-  counter-reset: h3;
   letter-spacing: 0.5px;
 }
 
