@@ -1,6 +1,7 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
 title: 'Crimson: What if low-code was built for developers?'
+description: "A retrospective on Crimson, Adam Govier's university research project exploring backend code generation from Vue frontend components."
 pubDate: 2025-08-26
 slug: Crimson-Overview
 image:

@@ -1,5 +1,6 @@
 export interface BlogPostMetadata {
   title: string;
+  description: string;
   pubDate: Date;
   slug: string;
   image: {

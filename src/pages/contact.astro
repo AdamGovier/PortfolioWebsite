@@ -2,6 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactComponent from "../components/shared/Contact.vue";
 ---
-<BaseLayout title="Contact">
+<BaseLayout
+  title="Contact"
+  description="Contact Adam Govier to discuss software development, technical projects, or collaboration opportunities."
+  keywords={["contact Adam Govier", "software developer", "Aberdeen"]}
+>
   <ContactComponent client:only />
 </BaseLayout>
