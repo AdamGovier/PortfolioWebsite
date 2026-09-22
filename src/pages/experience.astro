@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Skills from "../components/experience/Skills.vue";
+
+import ExperienceItem from "../components/experience/ExperienceItem.vue";
+import Dev4Logo from "../assets/images/organisations/dev4_logo.webp";
+import RguLogo from "../assets/images/organisations/rgu_logo.webp";
+import UhiLogo from "../assets/images/organisations/uhi_logo.webp";
+
+import Projects from "../components/experience/Projects.vue";
+---
+
+<BaseLayout title="Experience">
+
+  <h2 class="title" style="margin-bottom: var(--margin-medium);">Career</h2>
+  <ExperienceItem
+    organisationName="DEV4 ONLINE" 
+    organisationImage={Dev4Logo} 
+    roleName="Software Developer" 
+    period="2023 - Present">
+
+    <p>
+      Since 2023, I’ve contributed to the development, maintenance, and deployment of Azure-hosted web applications at DEV4 Online, spanning proprietary and bespoke client solutions for the offshore, energy, and inventory management sectors.
+    </p>
+
+    <p>
+      I work closely with clients to understand their requirements, scope out solutions, and estimate development time. From building features in Blazor, Vue, and ASP.NET Core to automating deployments with Azure Pipelines, I’m involved throughout the development lifecycle, from initial discussions through to production.
+    </p>
+  </ExperienceItem>
+
+  <Skills />
+
+  <div class="spacer-xl">
+    <h2 class="title" style="margin-bottom: var(--margin-medium);">Education</h2>
+
+    <ExperienceItem 
+      organisationName="Robert Gordon University"
+      organisationImage={RguLogo}
+      roleName="Master of Science | Computing Science | MERIT" 
+      period="2020 - 2025">
+  
+      <p>
+        I graduated in July 2025 with a Master of Science (Merit) in Computing Science from Robert Gordon University. The five-year integrated master's programme comprised 29 modules and a year-long industrial placement at DEV4 Online, allowing me to develop both my academic knowledge and practical experience in software development.
+      </p>
+  
+  
+    </ExperienceItem>
+  
+    <ExperienceItem 
+      organisationName="UHI Moray" 
+      organisationImage={UhiLogo}
+      roleName="Higher National Certificate (HNC) | Computer Science | A" 
+      period="2019 - 2020">
+  
+    </ExperienceItem>
+  </div>
+
+  <Projects />
+</BaseLayout>

@@ -1,0 +1,120 @@
+---
+import { type SearchEngineMetaData } from "../models/Head";
+import BaseLayout from "./BaseLayout.astro";
+import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
+import "../assets/blog.css";
+import BlogCard from "../components/blog/BlogCard.vue";
+import { getCollection } from "astro:content";
+import Attachments from "../components/shared/Attachments.vue";
+import Sources from "../components/shared/Sources.vue";
+
+const { title, author, date, image, slug, tags, attachments, sources } = Astro.props;
+
+const dateParsed = new Date(date).toLocaleDateString('en-GB', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+});
+
+const relatedPosts = (await getCollection('blog', item =>
+  !item.data.draft &&
+  item.data.slug != slug &&
+  item.data.tags.some(tag => tags.includes(tag))
+))
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .slice(0, 3);
+
+const url = `https://adamgovier.co.uk/${new Date(date).getFullYear()}/${slug}`;
+
+const linkedInLink = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURI(url)}`
+const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(url)}`
+const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
+---
+
+<BaseLayout title={title}>
+  <div class="markdown-page">
+    <div class="markdown-full-content">
+      <div class="markdown-page-hero-image" style={`background-image: url('${image.url}')`} />
+      <div class="markdown-page-content">
+        <div class="blog-card-tags">
+          {tags && tags.map((tag: string) => (
+            <div class="blog-card-tag">
+              <span class="text-small">#{tag}</span>
+            </div>
+          ))}
+        </div>
+        <h1 class="title" style="margin-top: var(--margin-small);">{title}</h1>
+        <p class="sub-text">{author ?? "Adam Govier"} | {dateParsed}</p>
+        <a href="/blog" class="text-small small">
+          <i class="fa-solid fa-arrow-left"></i> Back to blog
+        </a>
+        <div class="spacer-medium"></div>
+        <div class="spacer"></div>
+        <slot />
+
+        <div class="spacer-xl d-flex align-center gap-small text-large divider small">
+          <strong>Share Post: </strong>
+
+          <a href={linkedInLink}><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+
+        {
+          attachments &&
+          <div class="small spacer">
+            <Attachments attachments={attachments} />
+          </div>
+        }
+
+        {
+          sources &&
+          <div class="small spacer">
+            <Sources sources={sources} />
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="markdown-page-sidebar big">
+      <div>
+        <a href="/blog" class="text-small">
+          <i class="fa-solid fa-arrow-left"></i> Back to blog
+        </a>
+      </div>
+
+      <div class="spacer-small d-flex align-center gap-small text-large divider">
+        <strong>Share on: </strong>
+
+        <a href={linkedInLink}><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+
+      <Attachments attachments={attachments} />
+      <Sources sources={sources} />
+
+      {relatedPosts.length != 0 && (
+        <div class="spacer-small">
+          <span class="text-regular font-heading">Related Posts</span>
+        </div>
+      )}
+
+      {
+        relatedPosts.map((card) => (
+          <div class="spacer-small" style="height: 60dvh;">
+            <BlogCard
+              title={card?.data.title} 
+              tags={card?.data.tags} 
+              date={card?.data.pubDate} 
+              author={card?.data.author} 
+              imageURL={card?.data.image.url} 
+              slug={card?.data.slug}
+            />
+          </div>
+        ))
+      }
+
+    </div>
+  </div>
+</BaseLayout>

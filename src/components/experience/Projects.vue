@@ -1,0 +1,64 @@
+<template>
+  <div class="spacer">
+    <h2 class="title">Notable Projects</h2>
+    <h5 class="text-small sub-text" style="margin-top: var(--margin-small);">A showcase of projects undertaken in academic and personal contexts.</h5>
+
+    <div class="projects-grid spacer">
+      <Project href="/blog/2025/portfolio-v2-launch" :thumbnail="GovierLogo" title="Portfolio." status="2023 – Present">
+          <p class="text-black">
+            Personal website, originally developed as a standalone Vue application in 2023. Gradually migrated to Astro + Vue throughout 2025 and 2026 to extend functionality.
+          </p>
+      </Project>
+
+      <Project href="/blog/2025/Crimson-Overview" :thumbnail="CrimsonLogo" title="Crimson." status="2025 | Awarded A Grade">
+          <p class="text-black">
+            Crimson is a research project exploring a bespoke prototype full-stack framework that automates backend code generation from front-end components, aiming to simplify and streamline web application development.
+          </p>
+      </Project>
+
+      <Project href="/blog/2026/Bolus-Calc-Overview" :thumbnail="BolusCalcLogo" title="Bolus Calc." status="2018 - 2023 | Retired / Legacy">
+          <p class="text-black">
+            A mobile application that aimed to help better manage my diabetes control. Bolus Calculator is featureful but requires serious and stringent testing to be realeased to the general public as a medical application. 
+          </p>
+      </Project>
+    </div>
+  </div>
+</template>
+
+<style>
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: var(--margin-medium);
+  justify-content: space-between;
+
+  min-height: 60dvh;
+}
+
+@media (min-width: 1401px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 801px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 40dvh;
+  }
+}
+
+@media (max-width: 800px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
+}
+</style>
+
+<script lang="ts" setup>
+import Project from "./Project.vue";
+import CrimsonLogo from "../../assets/images/projects/Crimson.webp";
+import BolusCalcLogo from "../../assets/images/projects/BolusCalc.webp";
+import GovierLogo from "../../assets/images/projects/Govier.webp";
+</script>
