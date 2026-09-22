@@ -3,7 +3,7 @@
 
   <p class="spacer-small">
     I’m a software developer focused on full-stack web development, 
-    with a strong technical skills in ASP.NET, Blazor, and Vue, 
+    with strong technical skills in ASP.NET, Blazor, and Vue, 
     and over three years of hands-on experience building and maintaining commercial systems.
     My work at DEV4 Online spans bespoke client projects and an equipment management platform; I’ve also supported onboarding and training for new team members, 
     helping share the tools and practices that keep our collaborative workflow effective.
@@ -30,10 +30,10 @@
   </p>
 
   <p>
-    Recently, I have took paticular interest in automatic testing, and code quality. 
+    Recently, I have taken a particular interest in automated testing and code quality. 
     I am currently reading 
     <a href="https://www.packtpub.com/en-us/product/architecting-aspnet-core-applications-9781805123385" target="_blank">Architecting ASP.NET Core Applications: An atypical design patterns guide for .NET 8, C# 12, and beyond, Third Edition</a> 
-    by Carl-Hugo Marcotte. This book covers various topics such as the SOLID principles, automated testing, and design patterns. I highly recommend.
+    by Carl-Hugo Marcotte. This book covers various topics such as the SOLID principles, automated testing, and design patterns. I highly recommend it.
   </p>
 
   <p>

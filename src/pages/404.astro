@@ -4,7 +4,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SleepyDogImage from "../assets/images/errors/sleepy_dog.webp";
 ---
 
-<BaseLayout title="Error 404">
+<BaseLayout
+  title="Page Not Found"
+  description="The requested page could not be found on Adam Govier's website."
+  noindex={true}
+>
   <ErrorPage 
     code={404} 
     message="It looks like you may be lost! This page does not exist." 
