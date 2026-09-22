@@ -29,6 +29,14 @@ const blog = defineCollection({
         })
       )
       .optional(),
+    sources:
+      z.array(
+        z.object({
+          href: z.string(),
+          displayName: z.string(),
+        })
+      )
+      .optional(),
   }) as z.ZodType<BlogPostMetadata>,
 });
 

@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
-title: 'Graduated with Merit: Reflections on My MSci Computing Science Experience at RGU'
+title: 'Graduated with merit: Reflections on my MSci Computing Science experience at RGU'
 pubDate: 2025-08-03
 slug: graduation-from-rgu
 image:

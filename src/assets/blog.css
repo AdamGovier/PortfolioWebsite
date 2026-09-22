@@ -61,7 +61,7 @@
   line-height: 1.2;
   margin-block: 1.1em 0.9em;
   letter-spacing: 0.6px;
-  counter-reset: h2;
+  counter-reset: h3;
 }
 
 .markdown-page-content h2:before {
@@ -78,7 +78,6 @@
   line-height: 1.25;
   margin-block: 1em 0.7em;
 
-  counter-reset: h3;
   letter-spacing: 0.5px;
 }
 
@@ -152,6 +151,29 @@
   margin: 0 auto;
 }
 
+.bolus-feature-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--margin-small);
+  margin: var(--margin-large) 0;
+}
+
+.bolus-feature-gallery figure {
+  margin: 0;
+}
+
+.bolus-feature-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bolus-feature-gallery figcaption {
+  margin-top: var(--margin-extra-small);
+  text-align: center;
+  color: #aaa;
+}
+
 .markdown-page-content em {
   margin-top: var(--margin-extra-small);
   display: block;
@@ -180,4 +202,3 @@
     padding-left: 0;
   }
 }
-

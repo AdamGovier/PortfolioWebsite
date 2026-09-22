@@ -12,10 +12,16 @@ export interface BlogPostMetadata {
   draft: boolean | undefined;
   pinned: number | undefined;
   attachments?: Attachment[];
+  sources?: Source[];
 }
 
 export interface Attachment {
   href: string;
   contentType: "application/pdf" | "audio/mpeg";
+  displayName: string;
+}
+
+export interface Source {
+  href: string;
   displayName: string;
 }

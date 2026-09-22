@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
-title: 'My Full-Stack Journey at DEV4 Online'
+title: 'My full-stack journey at DEV4 Online'
 pubDate: 2025-08-03
 slug: DEV4-Online-Journey
 image:

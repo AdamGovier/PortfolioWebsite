@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
-title: 'Crimson: What If Low-Code Was Built for Developers'
+title: 'Crimson: What if low-code was built for developers?'
 pubDate: 2025-08-26
 slug: Crimson-Overview
 image:
@@ -81,4 +81,3 @@ it’s an experiment in how automation could work differently - assisting develo
 
 The prototype proved some core ideas are possible, but there’s a lot left to
 explore before something like Crimson could become practical in real-world projects.
-
