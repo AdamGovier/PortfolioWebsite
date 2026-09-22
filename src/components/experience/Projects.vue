@@ -18,7 +18,7 @@
 
       <Project href="/blog/2026/Bolus-Calc-Overview" :thumbnail="BolusCalcLogo" title="Bolus Calc." status="2018 - 2023 | Retired / Legacy">
           <p class="text-black">
-            A mobile application that aimed to help better manage my diabetes control. Bolus Calculator is featureful but requires serious and stringent testing to be realeased to the general public as a medical application. 
+            A mobile application that aimed to help better manage my diabetes control. Bolus Calculator is featureful but requires serious and stringent testing to be released to the general public as a medical application. 
           </p>
       </Project>
     </div>
