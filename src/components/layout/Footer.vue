@@ -2,7 +2,7 @@
     <footer>
         <div class="lhs">
             <h2>Adam Govier</h2>
-            <a class="email" href="mailto:adam@adamgovier.co.uk">adam@adamgovier.co.uk</a>
+            <a class="email" href="mailto:contact@adamgovier.co.uk">contact@adamgovier.co.uk</a>
             <a class="privacy" href="/legal/privacy-policy">Privacy Policy</a>
         </div>
         <div class="socials">
