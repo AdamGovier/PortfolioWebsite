@@ -3,7 +3,9 @@
         <Modal :showModal="emailSentStatus" :message="emailSentStatusMsg" />
     </Teleport>
     <div id="contact" class="spacer">
-        <h1>Contact</h1>
+        <div>
+            <h1>Contact</h1>
+        </div>
         <form @submit.prevent="submitForm">
             <input type="text" name="_hp" style="display:none" tabindex="-1" autocomplete="off">
             <div class="inputContainer">
@@ -19,8 +21,9 @@
                 <textarea id="Message" v-model="inputs.message" name="Message" rows="5" />
             </div>
 
-            <div style="width: 100%; display: flex; justify-content: flex-end;">
-                <button type="submit">Submit</button>
+            <div style="margin-top:10%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <a href="/legal/privacy-policy" style="white-space: nowrap; font-size: 12px;">Privacy Policy</a>
+                <button type="submit" style="margin-top: 0; padding-right: 0;">Submit</button>
             </div>
         </form>
     </div>
