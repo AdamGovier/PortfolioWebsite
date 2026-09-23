@@ -1,7 +1,10 @@
 <template>
     <footer>
-        <h1>ADAM GOVIER</h1>
-        <a style="text-wrap: nowrap;" href="mailto:adam@adamgovier.co.uk">adam@adamgovier.co.uk</a>
+        <div class="lhs">
+            <h2>Adam Govier</h2>
+            <a class="email" href="mailto:contact@adamgovier.co.uk">contact@adamgovier.co.uk</a>
+            <a class="privacy" href="/legal/privacy-policy">Privacy Policy</a>
+        </div>
         <div class="socials">
             <Socials />
         </div>
@@ -12,32 +15,51 @@
     footer {
       width: 100%;
       margin-top: 10vh;
-
-      height: 25vh;
-      background-color: rgba(255,255,255, 0.95); /* Slight tint makes it easier on eyes */
+      min-height: 280px;
+      box-sizing: border-box;
+      background-color: rgba(255,255,255, 0.95);
       color: black;
-
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
+      padding: 60px 5%;
     }
 
-    footer > a {
-        font-size: 20px;
-        text-align: center;
+    footer .lhs {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     footer a {
         color: black;
         text-decoration: none;
+        text-align: left;
     }
 
-    footer h1 {
-        font-weight: normal;
-        font-size: 26px;
-        text-align: center;
-
+    footer h2 {
+        margin: 0;
+        font-family: "ITC Avant Garde Gothic LT";
+        font-size: 34px;
+        text-align: left;
+        text-transform: uppercase;
     }
+
+    footer .email {
+        margin-top: 26px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #a7a7a7;
+        font-family: Arial;
+        font-size: 20px;
+    }
+
+    footer .privacy {
+        margin-top: 24px;
+        color: #686868;
+        font-family: Arial;
+        font-size: 14px;
+    }
+
 
     footer .socials a {
         margin: 5px;
@@ -45,33 +67,25 @@
 
     @media screen and (max-width: 850px) {
         footer {
-            overflow: hidden;
+            min-height: 250px;
+            padding: 40px 6.5%;
         }
 
-        footer h1 {
-            width: 20vw;
-            font-size: 16px;
-            /* display: none; */
+        footer h2 {
+            font-size: 26px;
         }
 
-        footer > a {
-            width: 30vw;
-            text-align: center;
+        footer .email {
             font-size: 16px;
         }
 
         footer .socials i {
-            font-size: 30px;
-            margin: 5px;
-        }
-
-        footer h1 {
-            display: none;
+            font-size: 26px;
+            margin: 7px;
         }
 
         footer .socials {
             display: flex;
-            flex-direction: column;
         }
     }
 

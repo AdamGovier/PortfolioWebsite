@@ -1,0 +1,163 @@
+---
+title: "I Built a Medical App as a Side Project. Here's Why You Shouldn't."
+description: "A retrospective on building Bolus Calculator, why testing and regulation matter for medical software, and why the project was retired."
+pubDate: 2026-09-23
+slug: Bolus-Calc-Overview
+image:
+    url: '/images/blog/2026/bolus-calc/banner.png'
+    alt: 'Bolus Calculator app screens'
+tags: ["Personal"]
+pinned: 1
+sources: [
+  {
+    href: "https://github.com/AdamGovier/Vue-3-Fast-Acting-Insulin-Calculator",
+    displayName: "Bolus Calculator source code"
+  },
+  {
+    href: "https://github.com/AdamGovier/Bolus-Calculator-API",
+    displayName: "Bolus Calculator API source code"
+  },
+  {
+    href: "https://assets.publishing.service.gov.uk/media/64a7d22d7a4c230013bba33c/Medical_device_stand-alone_software_including_apps__including_IVDMDs_.pdf",
+    displayName: "MHRA: Medical device stand-alone software including apps"
+  },
+  {
+    href: "https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1",
+    displayName: "The Net Ninja: Vue.js 3 tutorial playlist"
+  },
+  {
+    href: "https://support.google.com/googleplay/android-developer/answer/16679511?hl=en-GB",
+    displayName: "Google Play's requirements for medical apps"
+  },
+  {
+    href: "https://books.google.co.uk/books/about/To_Engineer_is_Human.html?id=_YWvcD-SFAgC&redir_esc=y",
+    displayName: "To Engineer Is Human by Henry Petroski"
+  }
+]
+---
+
+import EmailThread from '../../../components/shared/EmailThread.vue';
+
+# What the app did
+
+Bolus Calculator calculated meal doses and corrections for high blood sugar using a user's insulin ratios, correction factors, and glucose targets. A user could set different insulin-to-carbohydrate ratios for different times of day and add dose modifiers for activities or other circumstances. Modifiers could be scheduled by day and time. The app also had a sick day adjustment based on ketone levels and total daily insulin dose.
+
+A diary recorded doses alongside carbohydrates, blood glucose, and any modifiers, and showed daily glucose averages. Hotshots made carbohydrate counting easier by letting a user save foods, search online nutritional data, scan barcodes, and optionally share food entries. The calculator checked unusually large carbohydrate entries and warned when a blood glucose reading was below the configured threshold.
+
+Personal records stayed on the device. A user could export the raw data as JSON or create a PDF report with glucose charts and trends.
+
+<div class="bolus-feature-gallery">
+  <figure>
+    <img src="/images/blog/2026/bolus-calc/dose-settings.gif" alt="Insulin dose settings, logbook, and scheduled insulin-to-carbohydrate ratios" width="554" height="1200" loading="lazy" />
+    <figcaption>Dose calculations, insulin logbook, and configurable ratios</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/blog/2026/bolus-calc/hotshots.png" alt="Hotshots showing saved food and nutritional search results" width="468" height="1012" loading="lazy" />
+    <figcaption>Hotshots and food search</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/blog/2026/bolus-calc/data-export.png" alt="My Data screen with PDF report and JSON export options" width="483" height="1046" loading="lazy" />
+    <figcaption>PDF and JSON export</figcaption>
+  </figure>
+</div>
+
+# Why I built it
+
+Before I built the app, I searched for a tool that was free to use, had no adverts, was simple, and followed the same principles, units and calculations that the NHS had taught me. I could not find one that met those needs, so I decided to make my own using NHS guidance available online.
+
+Over time, my ambition for the app grew. I hoped it could support people around the world, including those who did not have access to the level of diabetes care I was fortunate to receive in the UK. I wanted to keep it free, without adverts and simple to use. By the time I stopped development, however, it had not reached that vision. For example, it did not support multiple languages.
+
+Today, in 2026, there are likely better options available. Closed-loop systems can now automate many of the calculations that my app performed. I suspect that some small, free apps which are not backed by a healthcare provider or academic medical institution could also be unintentionally noncompliant with the same regulations. More on that later.
+
+# How the app evolved
+
+## The Original Project
+
+When I was 16, I discovered Adobe PhoneGap. I already had some basic web development knowledge, and PhoneGap let me use those skills to build a mobile app with HTML, CSS and JavaScript.
+
+At the time, I had not yet learnt how to share state between screens or structure a larger application. My naive solution was to build the entire app in a single HTML file. It helped me get the first version working, but it also created the maintainability problems that led to the first rewrite.
+
+I naively made the app available to others through Google Play. I continued using it myself for the next couple of years, and it worked like a charm for me.
+
+That decision eventually led to the first feedback I received from someone outside my family and friends. Their message gave me a reason to return to the project and expand it beyond its original scope.
+
+## The Redesign
+
+In early 2021, almost three years after I first built Bolus Calculator, an app user emailed me to thank me for creating it and explain how much easier it had made their daily life. Knowing something that I had created had made a difference to someone was incredibly rewarding, and it still is. Until then, I had assumed the app didn't have any active users and had effectively abandoned the project. Their kind feedback encouraged me to have a second look at it, which eventually led to the modularity redesign.
+I had ideas for making carbohydrate counting easier, including looking up nutritional information through third-party APIs. That idea would eventually become Hotshots.
+
+Returning to that single, sprawling file after several years was difficult. The code had become complex and almost impossible to maintain, so I started again from scratch while keeping much of the original styling.
+
+The new architecture was deliberately simple. I split the app into separate HTML, JavaScript and CSS files, each organised by responsibility. My first goal was to restore every feature from the original app, then use that foundation to build new ones.
+
+As development continued, new maintainability problems emerged. Looking back, many came from design decisions I made without enough experience to see how they would affect the project later.
+
+## The Final Rewrite
+
+The modular version still repeated the same UI logic in many places. I now recognise those repeated pieces as components, but at the time I was updating the page through `getElementById` calls scattered throughout the code. Vue.js offered a cleaner way to reuse those pieces and keep the interface in sync with the data. I chose Vue for its gentler learning curve, and I still love working with it. I learnt it through [The Net Ninja's Vue.js 3 tutorial series](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1), which I still recommend. If you are learning Vue today, however, you would probably benefit more from one of his newer tutorials.
+
+I rebuilt the app again using Vue. I also used Capacitor, a modern alternative to PhoneGap, to package it for mobile devices. Through conversations with friends from university and colleagues, I had become aware of the drawbacks of using web technologies to build mobile apps. Even so, to this day, I am still pleasantly surprised by how well the approach has worked for my use cases.
+
+The final rewrite matched the old version's features and added new ones. However, recreating the existing features while continuing to expand the app turned it into a much larger undertaking. The code was cleaner, but the overall commitment kept growing. The project had become more than I could support alone, which became another reason to retire it.
+
+# What went wrong
+
+The problem was not that the app failed as a side project. It was that I had approached a safety-critical product like an ordinary side project. I could experiment, learn and rewrite it whenever I had time, but the app calculated insulin doses. A mistake could affect someone's health, so I needed much stronger evidence before asking anyone to trust it.
+
+## Testing was an afterthought
+
+My naive plan was to build the app first and write the unit tests afterwards. Oh boy, was that the wrong call. By the time the features were in place, the codebase was sizeable, and adding meaningful test coverage was a much bigger job than I had expected.
+
+This was before Codex and Claude became everyday tools, but I still would not trust an LLM to rush through tests for an insulin calculator. To release the app with confidence, I needed strong evidence that every calculation worked as intended. In the later years of university, while also holding down a job, I did not have the time to do that work properly.
+
+## The code no longer met my standards
+
+TypeScript is now a must-have in my workflow, particularly when an application handles structured data and calculations. The final version of Bolus Calculator was still written in JavaScript. TypeScript would not have made the app safe by itself, and it would never replace proper testing or medical validation. However, its type checks could have made the app's data and calculation boundaries clearer and helped catch some mistakes during development.
+
+For an app that calculated insulin doses, leaving out that safeguard no longer felt acceptable to me. Adding TypeScript properly would have required a significant migration and possibly another rewrite. After already rebuilding the app twice, that became another reason to retire it.
+
+## Maintenance was not optional
+
+The responsibility for a medical app does not end when development stops. Its dependencies and platform tools continue to change. My packages were already getting older, and keeping everything up to date was another ongoing responsibility that I could not give the attention it needed.
+
+My last commit to the project was on 26 July 2023. From that point, I was no longer giving its dependencies, platform compatibility and calculations the ongoing attention that a medical app deserved.
+
+That is difficult enough for any side project. For an app that influences a medical decision, leaving it unmaintained was not a risk I was willing to take.
+
+## Publishing it meant more than passing an app review
+
+Public release raised a more serious question. The [MHRA's guidance on medical device software](https://assets.publishing.service.gov.uk/media/64a7d22d7a4c230013bba33c/Medical_device_stand-alone_software_including_apps__including_IVDMDs_.pdf) specifically gives this example of software that may be a medical device:
+
+> “Apps and software … intended to calculate the dose of a insulin a diabetic needs to treat their diabetes based on carbohydrate in a meal.”
+
+That description closely matched Bolus Calculator. Although its exact classification would have required a formal assessment, the app would likely have fallen within the medical-device framework. Releasing it under that framework would have required documented risk management, software validation, clinical evidence, conformity assessment and registration with the MHRA. Depending on its classification and novelty, it might also have required assessment by a UK Approved Body and a clinical investigation.
+
+[Google Play also has requirements for medical apps](https://support.google.com/googleplay/android-developer/answer/16679511?hl=en-GB). Its policy states:
+
+> “Apps that are regulated as a medical device must provide proof of approval, clearance or certification by the relevant authority upon request.”
+
+I still do not know how the version that I made at 16 was accepted on Google Play. I unlisted it shortly after starting my first rewrite, but its earlier acceptance did not prove that it was safe or met the applicable rules.
+
+Meeting the UK's requirements alone would have needed time, specialist knowledge and money beyond what I had. Releasing the app internationally would have increased that workload further because I would also have needed to understand and comply with the medical-device rules in each market. App-store approval was only one small part of the responsibility.
+
+## The consequences belonged to the user
+
+A bug in an ordinary side project might cause an inconvenience. A wrong dose recommendation could harm someone. I could not justify asking people to trust my app without the testing, maintenance, regulatory work and specialist input needed to support it.
+
+That is why I would not recommend building this type of medical app as a side project. Writing the code can be a valuable learning experience, but turning it into a product that informs treatment decisions is a much larger commitment. Safety cannot be the work you plan to do after the interesting features are finished.
+
+# What I learned
+
+I am incredibly proud of Bolus Calculator. It began as a blank canvas and taught me a great deal as I built and rebuilt it over the years. It also taught me that getting the code to work is only one part of making software that people can rely on. For an app that influences medical decisions, testing and maintenance have to be part of the plan from the start.
+
+# Where it stands now
+
+Retiring it was the responsible choice. A public release would have needed sustained time, specialist input and funding beyond a hobby project. The code is [open source](https://github.com/AdamGovier/Vue-3-Fast-Acting-Insulin-Calculator), and I would love to see someone take it further. After everything I have learnt through my work since then, I suspect I would end up rewriting it again if I returned to it 😂.
+
+The project was not a failure. It was a huge personal success, even if it never met the goal that first inspired it.
+
+# A Takeaway Quote
+
+> “A good judgment is usually the result of experience. And experience is frequently the result of bad judgment.”
+
+Barry LePatner, quoted in Henry Petroski's *To Engineer Is Human*

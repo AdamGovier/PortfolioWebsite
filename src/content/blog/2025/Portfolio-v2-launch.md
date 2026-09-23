@@ -5,7 +5,7 @@ description: "A look at the Astro and Vue rebuild of Adam Govier's portfolio, in
 pubDate: 2025-08-24
 slug: portfolio-v2-launch
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
+    url: '/images/blog/2025/portfolio-v2-launch/cover.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["Personal"]
 pinned: 3
