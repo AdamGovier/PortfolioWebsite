@@ -1,7 +1,15 @@
 <template>
     <footer>
-        <h1>ADAM GOVIER</h1>
-        <a style="text-wrap: nowrap;" href="mailto:adam@adamgovier.co.uk">adam@adamgovier.co.uk</a>
+        <div class="lhs">
+            <h1>ADAM GOVIER</h1>
+            <p>
+                <a href="mailto:adam@adamgovier.co.uk">adam@adamgovier.co.uk</a><br/>
+            </p>
+            <p>
+                <a href="/legal/privacy-policy">Privacy Policy</a>
+            </p>
+
+        </div>
         <div class="socials">
             <Socials />
         </div>
@@ -18,24 +26,26 @@
       color: black;
 
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      padding: 0% 5%;
       align-items: center;
     }
 
-    footer > a {
-        font-size: 20px;
-        text-align: center;
+    footer .lhs > p {
+        margin-top: 20px;
     }
 
     footer a {
         color: black;
         text-decoration: none;
+        text-align: left;
+        text-wrap: no-wrap;
     }
 
     footer h1 {
         font-weight: normal;
         font-size: 26px;
-        text-align: center;
+        text-align: left;
 
     }
 
