@@ -45,7 +45,8 @@ function displayDate(value: EmailMessage['Date']): string {
   if (!date) return String(value);
 
   return new Intl.DateTimeFormat('en-GB', {
-    dateStyle: 'medium',
+    month: 'long',
+    year: 'numeric',
   }).format(date);
 }
 </script>
