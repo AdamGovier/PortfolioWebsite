@@ -46,12 +46,6 @@ export default {
     },
     methods: {
         submitForm() {
-            const formData = new FormData();
-
-            formData.append("Name", this.inputs.name ?? "");
-            formData.append("Email", this.inputs.email ?? "");
-            formData.append("Message", this.inputs.message ?? "");
-
             this.emailSentStatus = true;
 
             // If invalid email.
@@ -63,16 +57,23 @@ export default {
 
             this.emailSentStatusMsg = "Sending.. Please wait."
 
-            fetch('https://formbold.com/s/9k2P6', {
+            fetch('https://postto.dev/api/v1/send/ep_oTAYioPjgPo3fX9T', {
                  method: 'POST',
-                 body: formData
+                 headers: {
+                     'Content-Type': 'application/json',
+                     'Accept': 'application/json'
+                 },
+                 body: JSON.stringify({
+                     name: this.inputs.name ?? "",
+                     email: this.inputs.email ?? "",
+                     message: this.inputs.message ?? ""
+                 })
             })
             .then((response) => {
-                if(response.status == 200) {
+                if(response.ok) {
                     this.emailSentStatusMsg = "Your message has successfully been sent, please expect to receive a reply within a few days.";
                 } else {
                     this.emailSentStatusMsg = "An unknown error has occurred. Please email me directly at adam@adamgovier.co.uk";
-                    // Don't hide message if error as user will need time to copy the above email into their client.
                 }
             }).catch(error => {
                 console.log(error);
