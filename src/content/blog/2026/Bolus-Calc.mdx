@@ -1,7 +1,7 @@
 ---
 title: "I Built a Medical App as a Side Project. Here's Why You Shouldn't."
 description: "A retrospective on building Bolus Calculator, why testing and regulation matter for medical software, and why the project was retired."
-pubDate: 2026-09-21
+pubDate: 2026-09-23
 slug: Bolus-Calc-Overview
 image:
     url: '/images/blog/2026/bolus-calc/banner.png'
@@ -81,52 +81,9 @@ I naively made the app available to others through Google Play. I continued usin
 
 That decision eventually led to the first feedback I received from someone outside my family and friends. Their message gave me a reason to return to the project and expand it beyond its original scope.
 
-## The Modularity Redesign
+## The Redesign
 
-In early 2021, almost three years after I first built Bolus Calculator, an app user emailed me. Knowing something that I had created had made a difference to their daily life was incredibly rewarding, and it still is.
-
-The following email exchange has been anonymised and **lightly** paraphrased to protect the user's privacy. Only the user's messages have been paraphrased; my responses remain unchanged, apart from identifying details. The original, unedited correspondence may be made available upon request, subject to obtaining the user's explicit consent.
-
-<EmailThread emails={[
-  {
-    SenderAddress: '<redacted>',
-    SenderName: 'User X',
-    Date: '2021-01',
-    Body: `Hi Adam,
-
-  Thank you for creating the app. It has made my daily life much easier, and I really appreciate it.
-
-  All the best`,
-  },
-  {
-    SenderAddress: '**************@gmail.com',
-    SenderName: 'Adam',
-    Date: '2021-01',
-    Body: `Hi User X,
-
-This has put a smile on my face, I am glad my app has made a difference to you I am a diabetic myself. Your the first person to give me feedback and I just wanted to say thank you it has made my day.
-
-This app has been out a while now and up until now I thought it didn't have any active users so I effectively abandoned the project however your kind feedback has encouraged me to have a second look at it.
-
-Is there anything you'd like changed to the app? I have a few ideas.
-
-Thanks a bunch,
-Adam`,
-  },
-  {
-    SenderAddress: '<redacted>',
-    SenderName: 'User X',
-    Date: '2021-01',
-    Body: `I can't think of any improvements. The app seems more accurate than others I've used, and it has already been incredibly helpful.`,
-  },
-  {
-    SenderAddress: '***************@gmail.com',
-    SenderName: 'Adam',
-    Date: '2021-01',
-    Body: `Thank you User X!`,
-  },
-]} />
-
+In early 2021, almost three years after I first built Bolus Calculator, an app user emailed me to thank me for creating it and explain how much easier it had made their daily life. Knowing something that I had created had made a difference to someone was incredibly rewarding, and it still is. Until then, I had assumed the app didn't have any active users and had effectively abandoned the project. Their kind feedback encouraged me to have a second look at it, which eventually led to the modularity redesign.
 I had ideas for making carbohydrate counting easier, including looking up nutritional information through third-party APIs. That idea would eventually become Hotshots.
 
 Returning to that single, sprawling file after several years was difficult. The code had become complex and almost impossible to maintain, so I started again from scratch while keeping much of the original styling.
