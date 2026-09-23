@@ -1,21 +1,9 @@
 # Portfolio
 
-Created with Vue 3 and live at: https://adamgovier.co.uk
+Created with Vue 3 and Astro. Live at: [https://adamgovier.co.uk](https://adamgovier.co.uk)
 
-## Project setup
-```
-npm install
-```
+# Contributions
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+I am not accepting any external contributions, as this is a personal site. Source code is open for transparency. Thank you.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The issues page is a self-recorded list of items required.
