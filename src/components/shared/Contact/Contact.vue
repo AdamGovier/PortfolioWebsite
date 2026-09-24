@@ -3,7 +3,7 @@
         <Modal :showModal="emailSentStatus" :message="emailSentStatusMsg" />
     </Teleport>
     <div id="contact" class="spacer">
-        <div>
+        <div class="w-100">
             <h1>Contact</h1>
         </div>
         <form @submit.prevent="submitForm">
@@ -106,7 +106,7 @@ const {
         #contact h1 {
             font-style: normal;
             font-weight: 700;
-            margin: 10%;
+            margin: 10% 0;
         }
 
         form {
