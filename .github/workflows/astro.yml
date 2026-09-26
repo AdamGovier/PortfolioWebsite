@@ -109,12 +109,11 @@ jobs:
           name: development_deploy_key
           known_hosts: ${{ secrets.DEV_SSH_KNOWN_HOSTS }}
       - name: Deploy to development server
-        uses: burnett01/rsync-deployments@v9
-        with:
-          switches: -az --delete
-          path: development-site/
-          remote_path: /opt/stacks/development-static-webhost/site/development.adamgovier.co.uk/
-          remote_host: ${{ secrets.DEV_SSH_HOST }}
-          remote_user: ${{ secrets.DEV_SSH_USER }}
-          remote_key: ${{ secrets.DEV_SSH_PRIVATE_KEY }}
-          strict_hostkeys_checking: true
+        env:
+          DEV_SSH_HOST: ${{ secrets.DEV_SSH_HOST }}
+          DEV_SSH_USER: ${{ secrets.DEV_SSH_USER }}
+        run: |
+          rsync -az --delete \
+            -e "ssh -i $HOME/.ssh/development_deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts" \
+            development-site/ \
+            "$DEV_SSH_USER@$DEV_SSH_HOST:/opt/stacks/development-static-webhost/site/development.adamgovier.co.uk/"
