@@ -23,7 +23,8 @@
 </template>
 
 <script lang="ts" setup>
-import ProfilePhoto from "../../assets/images/other/ProfilePhoto.jpg";
+/* Thanks to Ben Francis, for removing background noise with PhotoShop */
+import ProfilePhoto from "../../assets/images/other/ProfilePhoto.png";
 </script>
 
 <style>
@@ -113,7 +114,8 @@ import ProfilePhoto from "../../assets/images/other/ProfilePhoto.jpg";
     }
 
     #profileContainer .halfShield:nth-of-type(2) {
-        background-image: url('../../assets/images/other/ProfilePhoto.jpg');
+        /* Thanks to Ben Francis, for removing background noise with PhotoShop */
+        background-image: url('../../assets/images/other/ProfilePhoto.png');
         background-size: cover;
         background-position-x: 35%;
         border-radius: 55px 0 175px 0;
