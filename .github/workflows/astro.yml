@@ -85,6 +85,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     name: Deploy development
+    environment:
+      name: development
+      url: https://development.adamgovier.co.uk
     steps:
       - name: Download built site
         uses: actions/download-artifact@v4
@@ -102,6 +105,12 @@ jobs:
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:ci
           ping: ${{ secrets.TS_DEV_HOST }}
+      - name: Test development server connectivity
+        env:
+          DEV_SSH_HOST: ${{ secrets.DEV_SSH_HOST }}
+        run: |
+          tailscale ping "$DEV_SSH_HOST"
+          nc -vz -w 10 "$DEV_SSH_HOST" 22
       - name: Configure SSH
         uses: shimataro/ssh-key-action@v2
         with:
