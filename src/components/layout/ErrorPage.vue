@@ -1,12 +1,12 @@
 <template>
-  <div class="flex justify-around items-center pt-12">
+  <div>
     <div>
         <h1>Ooops! <strong>{{ code }}</strong>!</h1>
 
         <p>{{ message }}</p>
     </div>
 
-    <div class="error-img" :aria-label="imageCaption" :style="`background-image: url('${image?.src}');`"></div>
+    <div :aria-label="imageCaption"></div>
   </div>
 
 
@@ -20,13 +20,3 @@ const { code, message, image } = defineProps<{
   imageCaption? : string
 }>();
 </script>
-
-<style>
-.error-img {
-  height: 50dvh;
-  aspect-ratio: 1/1;
-  border-radius: 35px;
-  background-size: cover;
-  background-position: center;
-}
-</style>

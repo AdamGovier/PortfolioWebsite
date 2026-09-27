@@ -1,7 +1,7 @@
 <template>
   <h1>Biography</h1>
 
-  <p class="spacer-small">
+  <p>
     I’m a software developer focused on full-stack web development, 
     with strong technical skills in ASP.NET, Blazor, and Vue, 
     and over three years of hands-on experience building and maintaining commercial systems.

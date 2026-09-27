@@ -2,7 +2,6 @@
 import { type SearchEngineMetaData } from "../models/Head";
 import BaseLayout from "./BaseLayout.astro";
 import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
-import "../assets/blog.css";
 import BlogCard from "../components/blog/BlogCard.vue";
 import { getCollection } from "astro:content";
 import Attachments from "../components/shared/Attachments.vue";
@@ -41,77 +40,77 @@ const xSocialLink = `https://x.com/intent/tweet?text=${encodeURI(url)}`
   publishedTime={date}
   keywords={tags}
 >
-  <div class="markdown-page">
-    <div class="markdown-full-content">
-      <div class="markdown-page-hero-image" style={`background-image: url('${image.url}')`} />
-      <div class="markdown-page-content">
-        <div class="blog-card-tags">
+  <div>
+    <div>
+      <div />
+      <div>
+        <div>
           {tags && tags.map((tag: string) => (
-            <div class="blog-card-tag">
-              <span class="text-small">#{tag}</span>
+            <div>
+              <span>#{tag}</span>
             </div>
           ))}
         </div>
-        <h1 class="title" style="margin-top: var(--margin-small);">{title}</h1>
-        <p class="sub-text">{author ?? "Adam Govier"} | {dateParsed}</p>
-        <a href="/blog" class="text-small small">
-          <i class="fa-solid fa-arrow-left"></i> Back to blog
+        <h1>{title}</h1>
+        <p>{author ?? "Adam Govier"} | {dateParsed}</p>
+        <a href="/blog">
+          <i></i> Back to blog
         </a>
-        <div class="spacer-medium"></div>
-        <div class="spacer"></div>
+        <div></div>
+        <div></div>
         <slot />
 
-        <div class="spacer-xl d-flex align-center gap-small text-large divider small">
+        <div>
           <strong>Share Post: </strong>
 
-          <a href={linkedInLink}><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
+          <a href={linkedInLink}><i></i></a>
+          <a href={facebookLink} target="_blank"><i></i></a>
+          <a href={xSocialLink}><i></i></a>
         </div>
 
         {
           attachments &&
-          <div class="small spacer">
+          <div>
             <Attachments attachments={attachments} />
           </div>
         }
 
         {
           sources &&
-          <div class="small spacer">
+          <div>
             <Sources sources={sources} />
           </div>
         }
       </div>
     </div>
 
-    <div class="markdown-page-sidebar big">
+    <div>
       <div>
-        <a href="/blog" class="text-small">
-          <i class="fa-solid fa-arrow-left"></i> Back to blog
+        <a href="/blog">
+          <i></i> Back to blog
         </a>
       </div>
 
-      <div class="spacer-small d-flex align-center gap-small text-large divider">
+      <div>
         <strong>Share on: </strong>
 
-        <a href={linkedInLink}><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href={facebookLink} target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href={xSocialLink}><i class="fa-brands fa-x-twitter"></i></a>
+        <a href={linkedInLink}><i></i></a>
+        <a href={facebookLink} target="_blank"><i></i></a>
+        <a href={xSocialLink}><i></i></a>
       </div>
 
       <Attachments attachments={attachments} />
       <Sources sources={sources} />
 
       {relatedPosts.length != 0 && (
-        <div class="spacer-small">
-          <span class="text-regular font-heading">Related Posts</span>
+        <div>
+          <span>Related Posts</span>
         </div>
       )}
 
       {
         relatedPosts.map((card) => (
-          <div class="spacer-small" style="height: 60dvh;">
+          <div>
             <BlogCard
               title={card?.data.title} 
               tags={card?.data.tags} 

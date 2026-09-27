@@ -1,5 +1,5 @@
 <template>
-    <i class="fa-solid fa-star" :style="`color: ${colour};`"></i>
+    <i></i>
 </template>
 
 <script lang="ts" setup>

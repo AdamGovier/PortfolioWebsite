@@ -1,22 +1,22 @@
 <template>
-  <div class="d-flex justify-between align-center">
-    <div class="blog-card-tags big">
-      <div :class="['blog-card-tag', 'tag-filter', selectedTags.includes(tag) ? 'tag-filter-active' : '']" v-for="tag in tags" @click.native="toggleTagFilter(tag)">
-        <span class="text-small">#{{tag}}</span>
+  <div>
+    <div>
+      <div v-for="tag in tags" @click.native="toggleTagFilter(tag)">
+        <span>#{{tag}}</span>
       </div>
     </div>
 
-    <div class="blog-card-tags-search">
-      <div class="inputContainer">
+    <div>
+      <div>
           <input v-model="searchString" name="Search" type="text" placeholder="Search..."/>
       </div>
     </div>
   </div>
-  <div class="blog-list-grid spacer-small">
+  <div>
     <h4 v-if="filteredPosts == null || !filteredPosts.length">
       No posts match the selected filters.
     </h4>
-    <div class="blog-list-item" v-for="post in filteredPosts">
+    <div v-for="post in filteredPosts">
       <BlogCard 
         :title="post?.title" 
         :tags="post?.tags" 
@@ -74,40 +74,3 @@ function toggleTagFilter(tag: string) {
   }
 }
 </script>
-
-<style scoped>
-.blog-list-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: var(--margin-medium);
-  grid-row-gap: var(--margin-large);
-}
-
-@media (max-width: 1400px) {
-  .blog-list-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 850px) {
-  .blog-list-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.blog-list-item {
-  min-height: 600px;
-}
-
-.tag-filter {
-  cursor: pointer;
-}
-
-.tag-filter:hover {
-  scale: 1.05;
-}
-
-.tag-filter-active {
-  background-color: purple;
-}
-</style>

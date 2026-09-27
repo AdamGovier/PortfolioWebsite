@@ -16,75 +16,25 @@ const thirdFeaturePost = allBlogPosts.find(post => post.data.pinned == 3);
   description="Technical articles, project retrospectives, and personal insights from software developer Adam Govier."
   keywords={["software development blog", "web development", "technical articles", "Adam Govier"]}
 >
-  <p class="sub-text spacer">Featured Articles</p>
-  <div class="blog-featured-container">
-    <div class="leading-article article-item">
+  <p>Featured Articles</p>
+  <div>
+    <div>
       <BlogCard title={topFeaturePost?.data.title} tags={topFeaturePost?.data.tags} date={topFeaturePost?.data.pubDate} author={topFeaturePost?.data.author} imageURL={topFeaturePost?.data.image.url} slug={topFeaturePost?.data.slug} />
     </div>
 
-    <div class="blog-featured-subset">
-      <div class="article-item">
+    <div>
+      <div>
         <BlogCard title={secondaryFeaturePost?.data.title} tags={secondaryFeaturePost?.data.tags} date={secondaryFeaturePost?.data.pubDate} author={secondaryFeaturePost?.data.author} imageURL={secondaryFeaturePost?.data.image.url} slug={secondaryFeaturePost?.data.slug} />
       </div>
 
-      <div class="article-item">
+      <div>
         <BlogCard title={thirdFeaturePost?.data.title} tags={thirdFeaturePost?.data.tags} date={thirdFeaturePost?.data.pubDate} author={thirdFeaturePost?.data.author} imageURL={thirdFeaturePost?.data.image.url} slug={thirdFeaturePost?.data.slug} />
       </div>
     </div>
   </div>
 
-  <p class="sub-text spacer">All Articles</p>
+  <p>All Articles</p>
   <div>
     <BlogPostList posts={allBlogPosts.map(x => x.data)} client:idle />
   </div>
 </BaseLayout>
-
-<style>
-.article-item {
-  height: auto;
-}
-
-.blog-featured-container {
-  display: flex;
-  gap: var(--margin-medium);
-}
-
-.blog-featured-subset {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--margin-medium);
-}
-
-@media (max-width: 850px) {
-  .blog-featured-container {
-    flex-direction: column;
-  }
-}
-/* .blog-featured-container {
-  height: 75dvh;
-  max-height: 750px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: 5fr 4fr;
-  column-gap: var(--margin-medium);
-}
-
-@media (max-width: 850px) {
-  .blog-featured-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.blog-featured-subset {
-  display: flex;
-  flex-direction: column;
-
-  gap: var(--margin-medium);
-}
-
-.blog-featured-subset > div {
-  flex-grow: 1;
-} */
-</style>

@@ -1,21 +1,21 @@
 <template>
     <div id="skills">
-        <div class="blurb">
+        <div>
             <h2>Skills Console</h2>
             
-            <div class="console-terminal spacer-small">
-              <header class="terminal-titlebar">
-                <span><i class="fa-solid fa-terminal" aria-hidden="true"></i> agovier@os: ~</span>
+            <div>
+              <header>
+                <span><i aria-hidden="true"></i> agovier@os: ~</span>
               </header>
 
-              <div class="px-4 pt-4 pb-2">
-              <p class="text-small terminal-command"><span class="terminal-prompt">[agovier@os ~]</span>$ skills --help</p>
+              <div>
+              <p><span>[agovier@os ~]</span>$ skills --help</p>
   
-              <h5 class="text-small spacer-medium">
+              <h5>
                 Ratings
               </h5>
   
-              <p class="spacer-small text-small">
+              <p>
                 <strong>Gold stars</strong> – represent professional experience level:
   
                 <SkillStarExplanationItem :nStars="1" explanation="Light Usage" />
@@ -23,7 +23,7 @@
                 <SkillStarExplanationItem :nStars="3" explanation="In-depth Usage" />
               </p>
   
-              <p class="text-small spacer-medium">
+              <p>
                 <strong>Purple stars</strong> - represent the level of knowledge obtained within personal or university contexts:
   
                 <SkillStarExplanationItem :nStars="1" type="Other" explanation="Light Knowledge" />
@@ -31,19 +31,19 @@
                 <SkillStarExplanationItem :nStars="3" type="Other" explanation="Strong Knowledge" />
               </p>
   
-              <p class="text-small">
+              <p>
                 No purple stars are included if I have professional experience with that technology.
               </p>
   
-              <p class="text-small spacer-medium">
+              <p>
                 <strong>Other</strong>
   
-                <p class="text-small spacer-small">
-                  <i class="fa-solid fa-hourglass-end" style="color: var(--accent);"></i> - Knowledge Requires a Refresher
+                <p>
+                  <i></i> - Knowledge Requires a Refresher
                 </p>
               </p>
   
-              <p class="text-small spacer-medium terminal-command"><span class="terminal-prompt">[agovier@os ~]</span>$ skills list<span class="terminal-cursor" aria-hidden="true"></span></p>
+              <p><span>[agovier@os ~]</span>$ skills list<span aria-hidden="true"></span></p>
               </div>
             </div>
         </div>
@@ -95,95 +95,3 @@ import AzureDevopsIcon from "../../assets/images/skills/DevOps.webp";
 import AzurePipelinesIcon from "../../assets/images/skills/azure-pipelines.webp";
 import ReactIcon from "../../assets/images/skills/React.webp";
 </script>
-
-<style>
-    #skillsHolder {
-      display: grid;
-      gap: var(--margin-large);
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    #skills .blurb {
-      padding-right: 5%;
-
-      font-family: "Inconsolata", monospace;
-    }
-
-    #skills {
-        padding-top: 5%;
-        height: 100%;
-
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: 3fr 4fr;
-        /* opacity: 0.25; */
-        opacity: 1;
-        transition: all 1s ease-out;
-    }
-
-    .console-terminal {
-      background-color: black;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1%;
-      width: 75%;
-    }
-
-    .terminal-titlebar {
-      display: flex;
-      align-items: center;
-      padding-left: 1%;
-      padding-right: 2%;
-    }
-
-    .blurb p.terminal-command {
-      overflow-wrap: anywhere;
-      color: var(--text-colour);
-    }
-
-    .terminal-prompt {
-      color: var(--accent);
-    }
-
-    .terminal-cursor {
-      display: inline-block;
-      width: 0.5em;
-      height: 1em;
-      margin-left: 0.35em;
-      background-color: currentColor;
-      vertical-align: -0.15em;
-    }
-
-    @media screen and (max-width: 1300px) {
-        #skillsHolder {
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--margin-medium);
-        }
-    }
-
-
-    @media screen and (max-width: 850px) {
-        .console-terminal {
-          width: 100%;
-        }
-
-        #skills {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            margin-bottom: 15%;
-        }
-
-        #skills .blurb {
-            text-align: left;
-            margin-top: 25%;
-            padding-right: 0;
-        }
-
-        #skillsHolder {
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--margin-medium);
-            margin-top: 15%;
-        }
-    }
-</style>

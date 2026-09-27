@@ -1,10 +1,10 @@
 <template>
   <Card :thumbnail="thumbnail" :title="title" :href="href">
     <template #body>
-      <div class="card-project-body">
+      <div>
         <slot></slot>
 
-        <p class="sub-text-2">
+        <p>
           <i>{{ status }}</i>
         </p>
       </div>
@@ -27,13 +27,3 @@ const props = defineProps<{
   href?: string
 }>();
 </script>
-
-<style>
-.card-project-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  flex-grow: 1;
-}
-</style>

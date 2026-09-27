@@ -1,6 +1,6 @@
 <template>
-  <Button theme="fake-anchor" :class="`${buttonSizeClass}`">
-    <i :class="`${icon} mr-1 text-colour text-colour-hover`"></i> {{label}}
+  <Button theme="fake-anchor">
+    <i></i> {{label}}
   </Button>
 </template>
 

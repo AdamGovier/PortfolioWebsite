@@ -1,6 +1,6 @@
 <template>
-  <div class="spacer-small">
-    <p class="text-small">
+  <div>
+    <p>
       <Star
         v-for="n in nStars"
         :type="type"
