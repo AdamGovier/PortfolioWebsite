@@ -19,6 +19,7 @@
     "core-js": "^3.50.0",
     "email-validator": "^2.0.4",
     "fuzzy-search": "^3.3.0",
+    "reka-ui": "^2.10.5",
     "scrollmagic": "^2.0.9",
     "tailwindcss": "^4.3.3",
     "to-words": "^7.1.0",
