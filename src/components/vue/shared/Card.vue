@@ -21,7 +21,7 @@
 
 
 <script setup lang="ts">
-import { type ImageMetaData } from '../../models/Helpers';
+import { type ImageMetaData } from '../../../models/Helpers';
 
 const props = defineProps<{
   thumbnail: ImageMetaData,

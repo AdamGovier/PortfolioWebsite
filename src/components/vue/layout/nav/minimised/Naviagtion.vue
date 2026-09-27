@@ -18,5 +18,5 @@ import Links from "../common/Links.vue";
 import Socials from "../common/Socials.vue";
 import Logo from "../common/Logo.vue";
 
-import Cross from "../../../../assets/images/icons/Cross.png";
+import Cross from "../../../../../assets/images/icons/Cross.png";
 </script>

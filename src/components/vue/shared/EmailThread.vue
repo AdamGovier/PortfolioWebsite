@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import type { EmailMessage } from '../../types/email';
+import type { EmailMessage } from '../../../types/email';
 
 defineProps<{
   emails: EmailMessage[];

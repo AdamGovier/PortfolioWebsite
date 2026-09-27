@@ -17,7 +17,7 @@
 import Naviagtion from "./minimised/Naviagtion.vue";
 import Logo from "./common/Logo.vue";
 import { ref } from 'vue';
-import Icon from "../../../assets/images/icons/Cross.png";
+import Icon from "../../../../assets/images/icons/Cross.png";
 
 const showNavigation = ref(false);
 </script>

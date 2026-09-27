@@ -24,5 +24,5 @@
 
 <script lang="ts" setup>
 /* Thanks to Ben Francis, for removing background noise with PhotoShop */
-import ProfilePhoto from "../../assets/images/other/ProfilePhoto.png";
+import ProfilePhoto from "../../../assets/images/other/ProfilePhoto.png";
 </script>

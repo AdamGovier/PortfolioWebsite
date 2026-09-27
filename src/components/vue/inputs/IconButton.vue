@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type Size } from '../../models/Themeing';
+import { type Size } from '../../../models/Themeing';
 import Button from "./Button.vue";
 import { computed } from 'vue';
 

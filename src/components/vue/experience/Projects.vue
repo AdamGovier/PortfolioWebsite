@@ -29,7 +29,7 @@
 
 <script lang="ts" setup>
 import Project from "./Project.vue";
-import CrimsonLogo from "../../assets/images/projects/Crimson.webp";
-import BolusCalcLogo from "../../assets/images/projects/BolusCalc.webp";
-import GovierLogo from "../../assets/images/projects/Govier.webp";
+import CrimsonLogo from "../../../assets/images/projects/Crimson.webp";
+import BolusCalcLogo from "../../../assets/images/projects/BolusCalc.webp";
+import GovierLogo from "../../../assets/images/projects/Govier.webp";
 </script>

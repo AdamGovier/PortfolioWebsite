@@ -32,7 +32,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
 import BlogCard from './BlogCard.vue';
-import { type BlogPostMetadata } from '../../types/collection.ts';
+import { type BlogPostMetadata } from '../../../types/collection.ts';
 import FuzzySearch from 'fuzzy-search';
 
 // TODO: As blog grows, switch to an astro API project to server paginate posts. 

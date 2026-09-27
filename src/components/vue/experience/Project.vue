@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type ImageMetaData } from '../../models/Helpers';
+import { type ImageMetaData } from '../../../models/Helpers';
 import Card from "../shared/Card.vue";
 
 const props = defineProps<{

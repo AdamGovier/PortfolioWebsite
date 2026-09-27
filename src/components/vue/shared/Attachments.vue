@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type Attachment } from '../../types/collection';
+import { type Attachment } from '../../../types/collection';
 
 const props = defineProps<{
   attachments?: Attachment[],

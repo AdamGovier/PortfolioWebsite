@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type ImageMetaData } from '../../models/Helpers';
+import { type ImageMetaData } from '../../../models/Helpers';
 
 const props = defineProps<{
   organisationName: string,

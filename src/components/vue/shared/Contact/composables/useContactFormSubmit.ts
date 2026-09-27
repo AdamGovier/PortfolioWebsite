@@ -1,7 +1,7 @@
 import * as EmailValidator from "email-validator";
 import { reactive, ref } from "vue";
-import { toastConfiguration } from "../../../../constants/toastConstants";
-import { feedbackMessages } from "../../../../constants/feedbackMessages";
+import { toastConfiguration } from "../../../../../constants/toastConstants";
+import { feedbackMessages } from "../../../../../constants/feedbackMessages";
 
 
 export function useContactFormSubmit() {

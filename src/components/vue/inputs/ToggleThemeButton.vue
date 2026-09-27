@@ -4,9 +4,9 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
-import LocalStorage from '../../scripts/LocalStorage';
-import { localStorageKeys, icons } from '../../constants';
-import { type ColourTheme } from '../../models/Themeing';
+import LocalStorage from '../../../scripts/LocalStorage';
+import { localStorageKeys, icons } from '../../../constants';
+import { type ColourTheme } from '../../../models/Themeing';
 import { computed } from 'vue';
 import IconButton from './IconButton.vue';
 

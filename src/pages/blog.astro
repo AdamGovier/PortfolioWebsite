@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogCard from "../components/blog/BlogCard.vue";
+import BlogCard from "../components/vue/blog/BlogCard.vue";
 
 import { getCollection, getEntry } from 'astro:content';
-import BlogPostList from "../components/blog/BlogPostList.vue";
+import BlogPostList from "../components/vue/blog/BlogPostList.vue";
 
 const allBlogPosts = await getCollection('blog', item => !item.data.draft);
 

@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Source } from '../../types/collection';
+import type { Source } from '../../../types/collection';
 
 defineProps<{
   sources?: Source[];

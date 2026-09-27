@@ -1,11 +1,11 @@
 ---
 import { type SearchEngineMetaData } from "../models/Head";
 import BaseLayout from "./BaseLayout.astro";
-import ToggleThemeButton from "../components/inputs/ToggleThemeButton.vue";
-import BlogCard from "../components/blog/BlogCard.vue";
+import ToggleThemeButton from "../components/vue/inputs/ToggleThemeButton.vue";
+import BlogCard from "../components/vue/blog/BlogCard.vue";
 import { getCollection } from "astro:content";
-import Attachments from "../components/shared/Attachments.vue";
-import Sources from "../components/shared/Sources.vue";
+import Attachments from "../components/vue/shared/Attachments.vue";
+import Sources from "../components/vue/shared/Sources.vue";
 
 const { title, description, author, date, image, slug, tags, attachments, sources } = Astro.props;
 
